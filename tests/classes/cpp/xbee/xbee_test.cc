@@ -51,6 +51,14 @@ error_t PingCallback(const comnet::Header& header, const Ping& packet, comnet::C
 
 
 int main(int c, char** args) {
+
+	const char* deviceMac1 = "0013A2004067E4A0";
+	const char* deviceMac2 = "0013A2004067E49F";
+
+
+
+	// test date
+	std::cout << "Test: 11/15/2017" << std::endl;
   //Disables Pinging to make reading output easier
   comnet::constate::ConnectionStateManager::ConStateEnabled = false;
 
@@ -75,7 +83,7 @@ int main(int c, char** args) {
     << std::endl;
   std::cout << "Connected to address: "
     << std::boolalpha
-    << comm1.AddAddress(2, "0013A2004067E4AE")
+	  << comm1.AddAddress(2, deviceMac1)// "0013A2004067E4AE")
     << std::endl;
   // ComNode 2 init and add Connection.
   std::cout << "Init connection succeeded: "
@@ -84,7 +92,7 @@ int main(int c, char** args) {
    << std::endl;
   std::cout << "Connected to address: "
    << std::boolalpha
-   << comm2.AddAddress(1, "0013A20040917A31")
+   << comm2.AddAddress(1, deviceMac2)//"0013A20040917A31")
    << std::endl;
   // CommNode 2 init and add Connection.
   // CommNode Callback linking.
