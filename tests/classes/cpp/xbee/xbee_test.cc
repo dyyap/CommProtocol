@@ -64,7 +64,7 @@ void isolatedTest()
 	std::condition_variable cond;
 	std::cout << sizeof(comnet::Header) << std::endl;
 	// CommNode 1
-	comnet::Comms comm1(1);
+	comnet::Comms comm1(2);
 	comm1.LoadKey("01234567890ABCDEF");
 
 	comnet::architecture::os::CommMutex mut;
@@ -76,7 +76,7 @@ void isolatedTest()
 	// CommNode 1 init and add Connection.
 	std::cout << "Init connection succeeded: "
 		<< std::boolalpha
-		<< comm1.InitConnection(ZIGBEE_LINK, "COM5", "", 57600)
+		<< comm1.InitConnection(ZIGBEE_LINK, "COM6", "", 57600)
 		<< std::endl;
 	std::cout << "Connected to address: "
 		<< std::boolalpha
@@ -87,7 +87,7 @@ void isolatedTest()
 
 	// Test packet. 
 
-	Ping large("CAT NAME IS LILY");
+	Ping large("CAT NAME IS ANDREW");
 	// NOTE(All): Be sure to run the nodes! If not, the threads won't execute!
 	comm1.Run();
 
