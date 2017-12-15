@@ -50,19 +50,12 @@ error_t PingCallback(const comnet::Header& header, const Ping& packet, comnet::C
 }
 
 
-int main(int c, char** args) {
 
-
-	localTest();
-	isloatedTest();
-	
-	return 0;
-}
 
 // Test against an xbee on another machine.
-void isolateTest()
+void isolatedTest()
 {
-	const char* deviceMac = "0013A2004067E4AE";
+	const char* destMac = "0013A20040917A31";
 	// test date
 	std::cout << "Test: 11/17/2017" << std::endl;
 	//Disables Pinging to make reading output easier
@@ -87,7 +80,7 @@ void isolateTest()
 		<< std::endl;
 	std::cout << "Connected to address: "
 		<< std::boolalpha
-		<< comm1.AddAddress(2, deviceMac)
+		<< comm1.AddAddress(2, destMac)
 		<< std::endl;
 
 	comm1.LinkCallback(new Ping(), new comnet::Callback((comnet::callback_t)PingCallback));
@@ -103,8 +96,13 @@ void isolateTest()
 	while (true) {
 		std::cout << "Sleeping..." << std::endl;
 		// comm1 will be sending the packet.
-		comm1.Send(large, 2);
+		std::string word;
+		std::cout << "enter message:";
+		std::cin >> word;
+		Ping message(word);
+		comm1.Send(message, 2);
 		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+
 	}
 	std::cin.ignore();
 }
@@ -176,4 +174,13 @@ void localTest()
 		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 	}
 	std::cin.ignore();
+}
+
+int main(int c, char** args) {
+
+
+	//localTest();
+	isolatedTest();
+
+	return 0;
 }
