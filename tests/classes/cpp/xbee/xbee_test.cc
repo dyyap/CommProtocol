@@ -184,8 +184,8 @@ void localTest()
 int main(int c, char** args) {
 
 
-	//localTest();
-	isolatedTest();
+	localTest();
+	//isolatedTest();
 
 	return 0;
 }
