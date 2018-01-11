@@ -35,7 +35,7 @@ namespace architecture {
 namespace os {
 
 
-// Mutex Wrapper for CommProtocol.
+/** Mutex Wrapper for CommProtocol. */
 class COMM_EXPORT CommMutex {
 public:
   CommMutex() { }
@@ -53,6 +53,7 @@ private:
 /**
   Comms lock is a standard lock for mutex, intended to allow locking for certain amounts of time
   and whatnot.
+  Note:  the :: without scope means global scope
 */
 class CommLock : public ::std::unique_lock< ::std::mutex> {
 public:
@@ -64,7 +65,14 @@ private:
 
 
 namespace {
-// Waits for a certain amount of time before notifying. Mutex is locked during the process.
+/**
+Waits for a certain amount of time before notifying. Mutex is locked during the process.
+
+@param lock commLock object
+@param cond condition variable object
+@param milli Number of milliseconds to wait
+@returns returns whether or not the wait was time out or was released early.
+*/
 ConditionStatus WaitForMilliseconds(CommLock& lock,
                                     std::condition_variable& cond,
                                     uint64_t milli) {

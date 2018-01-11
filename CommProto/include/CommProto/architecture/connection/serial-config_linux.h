@@ -28,13 +28,14 @@
 #include <errno.h>
 #include <termios.h>
 
+/** Structure that holds the information on serial connection */
 struct serial_info {
   
-  speed_t baudrate;
-  serial_status serial_s;
-  port_id fd;
+  speed_t baudrate; /** Baudrate of the serial connection */
+  serial_status serial_s; /** Status of the serial connection*/
+  port_id fd; /** Port ID of the serial connection */
 
-  char device[50];
+  char device[50]; /** Name of the serial connection?*/
 };
 
 typedef struct serial_info serial_t;

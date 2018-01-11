@@ -24,12 +24,13 @@
 
 typedef HANDLE serial_h;
 
+/** Structure that holds the information of serial connection on Windows Machine*/
 struct serial_info {
 
-  speed_t baudrate;
-  serial_status serial_s;
-  port_id fd;
-  serial_h h_serial;
+  speed_t baudrate; /** Baud rate of the serial connection */
+  serial_status serial_s;/** Status of the serial connection */
+  port_id fd; /** Port ID of the serial connection */
+  serial_h h_serial; /** pointer to the serial connection? */
 
 };
 

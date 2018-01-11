@@ -22,6 +22,9 @@
 #include <CommProto/architecture/os/include_defines.h>
 #include <CommProto/architecture/api.h>
 
+/**
+Indicate the status of serial connection.
+*/
 enum serial_status_t {
 
   SERIAL_OPEN,
@@ -30,11 +33,11 @@ enum serial_status_t {
   SERIAL_TRANSMIT
 };
 
-typedef enum serial_status_t serial_status;
-typedef int32_t port_id;
+typedef enum serial_status_t serial_status; /** Status of serial connection */
+typedef int32_t port_id; /** Port ID for the serial connection */
 
 #if COMMPROTO_TARGET_OS == COMMMPROTO_OS_WINDOWS
- typedef uint32_t speed_t;
+ typedef uint32_t speed_t; 
 #endif
 
 #endif // __SERIAL_STATUS_H

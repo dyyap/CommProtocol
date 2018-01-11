@@ -55,7 +55,9 @@ error_t PingCallback(const comnet::Header& header, const Ping& packet, comnet::C
 // Test against an xbee on another machine.
 void isolatedTest()
 {
-	const char* destMac = "0013A2004105C6AF";
+	//const char* destMac = "0013A20040A54318";
+	const char* destMac = "0013A20040A5430F";
+
 	// test date
 	std::cout << "Test: 11/17/2017" << std::endl;
 	//Disables Pinging to make reading output easier
@@ -64,7 +66,7 @@ void isolatedTest()
 	std::condition_variable cond;
 	std::cout << sizeof(comnet::Header) << std::endl;
 	// CommNode 1
-	comnet::Comms comm1(1);
+	comnet::Comms comm1(2);
 	comm1.LoadKey("01234567890ABCDEF");
 
 	comnet::architecture::os::CommMutex mut;
@@ -76,14 +78,17 @@ void isolatedTest()
 	// CommNode 1 init and add Connection.
 	std::cout << "Init connection succeeded: "
 		<< std::boolalpha
-		<< comm1.InitConnection(ZIGBEE_LINK, "COM7", "", 57600)
+		<< comm1.InitConnection(ZIGBEE_LINK, "COM8", "", 57600)
 		<< std::endl;
 	std::cout << "Connected to address: "
 		<< std::boolalpha
-		<< comm1.AddAddress(2, destMac)
+		<< comm1.AddAddress(1, destMac)
 		<< std::endl;
 
-	comm1.LinkCallback(new Ping(), new comnet::Callback((comnet::callback_t)PingCallback));
+	Ping holder("");
+	comm1.LinkCallback(&holder, new comnet::Callback((comnet::callback_t)PingCallback));
+
+	//comm1.LinkCallback(new Ping(), new comnet::Callback((comnet::callback_t)PingCallback));
 
 	// Test packet. 
 
@@ -100,7 +105,7 @@ void isolatedTest()
 		std::cout << "enter message:";
 		std::cin >> word;
 		Ping message(word);
-		comm1.Send(message, 2);
+		comm1.Send(message, 1);
 		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
 	}
