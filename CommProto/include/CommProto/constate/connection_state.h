@@ -32,17 +32,17 @@ Time is represented using high resolution clock so each compiler can
 use its most precise clock
 */
 typedef std::chrono::high_resolution_clock Time;
-//Represents time in milliseconds but must call count to get int form
+/** Represents time in milliseconds but must call count to get int form */
 typedef std::chrono::milliseconds ms;
-//Stores a point in time
+/** Stores a point in time */
 typedef std::chrono::high_resolution_clock::time_point TimePoint;// std::chrono::time_point <std::chrono::steady_clock> TimePoint;
-//Used to store difference between time
+/** Used to store difference between time */
 typedef std::chrono::duration<float> fsec;
-//Integer to store the ping in milliseconds
+/** Integer to store the ping in milliseconds */
 typedef int16_t PingMillisInt;
-//Integer to store general milliseconds
+/** Integer to store general milliseconds */
 typedef int32_t MillisInt;
-//Integer to store unix time stamp in millisecond (yes, it has to be this large)
+/** Integer to store unix time stamp in millisecond (yes, it has to be this large) */
 typedef int64_t UnixMillisInt;
 
 using namespace comnet::architecture::os;
@@ -51,38 +51,49 @@ using namespace comnet::architecture::os;
 minus the previous (unix time stamp - high res clock)
 has a difference greater than this this amount, resync*/
 const MillisInt MAX_UNIX_HIGHRES_TIME_DIF = 2000;
+
 /**The amount of milliseconds to wait before sending another
 CheckConnectRequest. Value used when a packet was received from
 the peer.*/
 const MillisInt CHECK_CONNECT_REQUEST_SEND_DELAY = 7500;
+
 /**The amount of milliseconds to wait before sending another
 CheckConnectRequest. Value used when a CheckConnectRequest was
 sent to the peer.*/
 const MillisInt CHECK_CONNECT_REQUEST_RESEND_DELAY = 2500;
+
 /**The amount of milliseconds that must pass before sending a
 CheckConnectReply after sending any packet to the peer*/
 const MillisInt CHECK_CONNECT_REPLY_SEND_DELAY = 1500;
+
 /**The number of TimeSyncReplys that must be received for
 a ConnectionState to be considered synced*/
 const MillisInt NUM_SYNC_REPLIES_TO_SYNC = 8;
+
 /**The amount of time that must pass before sending another
 TimeSyncRequest*/
 const MillisInt SYNC_REQUEST_SEND_DELAY = 2000;
+
 /**The maximum amount of times a CheckConnectRequest can be
 sent without receiving a reply. Once exceeded, the peer is
 considered to be inactive*/
 const MillisInt MAX_CHECK_CONNECT_REQUESTS = 5;
+
 /**If the ping has this value, then the ping is unknown*/
 const PingMillisInt PING_UNKNOWN = -1;
 
 /**Gets a TimePoint representing now*/
 TimePoint GetNow();
 /**Gets the amount of milliseconds passed between now and
-the TimePoint argument*/
+the TimePoint argument
+@param time the TimePoint in the past
+*/
 MillisInt GetMillisPassed(TimePoint time);
+
 /**Gets the amount of milliseconds passed between now and
 the start of the program*/
 MillisInt GetTimeSinceStart();
+
 /**Gets the unix time stamp in milliseconds*/
 UnixMillisInt GetUnixTimeMillis();
 
@@ -97,6 +108,7 @@ class ConnectionState
 public:
   /**
   Creates a new instance of {@link ConnectionState}.
+
   @param nodeID The node id the remote {@link Comms} to represent
   the connection state of.
   */
@@ -105,6 +117,7 @@ public:
   /**
   Accessor for the {@link #nodeID} of the remote {@link Comms} associated 
   with {@code this}.
+
   @return A copy of {@link #destID}.
   */
   uint8_t GetNodeID() const

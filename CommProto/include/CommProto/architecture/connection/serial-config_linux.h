@@ -28,7 +28,7 @@
 #include <errno.h>
 #include <termios.h>
 
-/** Structure that holds the information on serial connection */
+/** Structure that holds the information of serial connection on Linux Machine*/
 struct serial_info {
   
   speed_t baudrate; /** Baudrate of the serial connection */

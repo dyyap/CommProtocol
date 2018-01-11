@@ -36,6 +36,7 @@ namespace os {
   for operating system stuff. In order to remain cross compatible, we implement C++11 threads 
   rather than standalone C threads.
  */
+
 class COMM_EXPORT CommThread {
 
   COMM_DISALLOW_COPYING(CommThread);
@@ -88,14 +89,19 @@ public:
 
   /**
     Determines whether this thread is joinable, or able to join in parallel with main thread.
+
+	@returns Return whether or not this thread is joinable.
   */
   bool IsJoinable() { return thr.joinable(); }
 
 
   /**
     Grabs the id of this thread.
+
+	@returns Returns the ID of this thread.
    */
   ::std::thread::id GetId() { return thr.get_id(); }
+
 private:
   ::std::thread thr;
 };

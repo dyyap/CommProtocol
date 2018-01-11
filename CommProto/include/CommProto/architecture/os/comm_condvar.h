@@ -47,7 +47,7 @@ namespace comnet {
         }
 
         /**
-        Block the thread until Set
+		Block the thread until Set
         */
         FORCE_INLINE void Wait() {
           std::unique_lock<std::mutex> lk(mu);

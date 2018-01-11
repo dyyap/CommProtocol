@@ -19,20 +19,14 @@
 #ifndef __CONDITION_H
 #define __CONDITION_H
 
-
 #define LIB_CPLUSPLUS11
-
-
 
 #if defined (LIB_CPLUSPLUS11)
 
-
 namespace comnet {
-
-
-//
-// Comm Implmentation of Condition Status for std::cv_status
-//
+/**
+	Comm Implmentation of Condition Status for std::cv_status
+*/
 enum ConditionStatus { 
   TIMEOUT,      // Condition timed out.
   NO_TIMEOUT,   // Condition was awakened by notify_one or notify_all.

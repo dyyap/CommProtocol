@@ -33,14 +33,14 @@
 namespace comnet {
 namespace architecture {
 
-
+/** enum indicate the piping mode */
 enum PipeMode {
   READ,
   WRITE,
   BOTH
 };
 
-
+/** enum indicate the piping status */
 enum PipeStatus {
   NOT_CONNECTED,
   CONNECTED_CLIENT,
@@ -48,7 +48,7 @@ enum PipeStatus {
   FAILED_CONNECT
 };
 
-
+/** enum indicate the piping type */
 enum PipeType {
   PIPE_ANONYMOUS,
   PIPE_NAMED,
