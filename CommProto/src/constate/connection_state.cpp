@@ -42,14 +42,19 @@ UnixMillisInt GetUnixTimeMillis() {
 }
 
 ConnectionState::ConnectionState(uint8_t nodeID)
-  :nodeID(nodeID), lastSyncPackSentTime(GetNow()),
-  syncRequestSendDelay(0), lastCheckConnectRequestSentTime(GetNow()),
-  checkConnectRequestSendDelay(0), numUnansweredCheckConnectRequests(0),
-  lastCheckConnectReplySentTime(GetNow()), inUnsyncedList(false), 
-  timeOff(0), numSyncRepliesReceived(0), ping(PING_UNKNOWN), receivedFrom(false)
-{
-      
-}
+	:
+	nodeID(nodeID), 
+	lastSyncPackSentTime(GetNow()),
+	syncRequestSendDelay(0), 
+	lastCheckConnectRequestSentTime(GetNow()),
+	checkConnectRequestSendDelay(0), 
+	numUnansweredCheckConnectRequests(0),
+	lastCheckConnectReplySentTime(GetNow()), 
+	inUnsyncedList(false), 
+	timeOff(0), 
+	numSyncRepliesReceived(0), 
+	ping(PING_UNKNOWN), 
+	receivedFrom(false) {}
 
 void ConnectionState::ResetSyncRequestSentTime()
 {
@@ -104,7 +109,8 @@ MillisInt ConnectionState::GetTimeUntilSendCheckConnectReply()
 
 bool ConnectionState::IsResyncRequired(UnixMillisInt unixTime)
 {
-  return numSyncRepliesReceived > 0 && abs(this->unixHighResTimeDif - unixTime) > MAX_UNIX_HIGHRES_TIME_DIF;
+  return numSyncRepliesReceived > 0 
+	  && abs(this->unixHighResTimeDif - unixTime) > MAX_UNIX_HIGHRES_TIME_DIF;
 }
 
 void ConnectionState::Resync()
@@ -121,8 +127,10 @@ void ConnectionState::SetUnixHighResTimeDif(UnixMillisInt unixHighResTimeDif)
 void ConnectionState::SyncTime(MillisInt timeOff)
 {
   numSyncRepliesReceived++;
-  this->timeOff = (MillisInt)(((float)(numSyncRepliesReceived - 1) / (float)numSyncRepliesReceived) * this->timeOff + 
-    (1.0f / (float)numSyncRepliesReceived) * timeOff);
+  this->timeOff = (MillisInt)(((float)(numSyncRepliesReceived - 1) 
+					/ (float)numSyncRepliesReceived) 
+					* this->timeOff 
+					+ (1.0f / (float)numSyncRepliesReceived) * timeOff);
 }
 
 bool ConnectionState::IsSynced()

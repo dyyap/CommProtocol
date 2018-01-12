@@ -303,6 +303,7 @@ private:
   whether the time is synced or not and helps calculate the average
   {@link #timeOff}.
   */
+
   std::atomic<uint8_t> numSyncRepliesReceived;
 
   /**
