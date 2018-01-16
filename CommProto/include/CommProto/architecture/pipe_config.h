@@ -1,5 +1,5 @@
 /*
-Piping for Intercommunications.
+Piping configuration for Intercommunications.
 
 Copyright (C) 2016  Mario Garcia.
 

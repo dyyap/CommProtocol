@@ -16,6 +16,9 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+
+
+
 #ifndef __COMM_CONDVAR_H
 #define __COMM_CONDVAR_H
 
@@ -44,7 +47,7 @@ namespace comnet {
         }
 
         /**
-        Block the thread until Set
+		Block the thread until Set
         */
         FORCE_INLINE void Wait() {
           std::unique_lock<std::mutex> lk(mu);

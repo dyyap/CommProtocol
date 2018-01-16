@@ -25,18 +25,25 @@
 COM_EXTERN_C
 /**
    initialize the mutex.
+   @param mutex mutex object
 */
 void mutex_init(mutex_t* mutex);
 /**
    Lock this mutex prevent any other thread from accessing the same resource.
+   @param mutex mutex object
+
 */
 void mutex_lock(mutex_t* mutex);
 /**
    Unlock the mutex to allow other threads to access the resource.
+   @param mutex mutex object
+
 */
 void mutex_unlock(mutex_t* mutex);
 /**
    Destroy the mutex.
+   @param mutex mutex object
+
 */
 void mutex_destroy(mutex_t* mutex);
 

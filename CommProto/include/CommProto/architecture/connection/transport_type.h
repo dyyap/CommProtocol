@@ -24,12 +24,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   Transport protocol types define the current protocols that are 
   in use right now (with the exception of ZigBee for now). They will be defined for the 
   CommNode children in order to provide proper state machine functionality.
+
+  Protocol types are: UDP, TCP, ZIGBEE, SERIAL
  */
 typedef enum transport_protocol_t {
   UDP_LINK,
   SERIAL_LINK,
   ZIGBEE_LINK,
-		TCP_LINK
+  TCP_LINK
 } protocol_t;
 
 #endif // __DATALINK_TYPE_H

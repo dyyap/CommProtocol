@@ -16,11 +16,12 @@
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+
+/** Configuration for win32 builds */
 #ifndef __WIN32_CONFIG_H
 #define __WIN32_CONFIG_H
 
 #include <CommProto/architecture/os/arch.h>
-
 
 #if (COMMPROTO_TARGET_OS == COMMMPROTO_OS_WINDOWS)
 

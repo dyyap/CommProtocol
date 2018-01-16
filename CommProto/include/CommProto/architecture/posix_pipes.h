@@ -31,7 +31,7 @@ namespace architecture {
 class COMM_EXPORT Pipe : public IPipe {
 public:
 private:
-  pipe_t pipefd[2];
+  pipe_t pipefd[2]; 
 };
 } // architecture
 } // comnet

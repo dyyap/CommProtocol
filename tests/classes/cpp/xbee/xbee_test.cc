@@ -55,7 +55,9 @@ error_t PingCallback(const comnet::Header& header, const Ping& packet, comnet::C
 // Test against an xbee on another machine.
 void isolatedTest()
 {
-	const char* destMac = "0013A20040917A31";
+	//const char* destMac = "0013A20040A54318";
+	const char* destMac = "0013A20040A5430F";
+
 	// test date
 	std::cout << "Test: 11/17/2017" << std::endl;
 	//Disables Pinging to make reading output easier
@@ -76,14 +78,17 @@ void isolatedTest()
 	// CommNode 1 init and add Connection.
 	std::cout << "Init connection succeeded: "
 		<< std::boolalpha
-		<< comm1.InitConnection(ZIGBEE_LINK, "COM6", "", 57600)
+		<< comm1.InitConnection(ZIGBEE_LINK, "COM8", "", 57600)
 		<< std::endl;
 	std::cout << "Connected to address: "
 		<< std::boolalpha
-		<< comm1.AddAddress(2, destMac)
+		<< comm1.AddAddress(1, destMac)
 		<< std::endl;
 
-	comm1.LinkCallback(new Ping(), new comnet::Callback((comnet::callback_t)PingCallback));
+	Ping holder("");
+	comm1.LinkCallback(&holder, new comnet::Callback((comnet::callback_t)PingCallback));
+
+	//comm1.LinkCallback(new Ping(), new comnet::Callback((comnet::callback_t)PingCallback));
 
 	// Test packet. 
 
@@ -100,7 +105,7 @@ void isolatedTest()
 		std::cout << "enter message:";
 		std::cin >> word;
 		Ping message(word);
-		comm1.Send(message, 2);
+		comm1.Send(message, 1);
 		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
 	}
@@ -111,8 +116,13 @@ void isolatedTest()
 //test two xbees on same machine.
 void localTest()
 {
-	const char* deviceMac1 = "0013A2004067E4A0";
-	const char* deviceMac2 = "0013A2004067E49F";
+	const char* destMAC1 = "0013A2004067E4A0";
+	const char* destMAC2 = "0013A2004067E49F";
+	const char* com1PortName = "COM3";
+	const char* com2PortName = "COM4";
+	const uint8_t com1ID = 1;
+	const uint8_t com2ID = 2;
+	const uint32_t baudRate = 57600;
 
 	// test date
 	std::cout << "Test: 11/17/2017" << std::endl;
@@ -136,20 +146,20 @@ void localTest()
 	// CommNode 1 init and add Connection.
 	std::cout << "Init connection succeeded: "
 		<< std::boolalpha
-		<< comm1.InitConnection(ZIGBEE_LINK, "COM3", "", 57600)
+		<< comm1.InitConnection(ZIGBEE_LINK, com1PortName, "", baudRate)
 		<< std::endl;
 	std::cout << "Connected to address: "
 		<< std::boolalpha
-		<< comm1.AddAddress(2, deviceMac1)// "0013A2004067E4AE")
+		<< comm1.AddAddress(com2ID, destMAC2)// "0013A2004067E4AE")
 		<< std::endl;
 	// ComNode 2 init and add Connection.
 	std::cout << "Init connection succeeded: "
 		<< std::boolalpha
-		<< comm2.InitConnection(ZIGBEE_LINK, "COM4", "", 57600)
+		<< comm2.InitConnection(ZIGBEE_LINK, com1PortName, "", baudRate)
 		<< std::endl;
 	std::cout << "Connected to address: "
 		<< std::boolalpha
-		<< comm2.AddAddress(1, deviceMac2)//"0013A20040917A31")
+		<< comm2.AddAddress(com1ID, destMAC1)//"0013A20040917A31")
 		<< std::endl;
 	// CommNode 2 init and add Connection.
 	// CommNode Callback linking.
@@ -170,7 +180,7 @@ void localTest()
 	while (true) {
 		std::cout << "Sleeping..." << std::endl;
 		// comm1 will be sending the packet.
-		comm1.Send(large, 2);
+		comm1.Send(large, com2ID);
 		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 	}
 	std::cin.ignore();
@@ -179,8 +189,8 @@ void localTest()
 int main(int c, char** args) {
 
 
-	//localTest();
-	isolatedTest();
+	localTest();
+	//isolatedTest();
 
 	return 0;
 }

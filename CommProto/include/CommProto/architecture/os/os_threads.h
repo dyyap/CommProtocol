@@ -28,11 +28,17 @@ COM_EXTERN_C
  
  
 //posix \ window threading 
-  /* Aside from the function pointer taking void* as argument and returning void*, nothing special here  
+/** Aside from the function pointer taking void* as argument and returning void*, nothing special here 
+	@param thread thread object
+	@param start_routine void pointer to the function that takes void* argument and return void*
+	@param arg void pointer argument
  */ 
 void thread_create(thread_t* thread, void *(*start_routine) (void *), void* arg); 
 
  
+/** The function returns the current thread  ID.
+	@returns return current thread ID.
+*/
 thread_t thread_get_self_id(); 
 
  
@@ -40,10 +46,6 @@ thread_t thread_get_self_id();
 unsigned Sleep(unsigned seconds); 
 #endif // COM_TARGET_OS != COM_OS_WINDOWS 
 
- 
-
- 
 END_EXTERN_C 
-
  
 #endif//OSTHREAD_H 

@@ -16,7 +16,9 @@
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-// Thread handling header.
+
+/** Thread handling header. */
+
 #ifndef __THREAD_CONFIG_H
 #define __THREAD_CONFIG_H
 
