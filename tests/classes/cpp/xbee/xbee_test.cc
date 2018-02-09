@@ -132,7 +132,7 @@ public:
 	const void print() const
 	{
 		std::cout << "VAL: p1: " << position1 << "\n p2:" 
-			<< position2 << "\n p3:" << position3 << "\n p4" << position4 << "\n";
+			<< position2 << "\n p3:" << position3 << "\n p4:" << position4 << "\n";
 	}
 	/**
 	Tells CommProtocol how to recreate the ArmPosition packet
@@ -185,7 +185,7 @@ error_t ArmPositionCallback(const comnet::Header& header, const ArmPosition& pac
 void isolatedTest()
 {
 	//const char* destMac = "0013A20040A54318";
-	const char* destMac = "0013A20040A5430F";
+	const char* destMac = "0013A20040A54318";
 
 	// test date
 	std::cout << "Test: 11/17/2017" << std::endl;
@@ -195,7 +195,7 @@ void isolatedTest()
 	std::condition_variable cond;
 	std::cout << sizeof(comnet::Header) << std::endl;
 	// CommNode 1
-	comnet::Comms comm1(2);
+	comnet::Comms comm1(1);
 	comm1.LoadKey("01234567890ABCDEF");
 
 	comnet::architecture::os::CommMutex mut;
@@ -207,11 +207,11 @@ void isolatedTest()
 	// CommNode 1 init and add Connection.
 	std::cout << "Init connection succeeded: "
 		<< std::boolalpha
-		<< comm1.InitConnection(ZIGBEE_LINK, "COM8", "", 57600)
+		<< comm1.InitConnection(ZIGBEE_LINK, "COM12", "", 57600)
 		<< std::endl;
 	std::cout << "Connected to address: "
 		<< std::boolalpha
-		<< comm1.AddAddress(1, destMac)
+		<< comm1.AddAddress(2, destMac)
 		<< std::endl;
 
 	Ping holder("");
@@ -236,7 +236,11 @@ void isolatedTest()
 		std::cout << "enter message:";
 		std::cin >> word;
 		Ping message(word);
-		comm1.Send(message, 1);
+		ArmCommand amc(22, 1337);
+		ArmPosition amp(7, 6, 5, 4);
+		comm1.Send(amp, 2);
+		comm1.Send(amc, 2);
+		comm1.Send(message, 2);
 		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
 	}
@@ -322,8 +326,8 @@ void localTest()
 int main(int c, char** args) {
 
 
-	localTest();
-	//isolatedTest();
+	//localTest();
+	isolatedTest();
 
 	return 0;
 }
