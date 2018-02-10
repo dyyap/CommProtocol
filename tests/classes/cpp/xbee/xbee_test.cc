@@ -179,6 +179,18 @@ error_t ArmPositionCallback(const comnet::Header& header, const ArmPosition& pac
 }
 
 
+static int packetReceivedCount = 0;
+error_t ThroughputPingTestCallback(const comnet::Header& header, const Ping& packet, comnet::Comms& node) {
+	
+	++packetReceivedCount;
+	std::cout << std::endl << "Source node: " << (int32_t)header.source_id << std::endl;
+	std::cout << "Packet count: " << packetReceivedCount << "\n";
+	//std::cout << "Message: " << std::endl;
+	//std::cout << "Packet contains: " << packet.GetCat() << std::endl;
+	return comnet::CALLBACK_SUCCESS | comnet::CALLBACK_DESTROY_PACKET;
+}
+
+
 
 
 // Test against an xbee on another machine.
@@ -219,6 +231,7 @@ void isolatedTest()
 
 	comm1.LinkCallback(new ArmCommand() , new comnet::Callback((comnet::callback_t)ArmCommandCallback));
 	comm1.LinkCallback(new ArmPosition(), new comnet::Callback((comnet::callback_t)ArmPositionCallback));
+
 	//comm1.LinkCallback(new Ping(), new comnet::Callback((comnet::callback_t)PingCallback));
 
 	// Test packet. 
@@ -251,10 +264,11 @@ void isolatedTest()
 //test two xbees on same machine.
 void localTest()
 {
+	
 	const uint8_t com1ID = 1;
 	const uint8_t com2ID = 2;
-	const char* com1PortName = "COM10";
-	const char* com2PortName = "COM11";
+	const char* com1PortName = "COM6";
+	const char* com2PortName = "COM10";
 	const char* node1_Mac = "0013A20040917A31";
 	const char* node2_Mac = "0013A2004067E4AE";
 
@@ -317,17 +331,64 @@ void localTest()
 	while (true) {
 		std::cout << "Sleeping..." << std::endl;
 		// comm1 will be sending the packet.
-		comm1.Send(small, com2ID);
+		comm2.Send(large, com1ID);
 		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 	}
 	std::cin.ignore();
 }
 
+void throughputTest()
+{
+	const uint8_t comID = 1;
+	const char* comPortName = "COM6";
+
+	const uint8_t destComID = 2;
+	const char* dest_Mac = "0013A2004067E4AE";
+
+
+	comnet::Comms comm(comID);
+	comm.LoadKey("01234567890ABCDEF");
+	comm.InitConnection(ZIGBEE_LINK, comPortName, "", 57600);
+	comm.AddAddress(destComID, dest_Mac);
+
+	comm.LinkCallback(new Ping(), new comnet::Callback((comnet::callback_t)ThroughputPingTestCallback));
+
+
+	const int numPacket = 1000;
+	std::cout << "Are you sender(1) or receiver(2)?\nEnter 1 or 2:";
+	int nodeType;
+	std::cin >> nodeType;
+	Ping testpacket("TEST");
+	if (nodeType == 1)
+	{
+		
+		for (int i = 0; i < numPacket; ++i)
+		{
+			comm.Send(testpacket, destComID);
+		}
+	}
+	else if (nodeType == 2)
+	{
+		std::cout << "Waiting for packet...Press anything to end" << std::endl;
+		std::cin;
+		//while (true) {
+		//	
+		//	// comm1 will be sending the packet.
+		//	
+		//	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+
+		//}
+	}
+
+
+
+}
+
 int main(int c, char** args) {
 
 
-	//localTest();
-	isolatedTest();
+	localTest();
+	//isolatedTest();
 
 	return 0;
 }
