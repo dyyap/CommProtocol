@@ -26,9 +26,10 @@
 #define BIT16_VALUE 65536
 #define BIT32_VALUE 4294967296
 
-// A loose string copy as an alternative to 
-// the C library strcpy.
-// NOTE: You can only copy into dynamically allocated (malloc, or new)  strings (char*). 
+/** A loose string copy as an alternative to 
+ the C library strcpy.
+ NOTE: You can only copy into dynamically allocated (malloc, or new)  strings (char*).  */
+
 _COMNET_PUBLIC_API_
 #define loose_strcopy(dest, src, size) \
 	{                              \
@@ -40,7 +41,8 @@ _COMNET_PUBLIC_API_
 	  dest[i] = '\0';              \
 	}
 
-// Count the number of characters in the string.
+/** Count the number of characters in the string. 
+	Note: while not at null terminator, increment length */
 _COMNET_PUBLIC_API_
 #define str_length(str, length) {       \
           length = 0;                   \
@@ -49,25 +51,24 @@ _COMNET_PUBLIC_API_
 	  }         \
 	}	
 
-
-// Delete a list, consisting of the node data type, 
-// and the variable "size" keeps track of the list.
-// Node have to be linked in some way however.
+/** Delete a list, consisting of the node data type, 
+ and the variable "size" keeps track of the list.
+ Node have to be linked in some way however. */
 _COMNET_PUBLIC_API_
 #define _delete_list(nodeType, currentSize) { \
-          if (currentSize > 0) {	      \
+          if (currentSize > 0) {	  \
 	    nodeType* previous;		      \
-	    nodeType* traverse = root;	      \
-	    while (traverse != NULL) {	      \
+	    nodeType* traverse = root;	  \
+	    while (traverse != NULL) {	  \
 	      previous = traverse;	      \
-	      traverse = traverse->next;      \
-	      delete previous;                \
-	      previous = NULL;                \
-	    }				      \
-          }                                   \
+	      traverse = traverse->next;  \
+	      delete previous;            \
+	      previous = NULL;            \
+		  }							  \
+          }                           \
         }
 
-// Nullify the pointer.
+/** Nullify the pointer. */
 _COMNET_PUBLIC_API_
 #define nullify_pointer(pointer) { \
           pointer = NULL;          \
@@ -75,15 +76,15 @@ _COMNET_PUBLIC_API_
 
 
 
-// Simple, Standard data allocator.
+/** Simple, Standard data allocator. */
 _COMNET_PUBLIC_API_
 #define allocate_pointer(data_type) new data_type()
 
-// Simple allocation of a new pointer.
+/** Simple allocation of a new pointer.*/
 _COMNET_PUBLIC_API_
 #define allocate_new_pointer(pointer, data_type) pointer = allocate_pointer(data_type)
 
-// Simple, Standard free pointer.
+/** Simple, Standard free pointer. */
 _COMNET_PUBLIC_API_
 #define free_pointer(pointer) {  \
           if (pointer != NULL) { \
@@ -93,7 +94,7 @@ _COMNET_PUBLIC_API_
         }
 
 _COMNET_PUBLIC_API_
-// Check if number
+/** Check if the string is a number, only works on integer. */
 #define is_number(string, result) { \
           result = true; \
           for (uint32_t i = 0; i < string.length(); ++i) { \
@@ -105,12 +106,11 @@ _COMNET_PUBLIC_API_
         }
 
 _COMNET_PUBLIC_API_
-// Nullify the indices in the table.
+/** Nullify the indices in the table. */
 #define nullifyAttributesInTable(theTable, size) { \
           for (uint32_t i = 0; i < size; ++i) { \
-	    theTable[i] = NULL; \
-	  } \
-        }
+				theTable[i] = NULL; } \
+			}
 
 #define cleanupListPointerAttributes(listPointer) { \
           for (uint32_t i = 0; i < listPointer->GetSize(); ++i) { \

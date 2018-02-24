@@ -27,10 +27,10 @@
 namespace comnet {
 namespace console {
 
-
 // Parsing engine for the Console.
 class ConsoleParserEngine {
 public:
+
   static ::std::string ParseDecode(Console& console, const char* buffer);
 
   static bool ParseEncode(Console& console, const char* buffer);

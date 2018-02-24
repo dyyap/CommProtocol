@@ -23,15 +23,14 @@
 #include <CommProto/architecture/api.h>
 #include <CommProto/architecture/macros.h>
 #include <CommProto/architecture/pipe_config.h>
-
 #include <memory>
-
-
 
 namespace coment {
 namespace console {
 
-
+/** 
+enum command to open or close the pipe
+*/
 enum PipeCommands {
   cp_OPEN,
   cp_CLOSE,
@@ -42,7 +41,7 @@ enum PipeCommands {
   Pipe is an object abstraction, used to handle intercommunication processes between the 
   CommNode and external applications. In order to communicate asyncronously with CommNode,
   We use a separate pipe to an external application, for use with both applications, since two
-  CommNodes will need to be used. 
+  CommNodes will need to be used.
 */
 class COMM_EXPORT CommPipe {
 public:

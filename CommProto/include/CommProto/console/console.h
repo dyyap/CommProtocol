@@ -76,16 +76,20 @@ public:
   virtual bool createConsole();
   /**
      Write into the console. This will allow the user to Send commands to the program, by means of a buffer.
+	 @param command command to be send into the console
    */
   virtual bool write(const char* command = "");
 
   /**
      Reads output from the program, Back to the user for evaluation.
+	 @param buffer buffer for the output
+	 @param intBuf size of buffer?
    */
   virtual bool read(char* buffer, int intBuf);
 
   /**
     Start the connection via tcp.
+	@param port TCP port number 
    */
   virtual bool listenConnect(uint16_t port);
   
@@ -117,6 +121,7 @@ protected:
     Socket used to define this Console object.
    */
   CommSocket* socket;
+
   /**
     The unique id of this Console object.
    */

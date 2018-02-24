@@ -89,13 +89,13 @@ enum socket_status_t {
    Both os'es use struct sockaddr_in, but they implement struct in_addr differently...
  */ 
 struct socket_info {
-  SOCKET socket;
-  PORT   port;
-  ID_T   id;
+  SOCKET socket; /** Pointer to the socket */
+  PORT   port;   /** Port to the socket */
+  ID_T   id;	 /** ID of the socket */
 
-  socket_status_t socket_status;
+  socket_status_t socket_status; /** Holds the Status of the socket */
 
-  struct sockaddr_in socket_address;
+  struct sockaddr_in socket_address; /** Address of the socket */
   
 };
 

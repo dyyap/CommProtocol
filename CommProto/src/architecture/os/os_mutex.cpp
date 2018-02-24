@@ -20,23 +20,34 @@
 
 #if COMMPROTO_TARGET_OS == COMMMPROTO_OS_WINDOWS
 /**
-   TODO(): Need to implement Windows mutex functions. 
+   Create Mutex
+   @param mutex pointer to mutex
 */
 void mutex_init(mutex_t* mutex) 
 {
   *mutex = CreateMutex(NULL, FALSE, NULL);
 }
 
+/**
+Lock mutex indefinitely
+	@param mutex pointer to mutex
+*/
 void mutex_lock(mutex_t* mutex)
 {
   WaitForSingleObject(*mutex, INFINITE);
 }
-
+/**
+	unlock mutex
+	@param mutex pointer to mutex
+*/
 void mutex_unlock(mutex_t* mutex)
 {
   ReleaseMutex(*mutex);
 }
-
+/** 
+	Destroy mutex
+	@param mutex pointer to mutex
+*/
 void mutex_destroy(mutex_t* mutex)
 {
   CloseHandle(*mutex);
@@ -44,21 +55,36 @@ void mutex_destroy(mutex_t* mutex)
 
 #else // TARGET_OS_LINUX && TARGET_OS_APPLE
 
+/**
+Create Mutex
+@param mutex pointer to mutex
+*/
 void mutex_init(mutex_t* mutex)
 {
   pthread_mutex_init(mutex, NULL);
 }
 
+/**
+lock Mutex indefinitely
+@param mutex pointer to mutex
+*/
 void mutex_lock(mutex_t* mutex)
 {
   pthread_mutex_lock(mutex);
 }
 
+/**
+Unlock Mutex
+@param mutex pointer to mutex
+*/
 void mutex_unlock(mutex_t* mutex)
 {
   pthread_mutex_unlock(mutex);
 }
-
+/**
+destroy Mutex
+@param mutex pointer to mutex
+*/
 void mutex_destroy(mutex_t* mutex)
 {
   pthread_mutex_destroy(mutex);
