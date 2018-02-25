@@ -18,3 +18,4 @@ script:
   # Run your build commands next
   - mkdir build && cd build
   - cmake Dtest=ON ../
+  - make
