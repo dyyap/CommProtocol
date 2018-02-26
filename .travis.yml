@@ -17,5 +17,5 @@ script:
   - gcc -v && g++ -v && cmake --version
   # Run your build commands next
   - mkdir build && cd build
-  - cmake Dtest=ON ../
+  - cmake -Dtest=ON ../
   - make
