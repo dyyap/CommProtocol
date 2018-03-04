@@ -7,3 +7,8 @@ tests/*
 
 # Test files not required.
 /CommProto/src/main.cpp
+CommProto/include/\.DS_Store
+
+CommProto/src/\.DS_Store
+
+\.DS_Store

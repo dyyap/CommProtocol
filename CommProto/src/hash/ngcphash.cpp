@@ -27,9 +27,10 @@
 
 #include <CommProto/architecture/macros.h>
 #include <CommProto/architecture/os/arch.h>
+#include <CommProto/architecture/os/include_defines.h>
 
 #define NGCP_PRIVATE_API
-
+#define NULLPTR 0
 
 namespace comnet {
 namespace hash {
@@ -56,7 +57,7 @@ ngcp_hash32_t reverse_byte(byte* _byte) {
  */
 FORCE_INLINE
 bool ValueIsNull(void* input) {
-  if (input == NULL) {
+  if (input == NULLPTR) {
     return true;
   } else {
     return false;
