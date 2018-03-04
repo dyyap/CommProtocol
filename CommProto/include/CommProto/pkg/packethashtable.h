@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <CommProto/architecture/api.h>
 #include <CommProto/architecture/macros.h>
 #include <CommProto/pkg/packettable.h>
-
+#define NULLPTR 0
 namespace comnet {
 
   class AbstractPacket;
@@ -119,7 +119,7 @@ namespace comnet {
        */
       inline bool containsObject(detail::Pair* ptr)
       {
-        return (ptr != NULL && ptr != REMOVED_PTR);
+        return (ptr != NULLPTR && ptr != REMOVED_PTR);
       }
       /**
         Returns the table index of the key, will return an index pointing to NULL if the key is not found.

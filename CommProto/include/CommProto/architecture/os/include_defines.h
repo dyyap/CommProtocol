@@ -41,6 +41,7 @@ typedef double real64_t;
  #include <CommProto/architecture/os/linux-config/linux-config.h>
 #elif COM_TARGET_OS == COM_OS_APPLE
  #include <CommProto/architecture/os/mac-config/mac-config.h>
+ #include <stddef.h>
 #else
  #error "Target OS is unknown. OS may be incompatible with this software."
 #endif // COM_TARGET_OS == COM_OS_WINDOWS
