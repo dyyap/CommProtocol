@@ -66,6 +66,8 @@
 
 #define current_api_version obtain_api_version(_COMNET_CURRENT_API_VERSION_)
 
+// Until there is a better way of dealing with visibility when compiling shared library, i am disabling this. -Jason
+/*
 // Definitions for exporting and importing certain classes and functions.
 #if defined (COMMPROTO_DLL)
  #if (COM_TARGET_OS == COM_OS_WINDOWS)
@@ -78,10 +80,10 @@
   #define COMM_EXPORT
   #define COMM_IMPORT
  #endif
-#else // No dll
+#else // No dll*/
  #define COMM_EXPORT
  #define COMM_IMPORT
-#endif
+//#endif
 
 
 //////////////////////////////////////////////////////////////////////////////////////

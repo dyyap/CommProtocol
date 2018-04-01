@@ -7,3 +7,6 @@ tests/*
 
 # Test files not required.
 /CommProto/src/main.cpp
+build2/
+
+build_shared_lib/
