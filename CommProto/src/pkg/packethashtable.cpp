@@ -21,7 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <CommProto/abstractpacket.h>
 #include <CommProto/callback.h>
 
-
+#define NULLPTR 0
 #if (COMMPROTO_TARGET_OS != COMMMPROTO_OS_WINDOWS) && (COMMPROTO_TARGET_OS != COMMPROTO_OS_APPLE)
 #include <tr1/functional>
 #define COMMSTD std::tr1
@@ -72,16 +72,16 @@ namespace comnet {
         if (containsObject(pair)) {
           if (pair->packet) {
             delete pair->packet;
-            pair->packet = NULL;
+            pair->packet = NULLPTR;
           }
 
           if (pair->callback) {
             delete pair->callback;
-            pair->callback = NULL;
+            pair->callback = NULLPTR;
           }
 
           delete pair;
-          pair = NULL;
+          pair = NULLPTR;
         }
       }
 
@@ -110,7 +110,7 @@ namespace comnet {
       uint32_t removePtrTableIndex = tableSize;	//Saves the first pointer to the REMOVE_PTR that was iterated over
 
        //Loop to continue iterating over the table until a valid position is found
-      while (*(table + tableIndex) == REMOVED_PTR || (*(table + tableIndex) != NULL && (*(table + tableIndex))->packet->GetId() != pair->packet->GetId()))
+      while (*(table + tableIndex) == REMOVED_PTR || (*(table + tableIndex) != NULLPTR && (*(table + tableIndex))->packet->GetId() != pair->packet->GetId()))
       {
         //If removePtrTableIndex hasn't been set yet and the index points to a REMOVED_PTR, set removePtrTableIndex to this value
         if (*(table + tableIndex) == REMOVED_PTR && removePtrTableIndex == tableSize)
@@ -126,7 +126,7 @@ namespace comnet {
         }
       }
       //If an REMOVED_PTR was found and an object with the same key hasn't been found, then put the element in the REMOVED_PTR spot
-      if (removePtrTableIndex != tableSize && *(table + tableIndex) == NULL)
+      if (removePtrTableIndex != tableSize && *(table + tableIndex) == NULLPTR)
       {
         tableIndex = removePtrTableIndex;
       }
@@ -150,7 +150,7 @@ namespace comnet {
 
     Callback* PacketHashTable::GetCallback(uint32_t key) {
       uint32_t tableIndex = FindTableIndex(key);
-      Callback* result = NULL;
+      Callback* result = NULLPTR;
 
       if (containsObject(*(table + tableIndex))) {
         if ((*(table + tableIndex))->packet->GetId() == key)  //Not necessary if we can guarantee the table is never full
@@ -165,12 +165,12 @@ namespace comnet {
 
     AbstractPacket* PacketHashTable::GetPacket(uint32_t key) {
       uint32_t tableIndex = FindTableIndex(key);
-      AbstractPacket* result = NULL;
+      AbstractPacket* result = NULLPTR;
 
       if (containsObject(*(table + tableIndex))) {
         return (*(table + tableIndex))->packet;
       }
-      return NULL;
+      return NULLPTR;
     }
 
 
@@ -217,7 +217,7 @@ namespace comnet {
     {
       uint32_t savedHashTableIndex = KeyHash(key);
       uint32_t arrI = savedHashTableIndex;
-      while (*(table + arrI) == REMOVED_PTR || *(table + arrI) != NULL && (*(table + arrI))->packet->GetId() != key)
+      while (*(table + arrI) == REMOVED_PTR || *(table + arrI) != NULLPTR && (*(table + arrI))->packet->GetId() != key)
       {
         arrI = TraverseIndex(arrI);
         if (arrI == savedHashTableIndex)
