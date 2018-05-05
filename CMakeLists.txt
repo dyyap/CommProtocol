@@ -227,6 +227,9 @@ if (test)
   add_subdirectory(unit)
 endif()
 
+# Comm Backend
+add_subdirectory(backend/)
+
 if (csharp)
   # C# DLL building
   if (WIN32)
