@@ -24,7 +24,7 @@
 namespace comnet {
 namespace tools {
 namespace datastructures {
-namespace interface {
+namespace DataInterface {
 
 enum StackType {
   ARRAY_STACK,

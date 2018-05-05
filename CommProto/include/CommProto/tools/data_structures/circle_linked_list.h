@@ -41,7 +41,7 @@ namespace datastructures {
 template<typename _Ty,
 	 typename _Compare = StandardComparator<_Ty>,
 	 typename _Alloc   = allocator::NewAllocator<_Ty> >
-class COMM_EXPORT CircleLinkedList : public interface::List<_Ty> {
+class COMM_EXPORT CircleLinkedList : public DataInterface::List<_Ty> {
   typedef _Ty* pointer;
   typedef _Ty& reference;
   typedef const _Ty* const_pointer;
@@ -128,7 +128,7 @@ public:
     , alloc(allocator)
     , _cmp(comparator)
   { 
-    this->list_type = interface::CIRCULAR_LINKED_LIST;
+    this->list_type = DataInterface::CIRCULAR_LINKED_LIST;
     this->size = 0;
   }
 
@@ -140,7 +140,7 @@ public:
     , cursor(NULL)
     , alloc(allocator)
   {
-    this->list_type = interface::CIRCULAR_LINKED_LIST;
+    this->list_type = DataInterface::CIRCULAR_LINKED_LIST;
     this->size = 0;
   }
 

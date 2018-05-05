@@ -37,7 +37,7 @@ _COMNET_PUBLIC_API_
 template<typename _Ty, 
          class    _Compare = StandardComparator<_Ty>,
 	 class    _Alloc   = tools::allocator::NewAllocator<_Ty> >
-class COMM_EXPORT SingleLinkedList : public interface::List< _Ty > {
+class COMM_EXPORT SingleLinkedList : public DataInterface::List< _Ty > {
 public:
   /**
      Constructor for the SingleLinkedList data structure.
@@ -49,7 +49,7 @@ public:
     , alloc(allocator)
     , _cmp(comparator)  
   { 
-    this->list_type = interface::SINGLE_LINKED_LIST;
+    this->list_type = DataInterface::SINGLE_LINKED_LIST;
     this->size = 0;
   }
   
@@ -58,7 +58,7 @@ public:
     , root(NULL)
     , tail(NULL)
   {
-    this->list_type = interface::SINGLE_LINKED_LIST;
+    this->list_type = DataInterface::SINGLE_LINKED_LIST;
     this->size = 0;
   }
 

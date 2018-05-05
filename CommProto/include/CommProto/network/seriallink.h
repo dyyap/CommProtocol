@@ -29,7 +29,7 @@ namespace network {
 
 class Serial;
 class SerialConn;
-using comnet::tools::datastructures::interface::List;
+using comnet::tools::datastructures::DataInterface::List;
 
 
 /**

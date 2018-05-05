@@ -10,3 +10,5 @@ tests/*
 build2/
 
 build_shared_lib/
+
+latestBuild/

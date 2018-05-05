@@ -35,7 +35,7 @@ namespace datastructures {
 _COMNET_PUBLIC_API_
 template<typename _Ty,
 	 class    _Alloc = tools::allocator::NewAllocator<_Ty> >
-class COMM_EXPORT LinkedQueue : public interface::Queue<_Ty>  { 
+class COMM_EXPORT LinkedQueue : public DataInterface::Queue<_Ty>  { 
 public:
   /**
      Constructor for the Linked Queue. 
@@ -45,7 +45,7 @@ public:
     , root(NULL)
     , tail(NULL)
   { 
-    this->queueType = interface::SINGLE_LINKED_QUEUE;
+    this->queueType = DataInterface::SINGLE_LINKED_QUEUE;
     this->size = 0;
   }
 
