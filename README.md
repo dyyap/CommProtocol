@@ -53,5 +53,10 @@ CommProtocol Library requires libxbee3 to execute copy the file to your bin fold
 - Windows {build dir}\libxbee3\(debug or release)\libxbee3.dll
 - Linux: {build dir}\libxbee3\libxbee3.o
  
+ 
+#Build Backend
+use the option 'backend' when invoking cmake:
+cmake -Dtest=ON -Dbackend=ON ../
+
 ## Design Analysis
 Coming soon...
