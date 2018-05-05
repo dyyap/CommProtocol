@@ -89,6 +89,7 @@ error_t ArmCommandCallback(const comnet::Header& header, const ArmCommandXbee& p
         WSACleanup();
         return -1;
     }
+	delete pkt;
     return comnet::CALLBACK_SUCCESS | comnet::CALLBACK_DESTROY_PACKET;
 }
 
@@ -128,7 +129,7 @@ void localTest(int& hsocket)
               << std::endl;
     std::cout << "Connected to address: "
               << std::boolalpha
-              << comm2.AddAddress(1, "127.0.0.1", 6969)
+              << comm2.AddAddress(1, "127.0.0.1", 1337)
               << std::endl;
     // CommNode 2 init and add Connection.
     std::cout << "Init connection succeeded: "
@@ -143,7 +144,7 @@ void localTest(int& hsocket)
     comm1.LinkCallback(new ArmCommandXbee(), new comnet::Callback((comnet::callback_t)ArmCommandCallback));
 
     // Test packet.
-    ArmCommandXbee amc(22, 1337);
+    ArmCommandXbee amc(22, 7777);
     // NOTE(All): Be sure to run the nodes! If not, the threads won't execute!
     comm1.Run();
     comm2.Run();

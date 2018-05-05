@@ -48,6 +48,7 @@ option(test "Build test executable to test library with" OFF)
 option(csharp "Build C# DLL for .NET use" OFF)
 # Options to allow debug/release version of CommProtocol.
 option(version_release "Compile the release version of CommProtocol" OFF)
+option(backend "Build backend system" OFF)
 
 
 if (version_release)
@@ -228,7 +229,9 @@ if (test)
 endif()
 
 # Comm Backend
-add_subdirectory(backend/)
+if(backend)
+	add_subdirectory(backend/)
+endif()
 
 if (csharp)
   # C# DLL building
