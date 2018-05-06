@@ -59,7 +59,7 @@ public:
     }
     const void print() const
     {
-        std::cout << "VAL: ID: " << id << "\n Position:"
+        std::cout << "ID: " << id << "\n Position:"
                   << position << "\n";
     }
 
