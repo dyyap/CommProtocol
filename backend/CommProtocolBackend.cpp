@@ -9,6 +9,7 @@
 #include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 #pragma comment(lib, "Ws2_32.lib")
 #include <CommProto/commproto.h>
+#include "ArmCommandXbee.h"
 using namespace google::protobuf::io;
 using namespace std;
 using namespace UGV;
@@ -18,57 +19,6 @@ bool initSocket(int& hsocket, char* host_name, int host_port);
 bool sendPacket(int& socket, char* packet, int pktSize, ArmCommand& payload);// , CodedOutputStream *coded_output);
 int hsock;
 
-class ArmCommandXbee : INHERITS_ABSPACKET
-{
-    /**
-    Creates an instance
-    */
-public:
-    ArmCommandXbee(uint8_t id = 0,
-                   int32_t position = 0)
-        : CHAIN_ABSPACKET(ArmCommandXbee),
-          id(id),
-          position(position)
-    {
-    }
-    /**
-    Pack data into the stream for sending out.
-    */
-    void Pack(comnet::ObjectStream &obj) override
-    {
-        obj << id;
-        obj << position;
-    }
-
-
-    /**
-    Unpack data back into this packet when receiving data.
-    */
-    void Unpack(comnet::ObjectStream &obj) override
-    {
-        obj >> position;
-        obj >> id;
-    }
-    /**
-    Tells CommProtocol how to recreate the ArmCommand packet
-    when receiving data.
-    */
-    comnet::AbstractPacket *Create() override
-    {
-        return new ArmCommandXbee();
-    }
-    const void print() const
-    {
-        std::cout << "ID: " << id << "\n Position:"
-                  << position << "\n";
-    }
-
-    /**
-    Data.
-    */
-    uint8_t id;
-    int32_t position;
-};
 
 error_t ArmCommandCallback(const comnet::Header& header, const ArmCommandXbee& packet, comnet::Comms& node)
 {
