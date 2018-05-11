@@ -44,6 +44,8 @@ error_t ArmCommandCallback(const comnet::Header& header, const ngcp::ArmCommand&
     std::cout << std::endl << "Source node: " << (int32_t)header.source_id << std::endl;
     std::cout << "Message: " << std::endl;
     std::cout << "Packet contains: ";
+	std::cout << "ID: " << packet.id << endl;
+	std::cout << "Pos: " << packet.position << endl;
     //packet.print();
 	ProtoPackets::ArmCommand payload;
     char *pkt = new char[1024];
@@ -66,7 +68,7 @@ error_t ArmCommandCallback(const comnet::Header& header, const ngcp::ArmCommand&
 void xbeeTest()
 {
 	//const char* destMac = "0013A20040A54318";
-	const char* destMac = "0013A20040A54318";
+	const char* destMac = "0013A2004105C6AF";
 
 	// test date
 	std::cout << "Test: 5/11/2018" << std::endl;
@@ -88,12 +90,12 @@ void xbeeTest()
 	// CommNode 1 init and add Connection.
 	std::cout << "Init connection succeeded: "
 		<< std::boolalpha
-		<< comm1.InitConnection(ZIGBEE_LINK, "COM12", "", 57600)
+		<< comm1.InitConnection(ZIGBEE_LINK, "COM8", "", 57600)
 		<< std::endl;
-	//std::cout << "Connected to address: "
-	//	<< std::boolalpha
-	//	<< comm1.AddAddress(2, destMac)
-	//	<< std::endl;
+	std::cout << "Connected to address: "
+		<< std::boolalpha
+		<< comm1.AddAddress(2, destMac)
+		<< std::endl;
 
 
 	comm1.LinkCallback(new ngcp::ArmCommand(), new comnet::Callback((comnet::callback_t)ArmCommandCallback));
@@ -124,6 +126,13 @@ void xbeeTest()
 
 	//}
 	//std::cin.ignore();
+	while(true){ 
+	std:string word;
+		std::cin >> word;
+		ngcp::ArmCommand amc(22, 1337);
+		comm1.Send(amc, 2);
+		std::this_thread::sleep_for(std::chrono::milliseconds(1000)); 
+	}
 }
 
 //test two xbees on same machine.
