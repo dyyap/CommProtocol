@@ -1,5 +1,5 @@
 //#include "stdafx.h"
-#include "UGVMessage.pb.h"
+#include "ProtoPacketsV2.pb.h"
 #include <WinSock2.h>
 #include <iostream>
 #include <google/protobuf/message.h>
@@ -9,25 +9,43 @@
 #include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 #pragma comment(lib, "Ws2_32.lib")
 #include <CommProto/commproto.h>
-#include "ArmCommandXbee.h"
+
+#include <XbeePackets\AirVehicleGroundRelativeState.hpp>
+#include <XbeePackets\ArmCommand.hpp>
+#include <XbeePackets\ArmPosition.hpp>
+#include <XbeePackets\Battery.hpp>
+#include <XbeePackets\TargetAcknowledgement.hpp>
+#include <XbeePackets\TargetDesignationCommand.hpp>
+#include <XbeePackets\TargetStatus.hpp>
+#include <XbeePackets\VehicleAttitude.hpp>
+#include <XbeePackets\VehicleAuthorizationReply.hpp>
+#include <XbeePackets\VehicleAuthorizationRequest.hpp>
+#include <XbeePackets\VehicleBodySensedState.hpp>
+#include <XbeePackets\VehicleGlobalPosition.hpp>
+#include <XbeePackets\VehicleIdentification.hpp>
+#include <XbeePackets\VehicleInertialState.hpp>
+#include <XbeePackets\VehicleModeCommand.hpp>
+#include <XbeePackets\VehicleSystemStatus.hpp>
+#include <XbeePackets\VehicleTelemetryCommand.hpp>
+#include <XbeePackets\VehicleTerminationCommand.hpp>
+#include <XbeePackets\VehicleWaypointCommand.hpp>
+
 using namespace google::protobuf::io;
 using namespace std;
-using namespace UGV;
-
 
 bool initSocket(int& hsocket, char* host_name, int host_port);
-bool sendPacket(int& socket, char* packet, int pktSize, ArmCommand& payload);// , CodedOutputStream *coded_output);
+bool sendPacket(int& socket, char* packet, int pktSize, ProtoPackets::ArmCommand& payload);// , CodedOutputStream *coded_output);
 int hsock;
 
 
-error_t ArmCommandCallback(const comnet::Header& header, const ArmCommandXbee& packet, comnet::Comms& node)
+error_t ArmCommandCallback(const comnet::Header& header, const ngcp::ArmCommand& packet, comnet::Comms& node)
 {
     std::cout << "=::RECEIVED PACKET::=" << std::endl;
     std::cout << std::endl << "Source node: " << (int32_t)header.source_id << std::endl;
     std::cout << "Message: " << std::endl;
     std::cout << "Packet contains: ";
-    packet.print();
-    ArmCommand payload;
+    //packet.print();
+	ProtoPackets::ArmCommand payload;
     char *pkt = new char[1024];
     payload.set_id(packet.id);
     payload.set_position(packet.position);
@@ -43,6 +61,70 @@ error_t ArmCommandCallback(const comnet::Header& header, const ArmCommandXbee& p
     return comnet::CALLBACK_SUCCESS | comnet::CALLBACK_DESTROY_PACKET;
 }
 
+
+// Test against an xbee on another machine.
+void xbeeTest()
+{
+	//const char* destMac = "0013A20040A54318";
+	const char* destMac = "0013A20040A54318";
+
+	// test date
+	std::cout << "Test: 5/11/2018" << std::endl;
+	//Disables Pinging to make reading output easier
+	comnet::constate::ConnectionStateManager::ConStateEnabled = false;
+
+	std::condition_variable cond;
+	std::cout << sizeof(comnet::Header) << std::endl;
+	// CommNode 1
+	comnet::Comms comm1(1);
+	//comm1.LoadKey("01234567890ABCDEF");
+
+	comnet::architecture::os::CommMutex mut;
+	comnet::architecture::os::CommLock commlock(mut);
+	// This will cause the thread to wait for a few milliseconds, causing any other thread to wait.
+	comnet::architecture::os::WaitForMilliseconds(commlock, cond, 1000);
+
+	std::cout << "Test complete!" << std::endl;
+	// CommNode 1 init and add Connection.
+	std::cout << "Init connection succeeded: "
+		<< std::boolalpha
+		<< comm1.InitConnection(ZIGBEE_LINK, "COM12", "", 57600)
+		<< std::endl;
+	//std::cout << "Connected to address: "
+	//	<< std::boolalpha
+	//	<< comm1.AddAddress(2, destMac)
+	//	<< std::endl;
+
+
+	comm1.LinkCallback(new ngcp::ArmCommand(), new comnet::Callback((comnet::callback_t)ArmCommandCallback));
+
+
+	//comm1.LinkCallback(new Ping(), new comnet::Callback((comnet::callback_t)PingCallback));
+
+	// Test packet. 
+
+	// NOTE(All): Be sure to run the nodes! If not, the threads won't execute!
+	comm1.Run();
+
+	//// Loop. To exit, Click the red button on the top left (Windows Visual Studio) OR 
+	//// CNTRL+C (Linux). 
+	//while (true) {
+	//	std::cout << "Sleeping..." << std::endl;
+	//	// comm1 will be sending the packet.
+	//	std::string word;
+	//	std::cout << "enter message:";
+	//	std::cin >> word;
+	//	Ping message(word);
+	//	ArmCommand amc(22, 1337);
+	//	ArmPosition amp(7, 6, 5, 4);
+	//	comm1.Send(amp, 2);
+	//	comm1.Send(amc, 2);
+	//	comm1.Send(message, 2);
+	//	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+
+	//}
+	//std::cin.ignore();
+}
 
 //test two xbees on same machine.
 void localTest(int& hsocket)
@@ -91,10 +173,10 @@ void localTest(int& hsocket)
               << comm1.AddAddress(2, "127.0.0.1", 1338)
               << std::endl;
 
-    comm1.LinkCallback(new ArmCommandXbee(), new comnet::Callback((comnet::callback_t)ArmCommandCallback));
+    comm1.LinkCallback(new ngcp::ArmCommand(), new comnet::Callback((comnet::callback_t)ArmCommandCallback));
 
     // Test packet.
-    ArmCommandXbee amc(22, 7777);
+    ngcp::ArmCommand amc(22, 7777);
     // NOTE(All): Be sure to run the nodes! If not, the threads won't execute!
     comm1.Run();
     comm2.Run();
@@ -119,12 +201,12 @@ int main()
     /* Coded output stram */
 
     int defaultSize = 1024;
-    ArmCommand payload;
+    //ProtoPackets::ArmCommand payload;
     int host_port = 6969;
     char* host_name = "127.0.0.1";
 
-    payload.set_id(777);
-    payload.set_position(1010);
+   // payload.set_id(777);
+    //payload.set_position(1010);
 
     //cout << "size after serilizing is " << payload.ByteSize() << endl;
 
@@ -150,7 +232,8 @@ int main()
         return -1;
     }
 
-    localTest(hsock);
+    //localTest(hsock);
+	xbeeTest();
 
     /*for (int i = 0; i<10000; i++) {
     	for (int j = 0; j<10; j++) {
@@ -245,7 +328,7 @@ bool initSocket(int& hsocket, char* host_name, int host_port)
     return true;
 }
 
-bool sendPacket(int& socket, char* packet, int pktSize, ArmCommand& payload)//, CodedOutputStream * unused_coded_output)
+bool sendPacket(int& socket, char* packet, int pktSize, ProtoPackets::ArmCommand& payload)//, CodedOutputStream * unused_coded_output)
 {
 
     google::protobuf::io::ArrayOutputStream aos(packet, pktSize);
