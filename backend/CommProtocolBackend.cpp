@@ -34,7 +34,7 @@ using namespace google::protobuf::io;
 using namespace std;
 
 bool initSocket(int& hsocket, char* host_name, int host_port);
-bool sendPacket(int& socket, char* packet, int pktSize, ProtoPackets::ArmCommand& payload);// , CodedOutputStream *coded_output);
+bool sendPacket(int& socket, char* packet, int pktSize, ProtoPackets::Packet& payload);// , CodedOutputStream *coded_output);
 int hsock;
 
 
@@ -47,12 +47,16 @@ error_t ArmCommandCallback(const comnet::Header& header, const ngcp::ArmCommand&
 	std::cout << "ID: " << packet.id << endl;
 	std::cout << "Pos: " << packet.position << endl;
     //packet.print();
-	ProtoPackets::ArmCommand payload;
+	ProtoPackets::ArmCommand *payload = new ProtoPackets::ArmCommand();
+	ProtoPackets::Packet masterPayload;
     char *pkt = new char[1024];
-    payload.set_id(packet.id);
-    payload.set_position(packet.position);
-    int pktSize = payload.ByteSize() + 4;
-    if (sendPacket(hsock, pkt, pktSize, payload)==false) //,coded_output) == false)
+    payload->set_id(packet.id);
+    payload->set_position(packet.position);
+
+	masterPayload.set_allocated_armcommand(payload );
+	
+    int pktSize = masterPayload.ByteSize() + 4;
+    if (sendPacket(hsock, pkt, pktSize, masterPayload)==false) //,coded_output) == false)
     {
         delete pkt;
         closesocket(hsock);
@@ -61,6 +65,42 @@ error_t ArmCommandCallback(const comnet::Header& header, const ngcp::ArmCommand&
     }
 	delete pkt;
     return comnet::CALLBACK_SUCCESS | comnet::CALLBACK_DESTROY_PACKET;
+}
+
+
+error_t ArmPositionCallback(const comnet::Header& header, const ngcp::ArmPosition& packet, comnet::Comms& node)
+{
+	std::cout << "=::RECEIVED PACKET::=" << std::endl;
+	std::cout << std::endl << "Source node: " << (int32_t)header.source_id << std::endl;
+	std::cout << "Message: " << std::endl;
+	std::cout << "Packet contains: ";
+	std::cout << "Pos1: " << packet.position1 << endl;
+	std::cout << "Pos2: " << packet.position2 << endl;
+	std::cout << "Pos3: " << packet.position3 << endl;
+	std::cout << "Pos4: " << packet.position4 << endl;
+
+	//packet.print();
+	ProtoPackets::ArmPosition *payload = new ProtoPackets::ArmPosition();
+	ProtoPackets::Packet masterPayload;
+	char *pkt = new char[1024];
+	payload->set_position1(packet.position1);
+	payload->set_position2(packet.position2);
+	payload->set_position3(packet.position3);
+	payload->set_position4(packet.position4);
+
+
+	masterPayload.set_allocated_armposition(payload);
+
+	int pktSize = masterPayload.ByteSize() + 4;
+	if (sendPacket(hsock, pkt, pktSize, masterPayload) == false) //,coded_output) == false)
+	{
+		delete pkt;
+		closesocket(hsock);
+		WSACleanup();
+		return -1;
+	}
+	delete pkt;
+	return comnet::CALLBACK_SUCCESS | comnet::CALLBACK_DESTROY_PACKET;
 }
 
 
@@ -99,6 +139,7 @@ void xbeeTest()
 
 
 	comm1.LinkCallback(new ngcp::ArmCommand(), new comnet::Callback((comnet::callback_t)ArmCommandCallback));
+	comm1.LinkCallback(new ngcp::ArmPosition(1,1,1,1), new comnet::Callback((comnet::callback_t)ArmPositionCallback));
 
 
 	//comm1.LinkCallback(new Ping(), new comnet::Callback((comnet::callback_t)PingCallback));
@@ -183,9 +224,11 @@ void localTest(int& hsocket)
               << std::endl;
 
     comm1.LinkCallback(new ngcp::ArmCommand(), new comnet::Callback((comnet::callback_t)ArmCommandCallback));
+	comm1.LinkCallback(new ngcp::ArmPosition(1, 1, 1, 1), new comnet::Callback((comnet::callback_t)ArmPositionCallback));
 
     // Test packet.
     ngcp::ArmCommand amc(22, 7777);
+	ngcp::ArmPosition amp(11, 22,33,44);
     // NOTE(All): Be sure to run the nodes! If not, the threads won't execute!
     comm1.Run();
     comm2.Run();
@@ -197,9 +240,15 @@ void localTest(int& hsocket)
         std::cout << "Sleeping..." << std::endl;
         // comm1 will be sending the packet.
         comm2.Send(amc, com1ID);
+		comm2.Send(amp, com1ID);
         std::this_thread::sleep_for(std::chrono::milliseconds(1000));
         ++amc.id;
         ++amc.position;
+		++amp.position1;
+		++amp.position2;
+		++amp.position3;
+		++amp.position4;
+
     }
     std::cin.ignore();
 }
@@ -241,8 +290,8 @@ int main()
         return -1;
     }
 
-    //localTest(hsock);
-	xbeeTest();
+    localTest(hsock);
+	//xbeeTest();
 
     /*for (int i = 0; i<10000; i++) {
     	for (int j = 0; j<10; j++) {
@@ -337,7 +386,7 @@ bool initSocket(int& hsocket, char* host_name, int host_port)
     return true;
 }
 
-bool sendPacket(int& socket, char* packet, int pktSize, ProtoPackets::ArmCommand& payload)//, CodedOutputStream * unused_coded_output)
+bool sendPacket(int& socket, char* packet, int pktSize, ProtoPackets::Packet& payload)//, CodedOutputStream * unused_coded_output)
 {
 
     google::protobuf::io::ArrayOutputStream aos(packet, pktSize);
