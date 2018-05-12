@@ -103,6 +103,77 @@ error_t ArmPositionCallback(const comnet::Header& header, const ngcp::ArmPositio
 	return comnet::CALLBACK_SUCCESS | comnet::CALLBACK_DESTROY_PACKET;
 }
 
+error_t VehicleGlobalPositionCallback(const comnet::Header& header, const ngcp::VehicleGlobalPosition& packet, comnet::Comms& node)
+{
+	std::cout << "=::RECEIVED PACKET::=" << std::endl;
+	std::cout << std::endl << "Source node: " << (int32_t)header.source_id << std::endl;
+
+	//packet.print();
+	ProtoPackets::VehicleGlobalPosition *payload = new ProtoPackets::VehicleGlobalPosition();
+	ProtoPackets::Packet masterPayload;
+	char *pkt = new char[1024];
+	payload->set_vehicleid(packet.vehicle_id);
+	payload->set_altitude(packet.altitude);
+	payload->set_latitude(packet.latitude);
+	payload->set_longitude(packet.longitude);
+	payload->set_xspeed(packet.x_speed);
+	payload->set_yspeed(packet.y_speed);
+	payload->set_zspeed(packet.z_speed);
+
+	masterPayload.set_allocated_vehicleglobalposition(payload);
+
+	int pktSize = masterPayload.ByteSize() + 4;
+	if (sendPacket(hsock, pkt, pktSize, masterPayload) == false) //,coded_output) == false)
+	{
+		delete pkt;
+		closesocket(hsock);
+		WSACleanup();
+		return -1;
+	}
+	delete pkt;
+	return comnet::CALLBACK_SUCCESS | comnet::CALLBACK_DESTROY_PACKET;
+}
+
+
+error_t VehicleInertialStateCallback(const comnet::Header& header, const ngcp::VehicleInertialState& packet, comnet::Comms& node)
+{
+	std::cout << "=::RECEIVED PACKET::=" << std::endl;
+	std::cout << std::endl << "Source node: " << (int32_t)header.source_id << std::endl;
+
+	//packet.print();
+	ProtoPackets::VehicleInertialState *payload = new ProtoPackets::VehicleInertialState();
+	ProtoPackets::Packet masterPayload;
+	char *pkt = new char[1024];
+	payload->set_vehicleid(packet.vehicle_id);
+	payload->set_altitude(packet.altitude);
+	payload->set_latitude(packet.latitude);
+	payload->set_longitude(packet.longitude);
+	payload->set_roll(packet.roll);
+	payload->set_pitch(packet.pitch);
+	payload->set_heading(packet.heading);
+	payload->set_northspeed(packet.north_speed);
+	payload->set_eastspeed(packet.east_speed);
+	payload->set_verticalspeed(packet.vertical_speed);
+	payload->set_rollrate(packet.roll_rate);
+	payload->set_pitchrate(packet.pitch_rate);
+	payload->set_yawrate(packet.yaw_rate);
+	payload->set_northaccel(packet.north_accel);
+	payload->set_eastaccel(packet.east_accel);
+	payload->set_verticalaccel(packet.vertical_accel);
+
+	masterPayload.set_allocated_vehicleinertialstate(payload);
+
+	int pktSize = masterPayload.ByteSize() + 4;
+	if (sendPacket(hsock, pkt, pktSize, masterPayload) == false) //,coded_output) == false)
+	{
+		delete pkt;
+		closesocket(hsock);
+		WSACleanup();
+		return -1;
+	}
+	delete pkt;
+	return comnet::CALLBACK_SUCCESS | comnet::CALLBACK_DESTROY_PACKET;
+}
 
 // Test against an xbee on another machine.
 void xbeeTest()
@@ -137,12 +208,11 @@ void xbeeTest()
 		<< comm1.AddAddress(2, destMac)
 		<< std::endl;
 
-
+	// link to callback function.
 	comm1.LinkCallback(new ngcp::ArmCommand(), new comnet::Callback((comnet::callback_t)ArmCommandCallback));
 	comm1.LinkCallback(new ngcp::ArmPosition(1,1,1,1), new comnet::Callback((comnet::callback_t)ArmPositionCallback));
-
-
-	//comm1.LinkCallback(new Ping(), new comnet::Callback((comnet::callback_t)PingCallback));
+	comm1.LinkCallback(new ngcp::VehicleGlobalPosition(), new comnet::Callback((comnet::callback_t)VehicleGlobalPositionCallback));
+	comm1.LinkCallback(new ngcp::VehicleInertialState(), new comnet::Callback((comnet::callback_t)VehicleInertialStateCallback));
 
 	// Test packet. 
 
@@ -177,12 +247,11 @@ void xbeeTest()
 }
 
 //test two xbees on same machine.
-void localTest(int& hsocket)
+void localTcpTest(int& hsocket)
 {
 
     const uint8_t com1ID = 1;
     const uint8_t com2ID = 2;
-    const uint32_t baudRate = 57600;//57600;
 
     // test date
     std::cout << "Test: 11/17/2017" << std::endl;
@@ -203,7 +272,6 @@ void localTest(int& hsocket)
     comnet::architecture::os::WaitForMilliseconds(commlock, cond, 1000);
 
     std::cout << "Test complete!" << std::endl;
-
     // ComNode 1 init and add Connection.
     std::cout << "Init connection succeeded: "
               << std::boolalpha
@@ -223,12 +291,18 @@ void localTest(int& hsocket)
               << comm1.AddAddress(2, "127.0.0.1", 1338)
               << std::endl;
 
-    comm1.LinkCallback(new ngcp::ArmCommand(), new comnet::Callback((comnet::callback_t)ArmCommandCallback));
+	// link to callback function.
+	comm1.LinkCallback(new ngcp::ArmCommand(), new comnet::Callback((comnet::callback_t)ArmCommandCallback));
 	comm1.LinkCallback(new ngcp::ArmPosition(1, 1, 1, 1), new comnet::Callback((comnet::callback_t)ArmPositionCallback));
+	comm1.LinkCallback(new ngcp::VehicleGlobalPosition(), new comnet::Callback((comnet::callback_t)VehicleGlobalPositionCallback));
+	comm1.LinkCallback(new ngcp::VehicleInertialState(), new comnet::Callback((comnet::callback_t)VehicleInertialStateCallback));
 
     // Test packet.
     ngcp::ArmCommand amc(22, 7777);
 	ngcp::ArmPosition amp(11, 22,33,44);
+	ngcp::VehicleGlobalPosition vgp(777,100.1, 200.2, 300.3, 400.4, 500.5, 600.6);
+	ngcp::VehicleInertialState vis(888,1000.1, 2000.2, 3000.3, 4000.4, 5000.5, 6000.6, 7000.7, 8000.8, 9000.9,10000.10, 11000.11, 12000.12,
+		13000.13, 14000.14, 15000.15);
     // NOTE(All): Be sure to run the nodes! If not, the threads won't execute!
     comm1.Run();
     comm2.Run();
@@ -241,6 +315,8 @@ void localTest(int& hsocket)
         // comm1 will be sending the packet.
         comm2.Send(amc, com1ID);
 		comm2.Send(amp, com1ID);
+		comm2.Send(vgp, com1ID);
+		comm2.Send(vis, com1ID);
         std::this_thread::sleep_for(std::chrono::milliseconds(1000));
         ++amc.id;
         ++amc.position;
@@ -248,7 +324,6 @@ void localTest(int& hsocket)
 		++amp.position2;
 		++amp.position3;
 		++amp.position4;
-
     }
     std::cin.ignore();
 }
@@ -263,8 +338,6 @@ int main()
     int host_port = 6969;
     char* host_name = "127.0.0.1";
 
-   // payload.set_id(777);
-    //payload.set_position(1010);
 
     //cout << "size after serilizing is " << payload.ByteSize() << endl;
 
@@ -280,8 +353,6 @@ int main()
     //int bytecount;
     //int buffer_len = 0;
 
-
-
     if (initSocket(hsock, host_name, host_port) == false)
     {
         delete pkt;
@@ -290,46 +361,12 @@ int main()
         return -1;
     }
 
-    localTest(hsock);
+	
+    localTcpTest(hsock);
 	//xbeeTest();
-
-    /*for (int i = 0; i<10000; i++) {
-    	for (int j = 0; j<10; j++) {
-
-    		if ((bytecount = send(hsock, pkt, siz, 0)) == -1) {
-    			fprintf(stderr, "Error sending data %d\n", errno);
-    			delete pkt;
-    			closesocket(hsock);
-    			WSACleanup();
-    			return -1;
-    		}
-    		printf("Sent bytes %d\n", bytecount);
-    		Sleep(1);
-    	}
-    }*/
-
-    //int id = 0;
-    //int pos = 1111;
-    //for (int i = 0; i < 100000; ++i,++id,++pos)
-    //{
-    //	payload.set_id(id);
-    //	payload.set_position(pos);
-    //	int pktSize = payload.ByteSize() + 4;
-    //	cout << "count " << i + 1 << endl;
-    //	if (sendPacket(hsock, pkt, pktSize, payload)==false) //,coded_output) == false)
-    //	{
-    //		delete pkt;
-    //		closesocket(hsock);
-    //		WSACleanup();
-    //		return -1;
-    //	}
-    //	Sleep(50);
-    //}
 
 
     delete pkt;
-
-//FINISH:
     closesocket(hsock);
     WSACleanup();
     cin.get();
