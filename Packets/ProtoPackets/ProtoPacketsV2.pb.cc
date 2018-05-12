@@ -588,17 +588,17 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, vehicle_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, angle_of_attack_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, angle_of_sideslip_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, true_airspeed_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, indicated_airspeed_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, north_wind_speed_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, east_wind_speed_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, north_ground_speed_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, east_ground_speed_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, barometric_pressure_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, barometric_altitude_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, vehicleid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, angleofattack_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, angleofsideslip_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, trueairspeed_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, indicatedairspeed_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, northwindspeed_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, eastwindspeed_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, northgroundspeed_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, eastgroundspeed_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, barometricpressure_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::AirVehicleGroundRelativeState, barometricaltitude_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::ArmCommand, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -626,16 +626,16 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetAcknowledgement, target_status_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetAcknowledgement, targetstatus_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetDesignationCommand, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetDesignationCommand, vehicle_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetDesignationCommand, payload_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetDesignationCommand, target_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetDesignationCommand, target_type_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetDesignationCommand, vehicleid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetDesignationCommand, payloadid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetDesignationCommand, targetid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetDesignationCommand, targettype_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetDesignationCommand, longitude_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetDesignationCommand, latitude_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetDesignationCommand, altitude_),
@@ -644,15 +644,15 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetStatus, target_radius_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetStatus, target_angle_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetStatus, target_altitude_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetStatus, targetradius_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetStatus, targetangle_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::TargetStatus, targetaltitude_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAttitude, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAttitude, vehicle_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAttitude, vehicleid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAttitude, roll_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAttitude, pitch_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAttitude, yaw_),
@@ -661,107 +661,107 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAuthorizationReply, vehicle_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAuthorizationReply, vehicle_type_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAuthorizationReply, authorized_services_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAuthorizationReply, granted_services_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAuthorizationReply, vehicleid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAuthorizationReply, vehicletype_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAuthorizationReply, authorizedservices_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAuthorizationReply, grantedservices_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAuthorizationRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAuthorizationRequest, vehicle_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAuthorizationRequest, vehicle_type_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAuthorizationRequest, authorized_services_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAuthorizationRequest, granted_services_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAuthorizationRequest, vehicleid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAuthorizationRequest, vehicletype_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAuthorizationRequest, authorizedservices_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleAuthorizationRequest, grantedservices_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleBodySensedState, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleBodySensedState, vehicle_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleBodySensedState, x_accel_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleBodySensedState, y_accel_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleBodySensedState, z_accel_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleBodySensedState, roll_rate_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleBodySensedState, pitch_rate_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleBodySensedState, yaw_rate_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleBodySensedState, vehicleid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleBodySensedState, xaccel_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleBodySensedState, yaccel_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleBodySensedState, zaccel_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleBodySensedState, rollrate_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleBodySensedState, pitchrate_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleBodySensedState, yawrate_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleGlobalPosition, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleGlobalPosition, vehicle_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleGlobalPosition, vehicleid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleGlobalPosition, longitude_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleGlobalPosition, latitude_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleGlobalPosition, altitude_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleGlobalPosition, x_speed_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleGlobalPosition, y_speed_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleGlobalPosition, z_speed_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleGlobalPosition, xspeed_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleGlobalPosition, yspeed_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleGlobalPosition, zspeed_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleIdentification, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleIdentification, vehicle_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleIdentification, vehicle_type_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleIdentification, vehicleid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleIdentification, vehicletype_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, vehicle_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, vehicleid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, longitude_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, latitude_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, altitude_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, roll_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, pitch_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, heading_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, north_speed_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, east_speed_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, vertical_speed_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, roll_rate_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, pitch_rate_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, yaw_rate_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, north_accel_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, east_accel_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, vertical_accel_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, northspeed_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, eastspeed_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, verticalspeed_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, rollrate_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, pitchrate_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, yawrate_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, northaccel_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, eastaccel_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleInertialState, verticalaccel_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleModeCommand, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleModeCommand, vehicle_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleModeCommand, vehicle_mode_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleModeCommand, vehicleid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleModeCommand, vehiclemode_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleSystemStatus, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleSystemStatus, vehicle_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleSystemStatus, vehicle_mode_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleSystemStatus, vehicle_state_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleSystemStatus, vehicleid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleSystemStatus, vehiclemode_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleSystemStatus, vehiclestate_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleTelemetryCommand, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleTelemetryCommand, vehicle_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleTelemetryCommand, telemetry_select_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleTelemetryCommand, telemetry_rate_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleTelemetryCommand, vehicleid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleTelemetryCommand, telemetryselect_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleTelemetryCommand, telemetryrate_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleTerminationCommand, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleTerminationCommand, vehicle_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleTerminationCommand, termination_mode_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleTerminationCommand, vehicleid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleTerminationCommand, terminationmode_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleWaypointCommand, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleWaypointCommand, vehicle_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleWaypointCommand, vehicleid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleWaypointCommand, longitude_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleWaypointCommand, latitude_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ProtoPackets::VehicleWaypointCommand, altitude_),
@@ -859,99 +859,98 @@ void protobuf_RegisterTypes(const ::std::string&) {
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\024ProtoPacketsV2.proto\022\014ProtoPackets\"\276\002\n"
-      "\035AirVehicleGroundRelativeState\022\022\n\nvehicl"
-      "e_id\030\001 \001(\r\022\027\n\017angle_of_attack\030\002 \001(\002\022\031\n\021a"
-      "ngle_of_sideslip\030\003 \001(\002\022\025\n\rtrue_airspeed\030"
-      "\004 \001(\002\022\032\n\022indicated_airspeed\030\005 \001(\002\022\030\n\020nor"
-      "th_wind_speed\030\006 \001(\002\022\027\n\017east_wind_speed\030\007"
-      " \001(\002\022\032\n\022north_ground_speed\030\010 \001(\002\022\031\n\021east"
-      "_ground_speed\030\t \001(\002\022\033\n\023barometric_pressu"
-      "re\030\n \001(\002\022\033\n\023barometric_altitude\030\013 \001(\002\"*\n"
-      "\nArmCommand\022\n\n\002id\030\001 \001(\r\022\020\n\010position\030\002 \001("
-      "\005\"Y\n\013ArmPosition\022\021\n\tposition1\030\001 \001(\005\022\021\n\tp"
-      "osition2\030\002 \001(\005\022\021\n\tposition3\030\003 \001(\005\022\021\n\tpos"
-      "ition4\030\004 \001(\005\"$\n\007Battery\022\031\n\021batteryPercen"
-      "tage\030\001 \001(\r\".\n\025TargetAcknowledgement\022\025\n\rt"
-      "arget_status\030\001 \001(\r\"\241\001\n\030TargetDesignation"
-      "Command\022\022\n\nvehicle_id\030\001 \001(\r\022\022\n\npayload_i"
-      "d\030\002 \001(\r\022\021\n\ttarget_id\030\003 \001(\r\022\023\n\013target_typ"
-      "e\030\004 \001(\r\022\021\n\tlongitude\030\005 \001(\002\022\020\n\010latitude\030\006"
-      " \001(\002\022\020\n\010altitude\030\007 \001(\002\"T\n\014TargetStatus\022\025"
-      "\n\rtarget_radius\030\001 \001(\001\022\024\n\014target_angle\030\002 "
-      "\001(\001\022\027\n\017target_altitude\030\003 \001(\001\"O\n\017VehicleA"
-      "ttitude\022\022\n\nvehicle_id\030\001 \001(\r\022\014\n\004roll\030\002 \001("
-      "\002\022\r\n\005pitch\030\003 \001(\002\022\013\n\003yaw\030\004 \001(\002\"|\n\031Vehicle"
-      "AuthorizationReply\022\022\n\nvehicle_id\030\001 \001(\r\022\024"
-      "\n\014vehicle_type\030\002 \001(\r\022\033\n\023authorized_servi"
-      "ces\030\003 \001(\r\022\030\n\020granted_services\030\004 \001(\r\"~\n\033V"
-      "ehicleAuthorizationRequest\022\022\n\nvehicle_id"
-      "\030\001 \001(\r\022\024\n\014vehicle_type\030\002 \001(\r\022\033\n\023authoriz"
-      "ed_services\030\003 \001(\r\022\030\n\020granted_services\030\004 "
-      "\001(\r\"\230\001\n\026VehicleBodySensedState\022\022\n\nvehicl"
-      "e_id\030\001 \001(\r\022\017\n\007x_accel\030\002 \001(\002\022\017\n\007y_accel\030\003"
-      " \001(\002\022\017\n\007z_accel\030\004 \001(\002\022\021\n\troll_rate\030\005 \001(\002"
-      "\022\022\n\npitch_rate\030\006 \001(\002\022\020\n\010yaw_rate\030\007 \001(\002\"\225"
-      "\001\n\025VehicleGlobalPosition\022\022\n\nvehicle_id\030\001"
-      " \001(\r\022\021\n\tlongitude\030\002 \001(\002\022\020\n\010latitude\030\003 \001("
-      "\002\022\020\n\010altitude\030\004 \001(\002\022\017\n\007x_speed\030\005 \001(\002\022\017\n\007"
-      "y_speed\030\006 \001(\002\022\017\n\007z_speed\030\007 \001(\002\"A\n\025Vehicl"
-      "eIdentification\022\022\n\nvehicle_id\030\001 \001(\r\022\024\n\014v"
-      "ehicle_type\030\002 \001(\r\"\312\002\n\024VehicleInertialSta"
-      "te\022\022\n\nvehicle_id\030\001 \001(\r\022\021\n\tlongitude\030\002 \001("
-      "\002\022\020\n\010latitude\030\003 \001(\002\022\020\n\010altitude\030\004 \001(\002\022\014\n"
-      "\004roll\030\005 \001(\002\022\r\n\005pitch\030\006 \001(\002\022\017\n\007heading\030\007 "
-      "\001(\002\022\023\n\013north_speed\030\010 \001(\002\022\022\n\neast_speed\030\t"
-      " \001(\002\022\026\n\016vertical_speed\030\n \001(\002\022\021\n\troll_rat"
-      "e\030\013 \001(\002\022\022\n\npitch_rate\030\014 \001(\002\022\020\n\010yaw_rate\030"
-      "\r \001(\002\022\023\n\013north_accel\030\016 \001(\002\022\022\n\neast_accel"
-      "\030\017 \001(\002\022\026\n\016vertical_accel\030\020 \001(\002\">\n\022Vehicl"
-      "eModeCommand\022\022\n\nvehicle_id\030\001 \001(\r\022\024\n\014vehi"
-      "cle_mode\030\002 \001(\r\"V\n\023VehicleSystemStatus\022\022\n"
-      "\nvehicle_id\030\001 \001(\r\022\024\n\014vehicle_mode\030\002 \001(\r\022"
-      "\025\n\rvehicle_state\030\003 \001(\r\"_\n\027VehicleTelemet"
-      "ryCommand\022\022\n\nvehicle_id\030\001 \001(\r\022\030\n\020telemet"
-      "ry_select\030\002 \001(\r\022\026\n\016telemetry_rate\030\003 \001(\r\""
-      "I\n\031VehicleTerminationCommand\022\022\n\nvehicle_"
-      "id\030\001 \001(\r\022\030\n\020termination_mode\030\002 \001(\r\"c\n\026Ve"
-      "hicleWaypointCommand\022\022\n\nvehicle_id\030\001 \001(\r"
-      "\022\021\n\tlongitude\030\002 \001(\002\022\020\n\010latitude\030\003 \001(\002\022\020\n"
-      "\010altitude\030\004 \001(\002\"\216\n\n\006Packet\022T\n\035AirVehicle"
-      "GroundRelativeState\030\001 \001(\0132+.ProtoPackets"
-      ".AirVehicleGroundRelativeStateH\000\022.\n\nArmC"
-      "ommand\030\002 \001(\0132\030.ProtoPackets.ArmCommandH\000"
-      "\0220\n\013ArmPosition\030\003 \001(\0132\031.ProtoPackets.Arm"
-      "PositionH\000\022(\n\007Battery\030\004 \001(\0132\025.ProtoPacke"
-      "ts.BatteryH\000\022D\n\025TargetAcknowledgement\030\005 "
-      "\001(\0132#.ProtoPackets.TargetAcknowledgement"
-      "H\000\022J\n\030TargetDesignationCommand\030\006 \001(\0132&.P"
-      "rotoPackets.TargetDesignationCommandH\000\0222"
-      "\n\014TargetStatus\030\007 \001(\0132\032.ProtoPackets.Targ"
-      "etStatusH\000\0228\n\017VehicleAttitude\030\010 \001(\0132\035.Pr"
-      "otoPackets.VehicleAttitudeH\000\022L\n\031VehicleA"
-      "uthorizationReply\030\t \001(\0132\'.ProtoPackets.V"
-      "ehicleAuthorizationReplyH\000\022P\n\033VehicleAut"
-      "horizationRequest\030\n \001(\0132).ProtoPackets.V"
-      "ehicleAuthorizationRequestH\000\022F\n\026VehicleB"
-      "odySensedState\030\013 \001(\0132$.ProtoPackets.Vehi"
-      "cleBodySensedStateH\000\022D\n\025VehicleGlobalPos"
-      "ition\030\014 \001(\0132#.ProtoPackets.VehicleGlobal"
-      "PositionH\000\022D\n\025VehicleIdentification\030\r \001("
-      "\0132#.ProtoPackets.VehicleIdentificationH\000"
-      "\022B\n\024VehicleInertialState\030\016 \001(\0132\".ProtoPa"
-      "ckets.VehicleInertialStateH\000\022>\n\022VehicleM"
-      "odeCommand\030\017 \001(\0132 .ProtoPackets.VehicleM"
-      "odeCommandH\000\022@\n\023VehicleSystemStatus\030\020 \001("
-      "\0132!.ProtoPackets.VehicleSystemStatusH\000\022H"
-      "\n\027VehicleTelemetryCommand\030\021 \001(\0132%.ProtoP"
-      "ackets.VehicleTelemetryCommandH\000\022L\n\031Vehi"
-      "cleTerminationCommand\030\022 \001(\0132\'.ProtoPacke"
-      "ts.VehicleTerminationCommandH\000\022F\n\026Vehicl"
-      "eWaypointCommand\030\023 \001(\0132$.ProtoPackets.Ve"
-      "hicleWaypointCommandH\000B\010\n\006packetb\006proto3"
+      "\n\024ProtoPacketsV2.proto\022\014ProtoPackets\"\255\002\n"
+      "\035AirVehicleGroundRelativeState\022\021\n\tvehicl"
+      "eid\030\001 \001(\r\022\025\n\rangleofattack\030\002 \001(\002\022\027\n\017angl"
+      "eofsideslip\030\003 \001(\002\022\024\n\014trueairspeed\030\004 \001(\002\022"
+      "\031\n\021indicatedairspeed\030\005 \001(\002\022\026\n\016northwinds"
+      "peed\030\006 \001(\002\022\025\n\reastwindspeed\030\007 \001(\002\022\030\n\020nor"
+      "thgroundspeed\030\010 \001(\002\022\027\n\017eastgroundspeed\030\t"
+      " \001(\002\022\032\n\022barometricpressure\030\n \001(\002\022\032\n\022baro"
+      "metricaltitude\030\013 \001(\002\"*\n\nArmCommand\022\n\n\002id"
+      "\030\001 \001(\r\022\020\n\010position\030\002 \001(\005\"Y\n\013ArmPosition\022"
+      "\021\n\tposition1\030\001 \001(\005\022\021\n\tposition2\030\002 \001(\005\022\021\n"
+      "\tposition3\030\003 \001(\005\022\021\n\tposition4\030\004 \001(\005\"$\n\007B"
+      "attery\022\031\n\021batteryPercentage\030\001 \001(\r\"-\n\025Tar"
+      "getAcknowledgement\022\024\n\014targetstatus\030\001 \001(\r"
+      "\"\235\001\n\030TargetDesignationCommand\022\021\n\tvehicle"
+      "id\030\001 \001(\r\022\021\n\tpayloadid\030\002 \001(\r\022\020\n\010targetid\030"
+      "\003 \001(\r\022\022\n\ntargettype\030\004 \001(\r\022\021\n\tlongitude\030\005"
+      " \001(\002\022\020\n\010latitude\030\006 \001(\002\022\020\n\010altitude\030\007 \001(\002"
+      "\"Q\n\014TargetStatus\022\024\n\014targetradius\030\001 \001(\001\022\023"
+      "\n\013targetangle\030\002 \001(\001\022\026\n\016targetaltitude\030\003 "
+      "\001(\001\"N\n\017VehicleAttitude\022\021\n\tvehicleid\030\001 \001("
+      "\r\022\014\n\004roll\030\002 \001(\002\022\r\n\005pitch\030\003 \001(\002\022\013\n\003yaw\030\004 "
+      "\001(\002\"x\n\031VehicleAuthorizationReply\022\021\n\tvehi"
+      "cleid\030\001 \001(\r\022\023\n\013vehicletype\030\002 \001(\r\022\032\n\022auth"
+      "orizedservices\030\003 \001(\r\022\027\n\017grantedservices\030"
+      "\004 \001(\r\"z\n\033VehicleAuthorizationRequest\022\021\n\t"
+      "vehicleid\030\001 \001(\r\022\023\n\013vehicletype\030\002 \001(\r\022\032\n\022"
+      "authorizedservices\030\003 \001(\r\022\027\n\017grantedservi"
+      "ces\030\004 \001(\r\"\221\001\n\026VehicleBodySensedState\022\021\n\t"
+      "vehicleid\030\001 \001(\r\022\016\n\006xaccel\030\002 \001(\002\022\016\n\006yacce"
+      "l\030\003 \001(\002\022\016\n\006zaccel\030\004 \001(\002\022\020\n\010rollrate\030\005 \001("
+      "\002\022\021\n\tpitchrate\030\006 \001(\002\022\017\n\007yawrate\030\007 \001(\002\"\221\001"
+      "\n\025VehicleGlobalPosition\022\021\n\tvehicleid\030\001 \001"
+      "(\r\022\021\n\tlongitude\030\002 \001(\002\022\020\n\010latitude\030\003 \001(\002\022"
+      "\020\n\010altitude\030\004 \001(\002\022\016\n\006xspeed\030\005 \001(\002\022\016\n\006ysp"
+      "eed\030\006 \001(\002\022\016\n\006zspeed\030\007 \001(\002\"\?\n\025VehicleIden"
+      "tification\022\021\n\tvehicleid\030\001 \001(\r\022\023\n\013vehicle"
+      "type\030\002 \001(\r\"\300\002\n\024VehicleInertialState\022\021\n\tv"
+      "ehicleid\030\001 \001(\r\022\021\n\tlongitude\030\002 \001(\002\022\020\n\010lat"
+      "itude\030\003 \001(\002\022\020\n\010altitude\030\004 \001(\002\022\014\n\004roll\030\005 "
+      "\001(\002\022\r\n\005pitch\030\006 \001(\002\022\017\n\007heading\030\007 \001(\002\022\022\n\nn"
+      "orthspeed\030\010 \001(\002\022\021\n\teastspeed\030\t \001(\002\022\025\n\rve"
+      "rticalspeed\030\n \001(\002\022\020\n\010rollrate\030\013 \001(\002\022\021\n\tp"
+      "itchrate\030\014 \001(\002\022\017\n\007yawrate\030\r \001(\002\022\022\n\nnorth"
+      "accel\030\016 \001(\002\022\021\n\teastaccel\030\017 \001(\002\022\025\n\rvertic"
+      "alaccel\030\020 \001(\002\"<\n\022VehicleModeCommand\022\021\n\tv"
+      "ehicleid\030\001 \001(\r\022\023\n\013vehiclemode\030\002 \001(\r\"S\n\023V"
+      "ehicleSystemStatus\022\021\n\tvehicleid\030\001 \001(\r\022\023\n"
+      "\013vehiclemode\030\002 \001(\r\022\024\n\014vehiclestate\030\003 \001(\r"
+      "\"\\\n\027VehicleTelemetryCommand\022\021\n\tvehicleid"
+      "\030\001 \001(\r\022\027\n\017telemetryselect\030\002 \001(\r\022\025\n\rtelem"
+      "etryrate\030\003 \001(\r\"G\n\031VehicleTerminationComm"
+      "and\022\021\n\tvehicleid\030\001 \001(\r\022\027\n\017terminationmod"
+      "e\030\002 \001(\r\"b\n\026VehicleWaypointCommand\022\021\n\tveh"
+      "icleid\030\001 \001(\r\022\021\n\tlongitude\030\002 \001(\002\022\020\n\010latit"
+      "ude\030\003 \001(\002\022\020\n\010altitude\030\004 \001(\002\"\216\n\n\006Packet\022T"
+      "\n\035AirVehicleGroundRelativeState\030\001 \001(\0132+."
+      "ProtoPackets.AirVehicleGroundRelativeSta"
+      "teH\000\022.\n\nArmCommand\030\002 \001(\0132\030.ProtoPackets."
+      "ArmCommandH\000\0220\n\013ArmPosition\030\003 \001(\0132\031.Prot"
+      "oPackets.ArmPositionH\000\022(\n\007Battery\030\004 \001(\0132"
+      "\025.ProtoPackets.BatteryH\000\022D\n\025TargetAcknow"
+      "ledgement\030\005 \001(\0132#.ProtoPackets.TargetAck"
+      "nowledgementH\000\022J\n\030TargetDesignationComma"
+      "nd\030\006 \001(\0132&.ProtoPackets.TargetDesignatio"
+      "nCommandH\000\0222\n\014TargetStatus\030\007 \001(\0132\032.Proto"
+      "Packets.TargetStatusH\000\0228\n\017VehicleAttitud"
+      "e\030\010 \001(\0132\035.ProtoPackets.VehicleAttitudeH\000"
+      "\022L\n\031VehicleAuthorizationReply\030\t \001(\0132\'.Pr"
+      "otoPackets.VehicleAuthorizationReplyH\000\022P"
+      "\n\033VehicleAuthorizationRequest\030\n \001(\0132).Pr"
+      "otoPackets.VehicleAuthorizationRequestH\000"
+      "\022F\n\026VehicleBodySensedState\030\013 \001(\0132$.Proto"
+      "Packets.VehicleBodySensedStateH\000\022D\n\025Vehi"
+      "cleGlobalPosition\030\014 \001(\0132#.ProtoPackets.V"
+      "ehicleGlobalPositionH\000\022D\n\025VehicleIdentif"
+      "ication\030\r \001(\0132#.ProtoPackets.VehicleIden"
+      "tificationH\000\022B\n\024VehicleInertialState\030\016 \001"
+      "(\0132\".ProtoPackets.VehicleInertialStateH\000"
+      "\022>\n\022VehicleModeCommand\030\017 \001(\0132 .ProtoPack"
+      "ets.VehicleModeCommandH\000\022@\n\023VehicleSyste"
+      "mStatus\030\020 \001(\0132!.ProtoPackets.VehicleSyst"
+      "emStatusH\000\022H\n\027VehicleTelemetryCommand\030\021 "
+      "\001(\0132%.ProtoPackets.VehicleTelemetryComma"
+      "ndH\000\022L\n\031VehicleTerminationCommand\030\022 \001(\0132"
+      "\'.ProtoPackets.VehicleTerminationCommand"
+      "H\000\022F\n\026VehicleWaypointCommand\030\023 \001(\0132$.Pro"
+      "toPackets.VehicleWaypointCommandH\000B\010\n\006pa"
+      "cketb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 3600);
+      descriptor, 3532);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "ProtoPacketsV2.proto", &protobuf_RegisterTypes);
 }
@@ -974,17 +973,17 @@ namespace ProtoPackets {
 void AirVehicleGroundRelativeState::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int AirVehicleGroundRelativeState::kVehicleIdFieldNumber;
-const int AirVehicleGroundRelativeState::kAngleOfAttackFieldNumber;
-const int AirVehicleGroundRelativeState::kAngleOfSideslipFieldNumber;
-const int AirVehicleGroundRelativeState::kTrueAirspeedFieldNumber;
-const int AirVehicleGroundRelativeState::kIndicatedAirspeedFieldNumber;
-const int AirVehicleGroundRelativeState::kNorthWindSpeedFieldNumber;
-const int AirVehicleGroundRelativeState::kEastWindSpeedFieldNumber;
-const int AirVehicleGroundRelativeState::kNorthGroundSpeedFieldNumber;
-const int AirVehicleGroundRelativeState::kEastGroundSpeedFieldNumber;
-const int AirVehicleGroundRelativeState::kBarometricPressureFieldNumber;
-const int AirVehicleGroundRelativeState::kBarometricAltitudeFieldNumber;
+const int AirVehicleGroundRelativeState::kVehicleidFieldNumber;
+const int AirVehicleGroundRelativeState::kAngleofattackFieldNumber;
+const int AirVehicleGroundRelativeState::kAngleofsideslipFieldNumber;
+const int AirVehicleGroundRelativeState::kTrueairspeedFieldNumber;
+const int AirVehicleGroundRelativeState::kIndicatedairspeedFieldNumber;
+const int AirVehicleGroundRelativeState::kNorthwindspeedFieldNumber;
+const int AirVehicleGroundRelativeState::kEastwindspeedFieldNumber;
+const int AirVehicleGroundRelativeState::kNorthgroundspeedFieldNumber;
+const int AirVehicleGroundRelativeState::kEastgroundspeedFieldNumber;
+const int AirVehicleGroundRelativeState::kBarometricpressureFieldNumber;
+const int AirVehicleGroundRelativeState::kBarometricaltitudeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 AirVehicleGroundRelativeState::AirVehicleGroundRelativeState()
@@ -1000,16 +999,16 @@ AirVehicleGroundRelativeState::AirVehicleGroundRelativeState(const AirVehicleGro
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&vehicle_id_, &from.vehicle_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&barometric_altitude_) -
-    reinterpret_cast<char*>(&vehicle_id_)) + sizeof(barometric_altitude_));
+  ::memcpy(&vehicleid_, &from.vehicleid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&barometricaltitude_) -
+    reinterpret_cast<char*>(&vehicleid_)) + sizeof(barometricaltitude_));
   // @@protoc_insertion_point(copy_constructor:ProtoPackets.AirVehicleGroundRelativeState)
 }
 
 void AirVehicleGroundRelativeState::SharedCtor() {
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&barometric_altitude_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(barometric_altitude_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&barometricaltitude_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(barometricaltitude_));
   _cached_size_ = 0;
 }
 
@@ -1050,9 +1049,9 @@ void AirVehicleGroundRelativeState::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&barometric_altitude_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(barometric_altitude_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&barometricaltitude_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(barometricaltitude_));
   _internal_metadata_.Clear();
 }
 
@@ -1066,154 +1065,154 @@ bool AirVehicleGroundRelativeState::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 vehicle_id = 1;
+      // uint32 vehicleid = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_id_)));
+                 input, &vehicleid_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float angle_of_attack = 2;
+      // float angleofattack = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(21u /* 21 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &angle_of_attack_)));
+                 input, &angleofattack_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float angle_of_sideslip = 3;
+      // float angleofsideslip = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(29u /* 29 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &angle_of_sideslip_)));
+                 input, &angleofsideslip_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float true_airspeed = 4;
+      // float trueairspeed = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(37u /* 37 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &true_airspeed_)));
+                 input, &trueairspeed_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float indicated_airspeed = 5;
+      // float indicatedairspeed = 5;
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(45u /* 45 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &indicated_airspeed_)));
+                 input, &indicatedairspeed_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float north_wind_speed = 6;
+      // float northwindspeed = 6;
       case 6: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(53u /* 53 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &north_wind_speed_)));
+                 input, &northwindspeed_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float east_wind_speed = 7;
+      // float eastwindspeed = 7;
       case 7: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(61u /* 61 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &east_wind_speed_)));
+                 input, &eastwindspeed_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float north_ground_speed = 8;
+      // float northgroundspeed = 8;
       case 8: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(69u /* 69 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &north_ground_speed_)));
+                 input, &northgroundspeed_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float east_ground_speed = 9;
+      // float eastgroundspeed = 9;
       case 9: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(77u /* 77 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &east_ground_speed_)));
+                 input, &eastgroundspeed_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float barometric_pressure = 10;
+      // float barometricpressure = 10;
       case 10: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(85u /* 85 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &barometric_pressure_)));
+                 input, &barometricpressure_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float barometric_altitude = 11;
+      // float barometricaltitude = 11;
       case 11: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(93u /* 93 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &barometric_altitude_)));
+                 input, &barometricaltitude_)));
         } else {
           goto handle_unusual;
         }
@@ -1246,59 +1245,59 @@ void AirVehicleGroundRelativeState::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicle_id(), output);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicleid(), output);
   }
 
-  // float angle_of_attack = 2;
-  if (this->angle_of_attack() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(2, this->angle_of_attack(), output);
+  // float angleofattack = 2;
+  if (this->angleofattack() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(2, this->angleofattack(), output);
   }
 
-  // float angle_of_sideslip = 3;
-  if (this->angle_of_sideslip() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->angle_of_sideslip(), output);
+  // float angleofsideslip = 3;
+  if (this->angleofsideslip() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->angleofsideslip(), output);
   }
 
-  // float true_airspeed = 4;
-  if (this->true_airspeed() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(4, this->true_airspeed(), output);
+  // float trueairspeed = 4;
+  if (this->trueairspeed() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(4, this->trueairspeed(), output);
   }
 
-  // float indicated_airspeed = 5;
-  if (this->indicated_airspeed() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(5, this->indicated_airspeed(), output);
+  // float indicatedairspeed = 5;
+  if (this->indicatedairspeed() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(5, this->indicatedairspeed(), output);
   }
 
-  // float north_wind_speed = 6;
-  if (this->north_wind_speed() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(6, this->north_wind_speed(), output);
+  // float northwindspeed = 6;
+  if (this->northwindspeed() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(6, this->northwindspeed(), output);
   }
 
-  // float east_wind_speed = 7;
-  if (this->east_wind_speed() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(7, this->east_wind_speed(), output);
+  // float eastwindspeed = 7;
+  if (this->eastwindspeed() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(7, this->eastwindspeed(), output);
   }
 
-  // float north_ground_speed = 8;
-  if (this->north_ground_speed() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(8, this->north_ground_speed(), output);
+  // float northgroundspeed = 8;
+  if (this->northgroundspeed() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(8, this->northgroundspeed(), output);
   }
 
-  // float east_ground_speed = 9;
-  if (this->east_ground_speed() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(9, this->east_ground_speed(), output);
+  // float eastgroundspeed = 9;
+  if (this->eastgroundspeed() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(9, this->eastgroundspeed(), output);
   }
 
-  // float barometric_pressure = 10;
-  if (this->barometric_pressure() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(10, this->barometric_pressure(), output);
+  // float barometricpressure = 10;
+  if (this->barometricpressure() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(10, this->barometricpressure(), output);
   }
 
-  // float barometric_altitude = 11;
-  if (this->barometric_altitude() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(11, this->barometric_altitude(), output);
+  // float barometricaltitude = 11;
+  if (this->barometricaltitude() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(11, this->barometricaltitude(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1315,59 +1314,59 @@ void AirVehicleGroundRelativeState::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicle_id(), target);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicleid(), target);
   }
 
-  // float angle_of_attack = 2;
-  if (this->angle_of_attack() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(2, this->angle_of_attack(), target);
+  // float angleofattack = 2;
+  if (this->angleofattack() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(2, this->angleofattack(), target);
   }
 
-  // float angle_of_sideslip = 3;
-  if (this->angle_of_sideslip() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->angle_of_sideslip(), target);
+  // float angleofsideslip = 3;
+  if (this->angleofsideslip() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->angleofsideslip(), target);
   }
 
-  // float true_airspeed = 4;
-  if (this->true_airspeed() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(4, this->true_airspeed(), target);
+  // float trueairspeed = 4;
+  if (this->trueairspeed() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(4, this->trueairspeed(), target);
   }
 
-  // float indicated_airspeed = 5;
-  if (this->indicated_airspeed() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(5, this->indicated_airspeed(), target);
+  // float indicatedairspeed = 5;
+  if (this->indicatedairspeed() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(5, this->indicatedairspeed(), target);
   }
 
-  // float north_wind_speed = 6;
-  if (this->north_wind_speed() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(6, this->north_wind_speed(), target);
+  // float northwindspeed = 6;
+  if (this->northwindspeed() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(6, this->northwindspeed(), target);
   }
 
-  // float east_wind_speed = 7;
-  if (this->east_wind_speed() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(7, this->east_wind_speed(), target);
+  // float eastwindspeed = 7;
+  if (this->eastwindspeed() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(7, this->eastwindspeed(), target);
   }
 
-  // float north_ground_speed = 8;
-  if (this->north_ground_speed() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(8, this->north_ground_speed(), target);
+  // float northgroundspeed = 8;
+  if (this->northgroundspeed() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(8, this->northgroundspeed(), target);
   }
 
-  // float east_ground_speed = 9;
-  if (this->east_ground_speed() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(9, this->east_ground_speed(), target);
+  // float eastgroundspeed = 9;
+  if (this->eastgroundspeed() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(9, this->eastgroundspeed(), target);
   }
 
-  // float barometric_pressure = 10;
-  if (this->barometric_pressure() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(10, this->barometric_pressure(), target);
+  // float barometricpressure = 10;
+  if (this->barometricpressure() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(10, this->barometricpressure(), target);
   }
 
-  // float barometric_altitude = 11;
-  if (this->barometric_altitude() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(11, this->barometric_altitude(), target);
+  // float barometricaltitude = 11;
+  if (this->barometricaltitude() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(11, this->barometricaltitude(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1387,60 +1386,60 @@ size_t AirVehicleGroundRelativeState::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_id());
+        this->vehicleid());
   }
 
-  // float angle_of_attack = 2;
-  if (this->angle_of_attack() != 0) {
+  // float angleofattack = 2;
+  if (this->angleofattack() != 0) {
     total_size += 1 + 4;
   }
 
-  // float angle_of_sideslip = 3;
-  if (this->angle_of_sideslip() != 0) {
+  // float angleofsideslip = 3;
+  if (this->angleofsideslip() != 0) {
     total_size += 1 + 4;
   }
 
-  // float true_airspeed = 4;
-  if (this->true_airspeed() != 0) {
+  // float trueairspeed = 4;
+  if (this->trueairspeed() != 0) {
     total_size += 1 + 4;
   }
 
-  // float indicated_airspeed = 5;
-  if (this->indicated_airspeed() != 0) {
+  // float indicatedairspeed = 5;
+  if (this->indicatedairspeed() != 0) {
     total_size += 1 + 4;
   }
 
-  // float north_wind_speed = 6;
-  if (this->north_wind_speed() != 0) {
+  // float northwindspeed = 6;
+  if (this->northwindspeed() != 0) {
     total_size += 1 + 4;
   }
 
-  // float east_wind_speed = 7;
-  if (this->east_wind_speed() != 0) {
+  // float eastwindspeed = 7;
+  if (this->eastwindspeed() != 0) {
     total_size += 1 + 4;
   }
 
-  // float north_ground_speed = 8;
-  if (this->north_ground_speed() != 0) {
+  // float northgroundspeed = 8;
+  if (this->northgroundspeed() != 0) {
     total_size += 1 + 4;
   }
 
-  // float east_ground_speed = 9;
-  if (this->east_ground_speed() != 0) {
+  // float eastgroundspeed = 9;
+  if (this->eastgroundspeed() != 0) {
     total_size += 1 + 4;
   }
 
-  // float barometric_pressure = 10;
-  if (this->barometric_pressure() != 0) {
+  // float barometricpressure = 10;
+  if (this->barometricpressure() != 0) {
     total_size += 1 + 4;
   }
 
-  // float barometric_altitude = 11;
-  if (this->barometric_altitude() != 0) {
+  // float barometricaltitude = 11;
+  if (this->barometricaltitude() != 0) {
     total_size += 1 + 4;
   }
 
@@ -1473,38 +1472,38 @@ void AirVehicleGroundRelativeState::MergeFrom(const AirVehicleGroundRelativeStat
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.vehicle_id() != 0) {
-    set_vehicle_id(from.vehicle_id());
+  if (from.vehicleid() != 0) {
+    set_vehicleid(from.vehicleid());
   }
-  if (from.angle_of_attack() != 0) {
-    set_angle_of_attack(from.angle_of_attack());
+  if (from.angleofattack() != 0) {
+    set_angleofattack(from.angleofattack());
   }
-  if (from.angle_of_sideslip() != 0) {
-    set_angle_of_sideslip(from.angle_of_sideslip());
+  if (from.angleofsideslip() != 0) {
+    set_angleofsideslip(from.angleofsideslip());
   }
-  if (from.true_airspeed() != 0) {
-    set_true_airspeed(from.true_airspeed());
+  if (from.trueairspeed() != 0) {
+    set_trueairspeed(from.trueairspeed());
   }
-  if (from.indicated_airspeed() != 0) {
-    set_indicated_airspeed(from.indicated_airspeed());
+  if (from.indicatedairspeed() != 0) {
+    set_indicatedairspeed(from.indicatedairspeed());
   }
-  if (from.north_wind_speed() != 0) {
-    set_north_wind_speed(from.north_wind_speed());
+  if (from.northwindspeed() != 0) {
+    set_northwindspeed(from.northwindspeed());
   }
-  if (from.east_wind_speed() != 0) {
-    set_east_wind_speed(from.east_wind_speed());
+  if (from.eastwindspeed() != 0) {
+    set_eastwindspeed(from.eastwindspeed());
   }
-  if (from.north_ground_speed() != 0) {
-    set_north_ground_speed(from.north_ground_speed());
+  if (from.northgroundspeed() != 0) {
+    set_northgroundspeed(from.northgroundspeed());
   }
-  if (from.east_ground_speed() != 0) {
-    set_east_ground_speed(from.east_ground_speed());
+  if (from.eastgroundspeed() != 0) {
+    set_eastgroundspeed(from.eastgroundspeed());
   }
-  if (from.barometric_pressure() != 0) {
-    set_barometric_pressure(from.barometric_pressure());
+  if (from.barometricpressure() != 0) {
+    set_barometricpressure(from.barometricpressure());
   }
-  if (from.barometric_altitude() != 0) {
-    set_barometric_altitude(from.barometric_altitude());
+  if (from.barometricaltitude() != 0) {
+    set_barometricaltitude(from.barometricaltitude());
   }
 }
 
@@ -1532,17 +1531,17 @@ void AirVehicleGroundRelativeState::Swap(AirVehicleGroundRelativeState* other) {
 }
 void AirVehicleGroundRelativeState::InternalSwap(AirVehicleGroundRelativeState* other) {
   using std::swap;
-  swap(vehicle_id_, other->vehicle_id_);
-  swap(angle_of_attack_, other->angle_of_attack_);
-  swap(angle_of_sideslip_, other->angle_of_sideslip_);
-  swap(true_airspeed_, other->true_airspeed_);
-  swap(indicated_airspeed_, other->indicated_airspeed_);
-  swap(north_wind_speed_, other->north_wind_speed_);
-  swap(east_wind_speed_, other->east_wind_speed_);
-  swap(north_ground_speed_, other->north_ground_speed_);
-  swap(east_ground_speed_, other->east_ground_speed_);
-  swap(barometric_pressure_, other->barometric_pressure_);
-  swap(barometric_altitude_, other->barometric_altitude_);
+  swap(vehicleid_, other->vehicleid_);
+  swap(angleofattack_, other->angleofattack_);
+  swap(angleofsideslip_, other->angleofsideslip_);
+  swap(trueairspeed_, other->trueairspeed_);
+  swap(indicatedairspeed_, other->indicatedairspeed_);
+  swap(northwindspeed_, other->northwindspeed_);
+  swap(eastwindspeed_, other->eastwindspeed_);
+  swap(northgroundspeed_, other->northgroundspeed_);
+  swap(eastgroundspeed_, other->eastgroundspeed_);
+  swap(barometricpressure_, other->barometricpressure_);
+  swap(barometricaltitude_, other->barometricaltitude_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -2428,7 +2427,7 @@ void Battery::InternalSwap(Battery* other) {
 void TargetAcknowledgement::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int TargetAcknowledgement::kTargetStatusFieldNumber;
+const int TargetAcknowledgement::kTargetstatusFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 TargetAcknowledgement::TargetAcknowledgement()
@@ -2444,12 +2443,12 @@ TargetAcknowledgement::TargetAcknowledgement(const TargetAcknowledgement& from)
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  target_status_ = from.target_status_;
+  targetstatus_ = from.targetstatus_;
   // @@protoc_insertion_point(copy_constructor:ProtoPackets.TargetAcknowledgement)
 }
 
 void TargetAcknowledgement::SharedCtor() {
-  target_status_ = 0u;
+  targetstatus_ = 0u;
   _cached_size_ = 0;
 }
 
@@ -2490,7 +2489,7 @@ void TargetAcknowledgement::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  target_status_ = 0u;
+  targetstatus_ = 0u;
   _internal_metadata_.Clear();
 }
 
@@ -2504,14 +2503,14 @@ bool TargetAcknowledgement::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 target_status = 1;
+      // uint32 targetstatus = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &target_status_)));
+                 input, &targetstatus_)));
         } else {
           goto handle_unusual;
         }
@@ -2544,9 +2543,9 @@ void TargetAcknowledgement::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 target_status = 1;
-  if (this->target_status() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->target_status(), output);
+  // uint32 targetstatus = 1;
+  if (this->targetstatus() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->targetstatus(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -2563,9 +2562,9 @@ void TargetAcknowledgement::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 target_status = 1;
-  if (this->target_status() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->target_status(), target);
+  // uint32 targetstatus = 1;
+  if (this->targetstatus() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->targetstatus(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -2585,11 +2584,11 @@ size_t TargetAcknowledgement::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // uint32 target_status = 1;
-  if (this->target_status() != 0) {
+  // uint32 targetstatus = 1;
+  if (this->targetstatus() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->target_status());
+        this->targetstatus());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -2621,8 +2620,8 @@ void TargetAcknowledgement::MergeFrom(const TargetAcknowledgement& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.target_status() != 0) {
-    set_target_status(from.target_status());
+  if (from.targetstatus() != 0) {
+    set_targetstatus(from.targetstatus());
   }
 }
 
@@ -2650,7 +2649,7 @@ void TargetAcknowledgement::Swap(TargetAcknowledgement* other) {
 }
 void TargetAcknowledgement::InternalSwap(TargetAcknowledgement* other) {
   using std::swap;
-  swap(target_status_, other->target_status_);
+  swap(targetstatus_, other->targetstatus_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -2666,10 +2665,10 @@ void TargetAcknowledgement::InternalSwap(TargetAcknowledgement* other) {
 void TargetDesignationCommand::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int TargetDesignationCommand::kVehicleIdFieldNumber;
-const int TargetDesignationCommand::kPayloadIdFieldNumber;
-const int TargetDesignationCommand::kTargetIdFieldNumber;
-const int TargetDesignationCommand::kTargetTypeFieldNumber;
+const int TargetDesignationCommand::kVehicleidFieldNumber;
+const int TargetDesignationCommand::kPayloadidFieldNumber;
+const int TargetDesignationCommand::kTargetidFieldNumber;
+const int TargetDesignationCommand::kTargettypeFieldNumber;
 const int TargetDesignationCommand::kLongitudeFieldNumber;
 const int TargetDesignationCommand::kLatitudeFieldNumber;
 const int TargetDesignationCommand::kAltitudeFieldNumber;
@@ -2688,16 +2687,16 @@ TargetDesignationCommand::TargetDesignationCommand(const TargetDesignationComman
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&vehicle_id_, &from.vehicle_id_,
+  ::memcpy(&vehicleid_, &from.vehicleid_,
     static_cast<size_t>(reinterpret_cast<char*>(&altitude_) -
-    reinterpret_cast<char*>(&vehicle_id_)) + sizeof(altitude_));
+    reinterpret_cast<char*>(&vehicleid_)) + sizeof(altitude_));
   // @@protoc_insertion_point(copy_constructor:ProtoPackets.TargetDesignationCommand)
 }
 
 void TargetDesignationCommand::SharedCtor() {
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&altitude_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(altitude_));
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(altitude_));
   _cached_size_ = 0;
 }
 
@@ -2738,9 +2737,9 @@ void TargetDesignationCommand::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&altitude_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(altitude_));
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(altitude_));
   _internal_metadata_.Clear();
 }
 
@@ -2754,56 +2753,56 @@ bool TargetDesignationCommand::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 vehicle_id = 1;
+      // uint32 vehicleid = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_id_)));
+                 input, &vehicleid_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint32 payload_id = 2;
+      // uint32 payloadid = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &payload_id_)));
+                 input, &payloadid_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint32 target_id = 3;
+      // uint32 targetid = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &target_id_)));
+                 input, &targetid_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint32 target_type = 4;
+      // uint32 targettype = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &target_type_)));
+                 input, &targettype_)));
         } else {
           goto handle_unusual;
         }
@@ -2878,24 +2877,24 @@ void TargetDesignationCommand::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicle_id(), output);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicleid(), output);
   }
 
-  // uint32 payload_id = 2;
-  if (this->payload_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->payload_id(), output);
+  // uint32 payloadid = 2;
+  if (this->payloadid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->payloadid(), output);
   }
 
-  // uint32 target_id = 3;
-  if (this->target_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->target_id(), output);
+  // uint32 targetid = 3;
+  if (this->targetid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->targetid(), output);
   }
 
-  // uint32 target_type = 4;
-  if (this->target_type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->target_type(), output);
+  // uint32 targettype = 4;
+  if (this->targettype() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->targettype(), output);
   }
 
   // float longitude = 5;
@@ -2927,24 +2926,24 @@ void TargetDesignationCommand::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicle_id(), target);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicleid(), target);
   }
 
-  // uint32 payload_id = 2;
-  if (this->payload_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->payload_id(), target);
+  // uint32 payloadid = 2;
+  if (this->payloadid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->payloadid(), target);
   }
 
-  // uint32 target_id = 3;
-  if (this->target_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->target_id(), target);
+  // uint32 targetid = 3;
+  if (this->targetid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->targetid(), target);
   }
 
-  // uint32 target_type = 4;
-  if (this->target_type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->target_type(), target);
+  // uint32 targettype = 4;
+  if (this->targettype() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->targettype(), target);
   }
 
   // float longitude = 5;
@@ -2979,32 +2978,32 @@ size_t TargetDesignationCommand::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_id());
+        this->vehicleid());
   }
 
-  // uint32 payload_id = 2;
-  if (this->payload_id() != 0) {
+  // uint32 payloadid = 2;
+  if (this->payloadid() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->payload_id());
+        this->payloadid());
   }
 
-  // uint32 target_id = 3;
-  if (this->target_id() != 0) {
+  // uint32 targetid = 3;
+  if (this->targetid() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->target_id());
+        this->targetid());
   }
 
-  // uint32 target_type = 4;
-  if (this->target_type() != 0) {
+  // uint32 targettype = 4;
+  if (this->targettype() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->target_type());
+        this->targettype());
   }
 
   // float longitude = 5;
@@ -3051,17 +3050,17 @@ void TargetDesignationCommand::MergeFrom(const TargetDesignationCommand& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.vehicle_id() != 0) {
-    set_vehicle_id(from.vehicle_id());
+  if (from.vehicleid() != 0) {
+    set_vehicleid(from.vehicleid());
   }
-  if (from.payload_id() != 0) {
-    set_payload_id(from.payload_id());
+  if (from.payloadid() != 0) {
+    set_payloadid(from.payloadid());
   }
-  if (from.target_id() != 0) {
-    set_target_id(from.target_id());
+  if (from.targetid() != 0) {
+    set_targetid(from.targetid());
   }
-  if (from.target_type() != 0) {
-    set_target_type(from.target_type());
+  if (from.targettype() != 0) {
+    set_targettype(from.targettype());
   }
   if (from.longitude() != 0) {
     set_longitude(from.longitude());
@@ -3098,10 +3097,10 @@ void TargetDesignationCommand::Swap(TargetDesignationCommand* other) {
 }
 void TargetDesignationCommand::InternalSwap(TargetDesignationCommand* other) {
   using std::swap;
-  swap(vehicle_id_, other->vehicle_id_);
-  swap(payload_id_, other->payload_id_);
-  swap(target_id_, other->target_id_);
-  swap(target_type_, other->target_type_);
+  swap(vehicleid_, other->vehicleid_);
+  swap(payloadid_, other->payloadid_);
+  swap(targetid_, other->targetid_);
+  swap(targettype_, other->targettype_);
   swap(longitude_, other->longitude_);
   swap(latitude_, other->latitude_);
   swap(altitude_, other->altitude_);
@@ -3120,9 +3119,9 @@ void TargetDesignationCommand::InternalSwap(TargetDesignationCommand* other) {
 void TargetStatus::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int TargetStatus::kTargetRadiusFieldNumber;
-const int TargetStatus::kTargetAngleFieldNumber;
-const int TargetStatus::kTargetAltitudeFieldNumber;
+const int TargetStatus::kTargetradiusFieldNumber;
+const int TargetStatus::kTargetangleFieldNumber;
+const int TargetStatus::kTargetaltitudeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 TargetStatus::TargetStatus()
@@ -3138,16 +3137,16 @@ TargetStatus::TargetStatus(const TargetStatus& from)
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&target_radius_, &from.target_radius_,
-    static_cast<size_t>(reinterpret_cast<char*>(&target_altitude_) -
-    reinterpret_cast<char*>(&target_radius_)) + sizeof(target_altitude_));
+  ::memcpy(&targetradius_, &from.targetradius_,
+    static_cast<size_t>(reinterpret_cast<char*>(&targetaltitude_) -
+    reinterpret_cast<char*>(&targetradius_)) + sizeof(targetaltitude_));
   // @@protoc_insertion_point(copy_constructor:ProtoPackets.TargetStatus)
 }
 
 void TargetStatus::SharedCtor() {
-  ::memset(&target_radius_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&target_altitude_) -
-      reinterpret_cast<char*>(&target_radius_)) + sizeof(target_altitude_));
+  ::memset(&targetradius_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&targetaltitude_) -
+      reinterpret_cast<char*>(&targetradius_)) + sizeof(targetaltitude_));
   _cached_size_ = 0;
 }
 
@@ -3188,9 +3187,9 @@ void TargetStatus::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&target_radius_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&target_altitude_) -
-      reinterpret_cast<char*>(&target_radius_)) + sizeof(target_altitude_));
+  ::memset(&targetradius_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&targetaltitude_) -
+      reinterpret_cast<char*>(&targetradius_)) + sizeof(targetaltitude_));
   _internal_metadata_.Clear();
 }
 
@@ -3204,42 +3203,42 @@ bool TargetStatus::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // double target_radius = 1;
+      // double targetradius = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &target_radius_)));
+                 input, &targetradius_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // double target_angle = 2;
+      // double targetangle = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(17u /* 17 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &target_angle_)));
+                 input, &targetangle_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // double target_altitude = 3;
+      // double targetaltitude = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(25u /* 25 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &target_altitude_)));
+                 input, &targetaltitude_)));
         } else {
           goto handle_unusual;
         }
@@ -3272,19 +3271,19 @@ void TargetStatus::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // double target_radius = 1;
-  if (this->target_radius() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->target_radius(), output);
+  // double targetradius = 1;
+  if (this->targetradius() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->targetradius(), output);
   }
 
-  // double target_angle = 2;
-  if (this->target_angle() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->target_angle(), output);
+  // double targetangle = 2;
+  if (this->targetangle() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->targetangle(), output);
   }
 
-  // double target_altitude = 3;
-  if (this->target_altitude() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->target_altitude(), output);
+  // double targetaltitude = 3;
+  if (this->targetaltitude() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->targetaltitude(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -3301,19 +3300,19 @@ void TargetStatus::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // double target_radius = 1;
-  if (this->target_radius() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->target_radius(), target);
+  // double targetradius = 1;
+  if (this->targetradius() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->targetradius(), target);
   }
 
-  // double target_angle = 2;
-  if (this->target_angle() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->target_angle(), target);
+  // double targetangle = 2;
+  if (this->targetangle() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->targetangle(), target);
   }
 
-  // double target_altitude = 3;
-  if (this->target_altitude() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->target_altitude(), target);
+  // double targetaltitude = 3;
+  if (this->targetaltitude() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->targetaltitude(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -3333,18 +3332,18 @@ size_t TargetStatus::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // double target_radius = 1;
-  if (this->target_radius() != 0) {
+  // double targetradius = 1;
+  if (this->targetradius() != 0) {
     total_size += 1 + 8;
   }
 
-  // double target_angle = 2;
-  if (this->target_angle() != 0) {
+  // double targetangle = 2;
+  if (this->targetangle() != 0) {
     total_size += 1 + 8;
   }
 
-  // double target_altitude = 3;
-  if (this->target_altitude() != 0) {
+  // double targetaltitude = 3;
+  if (this->targetaltitude() != 0) {
     total_size += 1 + 8;
   }
 
@@ -3377,14 +3376,14 @@ void TargetStatus::MergeFrom(const TargetStatus& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.target_radius() != 0) {
-    set_target_radius(from.target_radius());
+  if (from.targetradius() != 0) {
+    set_targetradius(from.targetradius());
   }
-  if (from.target_angle() != 0) {
-    set_target_angle(from.target_angle());
+  if (from.targetangle() != 0) {
+    set_targetangle(from.targetangle());
   }
-  if (from.target_altitude() != 0) {
-    set_target_altitude(from.target_altitude());
+  if (from.targetaltitude() != 0) {
+    set_targetaltitude(from.targetaltitude());
   }
 }
 
@@ -3412,9 +3411,9 @@ void TargetStatus::Swap(TargetStatus* other) {
 }
 void TargetStatus::InternalSwap(TargetStatus* other) {
   using std::swap;
-  swap(target_radius_, other->target_radius_);
-  swap(target_angle_, other->target_angle_);
-  swap(target_altitude_, other->target_altitude_);
+  swap(targetradius_, other->targetradius_);
+  swap(targetangle_, other->targetangle_);
+  swap(targetaltitude_, other->targetaltitude_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -3430,7 +3429,7 @@ void TargetStatus::InternalSwap(TargetStatus* other) {
 void VehicleAttitude::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int VehicleAttitude::kVehicleIdFieldNumber;
+const int VehicleAttitude::kVehicleidFieldNumber;
 const int VehicleAttitude::kRollFieldNumber;
 const int VehicleAttitude::kPitchFieldNumber;
 const int VehicleAttitude::kYawFieldNumber;
@@ -3449,16 +3448,16 @@ VehicleAttitude::VehicleAttitude(const VehicleAttitude& from)
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&vehicle_id_, &from.vehicle_id_,
+  ::memcpy(&vehicleid_, &from.vehicleid_,
     static_cast<size_t>(reinterpret_cast<char*>(&yaw_) -
-    reinterpret_cast<char*>(&vehicle_id_)) + sizeof(yaw_));
+    reinterpret_cast<char*>(&vehicleid_)) + sizeof(yaw_));
   // @@protoc_insertion_point(copy_constructor:ProtoPackets.VehicleAttitude)
 }
 
 void VehicleAttitude::SharedCtor() {
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&yaw_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(yaw_));
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(yaw_));
   _cached_size_ = 0;
 }
 
@@ -3499,9 +3498,9 @@ void VehicleAttitude::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&yaw_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(yaw_));
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(yaw_));
   _internal_metadata_.Clear();
 }
 
@@ -3515,14 +3514,14 @@ bool VehicleAttitude::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 vehicle_id = 1;
+      // uint32 vehicleid = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_id_)));
+                 input, &vehicleid_)));
         } else {
           goto handle_unusual;
         }
@@ -3597,9 +3596,9 @@ void VehicleAttitude::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicle_id(), output);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicleid(), output);
   }
 
   // float roll = 2;
@@ -3631,9 +3630,9 @@ void VehicleAttitude::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicle_id(), target);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicleid(), target);
   }
 
   // float roll = 2;
@@ -3668,11 +3667,11 @@ size_t VehicleAttitude::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_id());
+        this->vehicleid());
   }
 
   // float roll = 2;
@@ -3719,8 +3718,8 @@ void VehicleAttitude::MergeFrom(const VehicleAttitude& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.vehicle_id() != 0) {
-    set_vehicle_id(from.vehicle_id());
+  if (from.vehicleid() != 0) {
+    set_vehicleid(from.vehicleid());
   }
   if (from.roll() != 0) {
     set_roll(from.roll());
@@ -3757,7 +3756,7 @@ void VehicleAttitude::Swap(VehicleAttitude* other) {
 }
 void VehicleAttitude::InternalSwap(VehicleAttitude* other) {
   using std::swap;
-  swap(vehicle_id_, other->vehicle_id_);
+  swap(vehicleid_, other->vehicleid_);
   swap(roll_, other->roll_);
   swap(pitch_, other->pitch_);
   swap(yaw_, other->yaw_);
@@ -3776,10 +3775,10 @@ void VehicleAttitude::InternalSwap(VehicleAttitude* other) {
 void VehicleAuthorizationReply::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int VehicleAuthorizationReply::kVehicleIdFieldNumber;
-const int VehicleAuthorizationReply::kVehicleTypeFieldNumber;
-const int VehicleAuthorizationReply::kAuthorizedServicesFieldNumber;
-const int VehicleAuthorizationReply::kGrantedServicesFieldNumber;
+const int VehicleAuthorizationReply::kVehicleidFieldNumber;
+const int VehicleAuthorizationReply::kVehicletypeFieldNumber;
+const int VehicleAuthorizationReply::kAuthorizedservicesFieldNumber;
+const int VehicleAuthorizationReply::kGrantedservicesFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 VehicleAuthorizationReply::VehicleAuthorizationReply()
@@ -3795,16 +3794,16 @@ VehicleAuthorizationReply::VehicleAuthorizationReply(const VehicleAuthorizationR
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&vehicle_id_, &from.vehicle_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&granted_services_) -
-    reinterpret_cast<char*>(&vehicle_id_)) + sizeof(granted_services_));
+  ::memcpy(&vehicleid_, &from.vehicleid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&grantedservices_) -
+    reinterpret_cast<char*>(&vehicleid_)) + sizeof(grantedservices_));
   // @@protoc_insertion_point(copy_constructor:ProtoPackets.VehicleAuthorizationReply)
 }
 
 void VehicleAuthorizationReply::SharedCtor() {
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&granted_services_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(granted_services_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&grantedservices_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(grantedservices_));
   _cached_size_ = 0;
 }
 
@@ -3845,9 +3844,9 @@ void VehicleAuthorizationReply::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&granted_services_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(granted_services_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&grantedservices_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(grantedservices_));
   _internal_metadata_.Clear();
 }
 
@@ -3861,56 +3860,56 @@ bool VehicleAuthorizationReply::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 vehicle_id = 1;
+      // uint32 vehicleid = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_id_)));
+                 input, &vehicleid_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint32 vehicle_type = 2;
+      // uint32 vehicletype = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_type_)));
+                 input, &vehicletype_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint32 authorized_services = 3;
+      // uint32 authorizedservices = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &authorized_services_)));
+                 input, &authorizedservices_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint32 granted_services = 4;
+      // uint32 grantedservices = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &granted_services_)));
+                 input, &grantedservices_)));
         } else {
           goto handle_unusual;
         }
@@ -3943,24 +3942,24 @@ void VehicleAuthorizationReply::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicle_id(), output);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicleid(), output);
   }
 
-  // uint32 vehicle_type = 2;
-  if (this->vehicle_type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->vehicle_type(), output);
+  // uint32 vehicletype = 2;
+  if (this->vehicletype() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->vehicletype(), output);
   }
 
-  // uint32 authorized_services = 3;
-  if (this->authorized_services() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->authorized_services(), output);
+  // uint32 authorizedservices = 3;
+  if (this->authorizedservices() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->authorizedservices(), output);
   }
 
-  // uint32 granted_services = 4;
-  if (this->granted_services() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->granted_services(), output);
+  // uint32 grantedservices = 4;
+  if (this->grantedservices() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->grantedservices(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -3977,24 +3976,24 @@ void VehicleAuthorizationReply::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicle_id(), target);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicleid(), target);
   }
 
-  // uint32 vehicle_type = 2;
-  if (this->vehicle_type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->vehicle_type(), target);
+  // uint32 vehicletype = 2;
+  if (this->vehicletype() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->vehicletype(), target);
   }
 
-  // uint32 authorized_services = 3;
-  if (this->authorized_services() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->authorized_services(), target);
+  // uint32 authorizedservices = 3;
+  if (this->authorizedservices() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->authorizedservices(), target);
   }
 
-  // uint32 granted_services = 4;
-  if (this->granted_services() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->granted_services(), target);
+  // uint32 grantedservices = 4;
+  if (this->grantedservices() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->grantedservices(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -4014,32 +4013,32 @@ size_t VehicleAuthorizationReply::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_id());
+        this->vehicleid());
   }
 
-  // uint32 vehicle_type = 2;
-  if (this->vehicle_type() != 0) {
+  // uint32 vehicletype = 2;
+  if (this->vehicletype() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_type());
+        this->vehicletype());
   }
 
-  // uint32 authorized_services = 3;
-  if (this->authorized_services() != 0) {
+  // uint32 authorizedservices = 3;
+  if (this->authorizedservices() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->authorized_services());
+        this->authorizedservices());
   }
 
-  // uint32 granted_services = 4;
-  if (this->granted_services() != 0) {
+  // uint32 grantedservices = 4;
+  if (this->grantedservices() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->granted_services());
+        this->grantedservices());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -4071,17 +4070,17 @@ void VehicleAuthorizationReply::MergeFrom(const VehicleAuthorizationReply& from)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.vehicle_id() != 0) {
-    set_vehicle_id(from.vehicle_id());
+  if (from.vehicleid() != 0) {
+    set_vehicleid(from.vehicleid());
   }
-  if (from.vehicle_type() != 0) {
-    set_vehicle_type(from.vehicle_type());
+  if (from.vehicletype() != 0) {
+    set_vehicletype(from.vehicletype());
   }
-  if (from.authorized_services() != 0) {
-    set_authorized_services(from.authorized_services());
+  if (from.authorizedservices() != 0) {
+    set_authorizedservices(from.authorizedservices());
   }
-  if (from.granted_services() != 0) {
-    set_granted_services(from.granted_services());
+  if (from.grantedservices() != 0) {
+    set_grantedservices(from.grantedservices());
   }
 }
 
@@ -4109,10 +4108,10 @@ void VehicleAuthorizationReply::Swap(VehicleAuthorizationReply* other) {
 }
 void VehicleAuthorizationReply::InternalSwap(VehicleAuthorizationReply* other) {
   using std::swap;
-  swap(vehicle_id_, other->vehicle_id_);
-  swap(vehicle_type_, other->vehicle_type_);
-  swap(authorized_services_, other->authorized_services_);
-  swap(granted_services_, other->granted_services_);
+  swap(vehicleid_, other->vehicleid_);
+  swap(vehicletype_, other->vehicletype_);
+  swap(authorizedservices_, other->authorizedservices_);
+  swap(grantedservices_, other->grantedservices_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -4128,10 +4127,10 @@ void VehicleAuthorizationReply::InternalSwap(VehicleAuthorizationReply* other) {
 void VehicleAuthorizationRequest::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int VehicleAuthorizationRequest::kVehicleIdFieldNumber;
-const int VehicleAuthorizationRequest::kVehicleTypeFieldNumber;
-const int VehicleAuthorizationRequest::kAuthorizedServicesFieldNumber;
-const int VehicleAuthorizationRequest::kGrantedServicesFieldNumber;
+const int VehicleAuthorizationRequest::kVehicleidFieldNumber;
+const int VehicleAuthorizationRequest::kVehicletypeFieldNumber;
+const int VehicleAuthorizationRequest::kAuthorizedservicesFieldNumber;
+const int VehicleAuthorizationRequest::kGrantedservicesFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 VehicleAuthorizationRequest::VehicleAuthorizationRequest()
@@ -4147,16 +4146,16 @@ VehicleAuthorizationRequest::VehicleAuthorizationRequest(const VehicleAuthorizat
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&vehicle_id_, &from.vehicle_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&granted_services_) -
-    reinterpret_cast<char*>(&vehicle_id_)) + sizeof(granted_services_));
+  ::memcpy(&vehicleid_, &from.vehicleid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&grantedservices_) -
+    reinterpret_cast<char*>(&vehicleid_)) + sizeof(grantedservices_));
   // @@protoc_insertion_point(copy_constructor:ProtoPackets.VehicleAuthorizationRequest)
 }
 
 void VehicleAuthorizationRequest::SharedCtor() {
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&granted_services_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(granted_services_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&grantedservices_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(grantedservices_));
   _cached_size_ = 0;
 }
 
@@ -4197,9 +4196,9 @@ void VehicleAuthorizationRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&granted_services_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(granted_services_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&grantedservices_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(grantedservices_));
   _internal_metadata_.Clear();
 }
 
@@ -4213,56 +4212,56 @@ bool VehicleAuthorizationRequest::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 vehicle_id = 1;
+      // uint32 vehicleid = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_id_)));
+                 input, &vehicleid_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint32 vehicle_type = 2;
+      // uint32 vehicletype = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_type_)));
+                 input, &vehicletype_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint32 authorized_services = 3;
+      // uint32 authorizedservices = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &authorized_services_)));
+                 input, &authorizedservices_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint32 granted_services = 4;
+      // uint32 grantedservices = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &granted_services_)));
+                 input, &grantedservices_)));
         } else {
           goto handle_unusual;
         }
@@ -4295,24 +4294,24 @@ void VehicleAuthorizationRequest::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicle_id(), output);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicleid(), output);
   }
 
-  // uint32 vehicle_type = 2;
-  if (this->vehicle_type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->vehicle_type(), output);
+  // uint32 vehicletype = 2;
+  if (this->vehicletype() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->vehicletype(), output);
   }
 
-  // uint32 authorized_services = 3;
-  if (this->authorized_services() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->authorized_services(), output);
+  // uint32 authorizedservices = 3;
+  if (this->authorizedservices() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->authorizedservices(), output);
   }
 
-  // uint32 granted_services = 4;
-  if (this->granted_services() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->granted_services(), output);
+  // uint32 grantedservices = 4;
+  if (this->grantedservices() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->grantedservices(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -4329,24 +4328,24 @@ void VehicleAuthorizationRequest::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicle_id(), target);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicleid(), target);
   }
 
-  // uint32 vehicle_type = 2;
-  if (this->vehicle_type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->vehicle_type(), target);
+  // uint32 vehicletype = 2;
+  if (this->vehicletype() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->vehicletype(), target);
   }
 
-  // uint32 authorized_services = 3;
-  if (this->authorized_services() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->authorized_services(), target);
+  // uint32 authorizedservices = 3;
+  if (this->authorizedservices() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->authorizedservices(), target);
   }
 
-  // uint32 granted_services = 4;
-  if (this->granted_services() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->granted_services(), target);
+  // uint32 grantedservices = 4;
+  if (this->grantedservices() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->grantedservices(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -4366,32 +4365,32 @@ size_t VehicleAuthorizationRequest::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_id());
+        this->vehicleid());
   }
 
-  // uint32 vehicle_type = 2;
-  if (this->vehicle_type() != 0) {
+  // uint32 vehicletype = 2;
+  if (this->vehicletype() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_type());
+        this->vehicletype());
   }
 
-  // uint32 authorized_services = 3;
-  if (this->authorized_services() != 0) {
+  // uint32 authorizedservices = 3;
+  if (this->authorizedservices() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->authorized_services());
+        this->authorizedservices());
   }
 
-  // uint32 granted_services = 4;
-  if (this->granted_services() != 0) {
+  // uint32 grantedservices = 4;
+  if (this->grantedservices() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->granted_services());
+        this->grantedservices());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -4423,17 +4422,17 @@ void VehicleAuthorizationRequest::MergeFrom(const VehicleAuthorizationRequest& f
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.vehicle_id() != 0) {
-    set_vehicle_id(from.vehicle_id());
+  if (from.vehicleid() != 0) {
+    set_vehicleid(from.vehicleid());
   }
-  if (from.vehicle_type() != 0) {
-    set_vehicle_type(from.vehicle_type());
+  if (from.vehicletype() != 0) {
+    set_vehicletype(from.vehicletype());
   }
-  if (from.authorized_services() != 0) {
-    set_authorized_services(from.authorized_services());
+  if (from.authorizedservices() != 0) {
+    set_authorizedservices(from.authorizedservices());
   }
-  if (from.granted_services() != 0) {
-    set_granted_services(from.granted_services());
+  if (from.grantedservices() != 0) {
+    set_grantedservices(from.grantedservices());
   }
 }
 
@@ -4461,10 +4460,10 @@ void VehicleAuthorizationRequest::Swap(VehicleAuthorizationRequest* other) {
 }
 void VehicleAuthorizationRequest::InternalSwap(VehicleAuthorizationRequest* other) {
   using std::swap;
-  swap(vehicle_id_, other->vehicle_id_);
-  swap(vehicle_type_, other->vehicle_type_);
-  swap(authorized_services_, other->authorized_services_);
-  swap(granted_services_, other->granted_services_);
+  swap(vehicleid_, other->vehicleid_);
+  swap(vehicletype_, other->vehicletype_);
+  swap(authorizedservices_, other->authorizedservices_);
+  swap(grantedservices_, other->grantedservices_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -4480,13 +4479,13 @@ void VehicleAuthorizationRequest::InternalSwap(VehicleAuthorizationRequest* othe
 void VehicleBodySensedState::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int VehicleBodySensedState::kVehicleIdFieldNumber;
-const int VehicleBodySensedState::kXAccelFieldNumber;
-const int VehicleBodySensedState::kYAccelFieldNumber;
-const int VehicleBodySensedState::kZAccelFieldNumber;
-const int VehicleBodySensedState::kRollRateFieldNumber;
-const int VehicleBodySensedState::kPitchRateFieldNumber;
-const int VehicleBodySensedState::kYawRateFieldNumber;
+const int VehicleBodySensedState::kVehicleidFieldNumber;
+const int VehicleBodySensedState::kXaccelFieldNumber;
+const int VehicleBodySensedState::kYaccelFieldNumber;
+const int VehicleBodySensedState::kZaccelFieldNumber;
+const int VehicleBodySensedState::kRollrateFieldNumber;
+const int VehicleBodySensedState::kPitchrateFieldNumber;
+const int VehicleBodySensedState::kYawrateFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 VehicleBodySensedState::VehicleBodySensedState()
@@ -4502,16 +4501,16 @@ VehicleBodySensedState::VehicleBodySensedState(const VehicleBodySensedState& fro
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&vehicle_id_, &from.vehicle_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&yaw_rate_) -
-    reinterpret_cast<char*>(&vehicle_id_)) + sizeof(yaw_rate_));
+  ::memcpy(&vehicleid_, &from.vehicleid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&yawrate_) -
+    reinterpret_cast<char*>(&vehicleid_)) + sizeof(yawrate_));
   // @@protoc_insertion_point(copy_constructor:ProtoPackets.VehicleBodySensedState)
 }
 
 void VehicleBodySensedState::SharedCtor() {
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&yaw_rate_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(yaw_rate_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&yawrate_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(yawrate_));
   _cached_size_ = 0;
 }
 
@@ -4552,9 +4551,9 @@ void VehicleBodySensedState::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&yaw_rate_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(yaw_rate_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&yawrate_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(yawrate_));
   _internal_metadata_.Clear();
 }
 
@@ -4568,98 +4567,98 @@ bool VehicleBodySensedState::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 vehicle_id = 1;
+      // uint32 vehicleid = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_id_)));
+                 input, &vehicleid_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float x_accel = 2;
+      // float xaccel = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(21u /* 21 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &x_accel_)));
+                 input, &xaccel_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float y_accel = 3;
+      // float yaccel = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(29u /* 29 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &y_accel_)));
+                 input, &yaccel_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float z_accel = 4;
+      // float zaccel = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(37u /* 37 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &z_accel_)));
+                 input, &zaccel_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float roll_rate = 5;
+      // float rollrate = 5;
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(45u /* 45 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &roll_rate_)));
+                 input, &rollrate_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float pitch_rate = 6;
+      // float pitchrate = 6;
       case 6: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(53u /* 53 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &pitch_rate_)));
+                 input, &pitchrate_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float yaw_rate = 7;
+      // float yawrate = 7;
       case 7: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(61u /* 61 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &yaw_rate_)));
+                 input, &yawrate_)));
         } else {
           goto handle_unusual;
         }
@@ -4692,39 +4691,39 @@ void VehicleBodySensedState::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicle_id(), output);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicleid(), output);
   }
 
-  // float x_accel = 2;
-  if (this->x_accel() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(2, this->x_accel(), output);
+  // float xaccel = 2;
+  if (this->xaccel() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(2, this->xaccel(), output);
   }
 
-  // float y_accel = 3;
-  if (this->y_accel() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->y_accel(), output);
+  // float yaccel = 3;
+  if (this->yaccel() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->yaccel(), output);
   }
 
-  // float z_accel = 4;
-  if (this->z_accel() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(4, this->z_accel(), output);
+  // float zaccel = 4;
+  if (this->zaccel() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(4, this->zaccel(), output);
   }
 
-  // float roll_rate = 5;
-  if (this->roll_rate() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(5, this->roll_rate(), output);
+  // float rollrate = 5;
+  if (this->rollrate() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(5, this->rollrate(), output);
   }
 
-  // float pitch_rate = 6;
-  if (this->pitch_rate() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(6, this->pitch_rate(), output);
+  // float pitchrate = 6;
+  if (this->pitchrate() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(6, this->pitchrate(), output);
   }
 
-  // float yaw_rate = 7;
-  if (this->yaw_rate() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(7, this->yaw_rate(), output);
+  // float yawrate = 7;
+  if (this->yawrate() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(7, this->yawrate(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -4741,39 +4740,39 @@ void VehicleBodySensedState::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicle_id(), target);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicleid(), target);
   }
 
-  // float x_accel = 2;
-  if (this->x_accel() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(2, this->x_accel(), target);
+  // float xaccel = 2;
+  if (this->xaccel() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(2, this->xaccel(), target);
   }
 
-  // float y_accel = 3;
-  if (this->y_accel() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->y_accel(), target);
+  // float yaccel = 3;
+  if (this->yaccel() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->yaccel(), target);
   }
 
-  // float z_accel = 4;
-  if (this->z_accel() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(4, this->z_accel(), target);
+  // float zaccel = 4;
+  if (this->zaccel() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(4, this->zaccel(), target);
   }
 
-  // float roll_rate = 5;
-  if (this->roll_rate() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(5, this->roll_rate(), target);
+  // float rollrate = 5;
+  if (this->rollrate() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(5, this->rollrate(), target);
   }
 
-  // float pitch_rate = 6;
-  if (this->pitch_rate() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(6, this->pitch_rate(), target);
+  // float pitchrate = 6;
+  if (this->pitchrate() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(6, this->pitchrate(), target);
   }
 
-  // float yaw_rate = 7;
-  if (this->yaw_rate() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(7, this->yaw_rate(), target);
+  // float yawrate = 7;
+  if (this->yawrate() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(7, this->yawrate(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -4793,40 +4792,40 @@ size_t VehicleBodySensedState::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_id());
+        this->vehicleid());
   }
 
-  // float x_accel = 2;
-  if (this->x_accel() != 0) {
+  // float xaccel = 2;
+  if (this->xaccel() != 0) {
     total_size += 1 + 4;
   }
 
-  // float y_accel = 3;
-  if (this->y_accel() != 0) {
+  // float yaccel = 3;
+  if (this->yaccel() != 0) {
     total_size += 1 + 4;
   }
 
-  // float z_accel = 4;
-  if (this->z_accel() != 0) {
+  // float zaccel = 4;
+  if (this->zaccel() != 0) {
     total_size += 1 + 4;
   }
 
-  // float roll_rate = 5;
-  if (this->roll_rate() != 0) {
+  // float rollrate = 5;
+  if (this->rollrate() != 0) {
     total_size += 1 + 4;
   }
 
-  // float pitch_rate = 6;
-  if (this->pitch_rate() != 0) {
+  // float pitchrate = 6;
+  if (this->pitchrate() != 0) {
     total_size += 1 + 4;
   }
 
-  // float yaw_rate = 7;
-  if (this->yaw_rate() != 0) {
+  // float yawrate = 7;
+  if (this->yawrate() != 0) {
     total_size += 1 + 4;
   }
 
@@ -4859,26 +4858,26 @@ void VehicleBodySensedState::MergeFrom(const VehicleBodySensedState& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.vehicle_id() != 0) {
-    set_vehicle_id(from.vehicle_id());
+  if (from.vehicleid() != 0) {
+    set_vehicleid(from.vehicleid());
   }
-  if (from.x_accel() != 0) {
-    set_x_accel(from.x_accel());
+  if (from.xaccel() != 0) {
+    set_xaccel(from.xaccel());
   }
-  if (from.y_accel() != 0) {
-    set_y_accel(from.y_accel());
+  if (from.yaccel() != 0) {
+    set_yaccel(from.yaccel());
   }
-  if (from.z_accel() != 0) {
-    set_z_accel(from.z_accel());
+  if (from.zaccel() != 0) {
+    set_zaccel(from.zaccel());
   }
-  if (from.roll_rate() != 0) {
-    set_roll_rate(from.roll_rate());
+  if (from.rollrate() != 0) {
+    set_rollrate(from.rollrate());
   }
-  if (from.pitch_rate() != 0) {
-    set_pitch_rate(from.pitch_rate());
+  if (from.pitchrate() != 0) {
+    set_pitchrate(from.pitchrate());
   }
-  if (from.yaw_rate() != 0) {
-    set_yaw_rate(from.yaw_rate());
+  if (from.yawrate() != 0) {
+    set_yawrate(from.yawrate());
   }
 }
 
@@ -4906,13 +4905,13 @@ void VehicleBodySensedState::Swap(VehicleBodySensedState* other) {
 }
 void VehicleBodySensedState::InternalSwap(VehicleBodySensedState* other) {
   using std::swap;
-  swap(vehicle_id_, other->vehicle_id_);
-  swap(x_accel_, other->x_accel_);
-  swap(y_accel_, other->y_accel_);
-  swap(z_accel_, other->z_accel_);
-  swap(roll_rate_, other->roll_rate_);
-  swap(pitch_rate_, other->pitch_rate_);
-  swap(yaw_rate_, other->yaw_rate_);
+  swap(vehicleid_, other->vehicleid_);
+  swap(xaccel_, other->xaccel_);
+  swap(yaccel_, other->yaccel_);
+  swap(zaccel_, other->zaccel_);
+  swap(rollrate_, other->rollrate_);
+  swap(pitchrate_, other->pitchrate_);
+  swap(yawrate_, other->yawrate_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -4928,13 +4927,13 @@ void VehicleBodySensedState::InternalSwap(VehicleBodySensedState* other) {
 void VehicleGlobalPosition::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int VehicleGlobalPosition::kVehicleIdFieldNumber;
+const int VehicleGlobalPosition::kVehicleidFieldNumber;
 const int VehicleGlobalPosition::kLongitudeFieldNumber;
 const int VehicleGlobalPosition::kLatitudeFieldNumber;
 const int VehicleGlobalPosition::kAltitudeFieldNumber;
-const int VehicleGlobalPosition::kXSpeedFieldNumber;
-const int VehicleGlobalPosition::kYSpeedFieldNumber;
-const int VehicleGlobalPosition::kZSpeedFieldNumber;
+const int VehicleGlobalPosition::kXspeedFieldNumber;
+const int VehicleGlobalPosition::kYspeedFieldNumber;
+const int VehicleGlobalPosition::kZspeedFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 VehicleGlobalPosition::VehicleGlobalPosition()
@@ -4950,16 +4949,16 @@ VehicleGlobalPosition::VehicleGlobalPosition(const VehicleGlobalPosition& from)
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&vehicle_id_, &from.vehicle_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&z_speed_) -
-    reinterpret_cast<char*>(&vehicle_id_)) + sizeof(z_speed_));
+  ::memcpy(&vehicleid_, &from.vehicleid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&zspeed_) -
+    reinterpret_cast<char*>(&vehicleid_)) + sizeof(zspeed_));
   // @@protoc_insertion_point(copy_constructor:ProtoPackets.VehicleGlobalPosition)
 }
 
 void VehicleGlobalPosition::SharedCtor() {
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&z_speed_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(z_speed_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&zspeed_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(zspeed_));
   _cached_size_ = 0;
 }
 
@@ -5000,9 +4999,9 @@ void VehicleGlobalPosition::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&z_speed_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(z_speed_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&zspeed_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(zspeed_));
   _internal_metadata_.Clear();
 }
 
@@ -5016,14 +5015,14 @@ bool VehicleGlobalPosition::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 vehicle_id = 1;
+      // uint32 vehicleid = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_id_)));
+                 input, &vehicleid_)));
         } else {
           goto handle_unusual;
         }
@@ -5072,42 +5071,42 @@ bool VehicleGlobalPosition::MergePartialFromCodedStream(
         break;
       }
 
-      // float x_speed = 5;
+      // float xspeed = 5;
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(45u /* 45 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &x_speed_)));
+                 input, &xspeed_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float y_speed = 6;
+      // float yspeed = 6;
       case 6: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(53u /* 53 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &y_speed_)));
+                 input, &yspeed_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float z_speed = 7;
+      // float zspeed = 7;
       case 7: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(61u /* 61 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &z_speed_)));
+                 input, &zspeed_)));
         } else {
           goto handle_unusual;
         }
@@ -5140,9 +5139,9 @@ void VehicleGlobalPosition::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicle_id(), output);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicleid(), output);
   }
 
   // float longitude = 2;
@@ -5160,19 +5159,19 @@ void VehicleGlobalPosition::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteFloat(4, this->altitude(), output);
   }
 
-  // float x_speed = 5;
-  if (this->x_speed() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(5, this->x_speed(), output);
+  // float xspeed = 5;
+  if (this->xspeed() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(5, this->xspeed(), output);
   }
 
-  // float y_speed = 6;
-  if (this->y_speed() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(6, this->y_speed(), output);
+  // float yspeed = 6;
+  if (this->yspeed() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(6, this->yspeed(), output);
   }
 
-  // float z_speed = 7;
-  if (this->z_speed() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(7, this->z_speed(), output);
+  // float zspeed = 7;
+  if (this->zspeed() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(7, this->zspeed(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -5189,9 +5188,9 @@ void VehicleGlobalPosition::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicle_id(), target);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicleid(), target);
   }
 
   // float longitude = 2;
@@ -5209,19 +5208,19 @@ void VehicleGlobalPosition::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(4, this->altitude(), target);
   }
 
-  // float x_speed = 5;
-  if (this->x_speed() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(5, this->x_speed(), target);
+  // float xspeed = 5;
+  if (this->xspeed() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(5, this->xspeed(), target);
   }
 
-  // float y_speed = 6;
-  if (this->y_speed() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(6, this->y_speed(), target);
+  // float yspeed = 6;
+  if (this->yspeed() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(6, this->yspeed(), target);
   }
 
-  // float z_speed = 7;
-  if (this->z_speed() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(7, this->z_speed(), target);
+  // float zspeed = 7;
+  if (this->zspeed() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(7, this->zspeed(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -5241,11 +5240,11 @@ size_t VehicleGlobalPosition::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_id());
+        this->vehicleid());
   }
 
   // float longitude = 2;
@@ -5263,18 +5262,18 @@ size_t VehicleGlobalPosition::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
-  // float x_speed = 5;
-  if (this->x_speed() != 0) {
+  // float xspeed = 5;
+  if (this->xspeed() != 0) {
     total_size += 1 + 4;
   }
 
-  // float y_speed = 6;
-  if (this->y_speed() != 0) {
+  // float yspeed = 6;
+  if (this->yspeed() != 0) {
     total_size += 1 + 4;
   }
 
-  // float z_speed = 7;
-  if (this->z_speed() != 0) {
+  // float zspeed = 7;
+  if (this->zspeed() != 0) {
     total_size += 1 + 4;
   }
 
@@ -5307,8 +5306,8 @@ void VehicleGlobalPosition::MergeFrom(const VehicleGlobalPosition& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.vehicle_id() != 0) {
-    set_vehicle_id(from.vehicle_id());
+  if (from.vehicleid() != 0) {
+    set_vehicleid(from.vehicleid());
   }
   if (from.longitude() != 0) {
     set_longitude(from.longitude());
@@ -5319,14 +5318,14 @@ void VehicleGlobalPosition::MergeFrom(const VehicleGlobalPosition& from) {
   if (from.altitude() != 0) {
     set_altitude(from.altitude());
   }
-  if (from.x_speed() != 0) {
-    set_x_speed(from.x_speed());
+  if (from.xspeed() != 0) {
+    set_xspeed(from.xspeed());
   }
-  if (from.y_speed() != 0) {
-    set_y_speed(from.y_speed());
+  if (from.yspeed() != 0) {
+    set_yspeed(from.yspeed());
   }
-  if (from.z_speed() != 0) {
-    set_z_speed(from.z_speed());
+  if (from.zspeed() != 0) {
+    set_zspeed(from.zspeed());
   }
 }
 
@@ -5354,13 +5353,13 @@ void VehicleGlobalPosition::Swap(VehicleGlobalPosition* other) {
 }
 void VehicleGlobalPosition::InternalSwap(VehicleGlobalPosition* other) {
   using std::swap;
-  swap(vehicle_id_, other->vehicle_id_);
+  swap(vehicleid_, other->vehicleid_);
   swap(longitude_, other->longitude_);
   swap(latitude_, other->latitude_);
   swap(altitude_, other->altitude_);
-  swap(x_speed_, other->x_speed_);
-  swap(y_speed_, other->y_speed_);
-  swap(z_speed_, other->z_speed_);
+  swap(xspeed_, other->xspeed_);
+  swap(yspeed_, other->yspeed_);
+  swap(zspeed_, other->zspeed_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -5376,8 +5375,8 @@ void VehicleGlobalPosition::InternalSwap(VehicleGlobalPosition* other) {
 void VehicleIdentification::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int VehicleIdentification::kVehicleIdFieldNumber;
-const int VehicleIdentification::kVehicleTypeFieldNumber;
+const int VehicleIdentification::kVehicleidFieldNumber;
+const int VehicleIdentification::kVehicletypeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 VehicleIdentification::VehicleIdentification()
@@ -5393,16 +5392,16 @@ VehicleIdentification::VehicleIdentification(const VehicleIdentification& from)
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&vehicle_id_, &from.vehicle_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&vehicle_type_) -
-    reinterpret_cast<char*>(&vehicle_id_)) + sizeof(vehicle_type_));
+  ::memcpy(&vehicleid_, &from.vehicleid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&vehicletype_) -
+    reinterpret_cast<char*>(&vehicleid_)) + sizeof(vehicletype_));
   // @@protoc_insertion_point(copy_constructor:ProtoPackets.VehicleIdentification)
 }
 
 void VehicleIdentification::SharedCtor() {
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&vehicle_type_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(vehicle_type_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&vehicletype_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(vehicletype_));
   _cached_size_ = 0;
 }
 
@@ -5443,9 +5442,9 @@ void VehicleIdentification::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&vehicle_type_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(vehicle_type_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&vehicletype_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(vehicletype_));
   _internal_metadata_.Clear();
 }
 
@@ -5459,28 +5458,28 @@ bool VehicleIdentification::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 vehicle_id = 1;
+      // uint32 vehicleid = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_id_)));
+                 input, &vehicleid_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint32 vehicle_type = 2;
+      // uint32 vehicletype = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_type_)));
+                 input, &vehicletype_)));
         } else {
           goto handle_unusual;
         }
@@ -5513,14 +5512,14 @@ void VehicleIdentification::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicle_id(), output);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicleid(), output);
   }
 
-  // uint32 vehicle_type = 2;
-  if (this->vehicle_type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->vehicle_type(), output);
+  // uint32 vehicletype = 2;
+  if (this->vehicletype() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->vehicletype(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -5537,14 +5536,14 @@ void VehicleIdentification::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicle_id(), target);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicleid(), target);
   }
 
-  // uint32 vehicle_type = 2;
-  if (this->vehicle_type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->vehicle_type(), target);
+  // uint32 vehicletype = 2;
+  if (this->vehicletype() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->vehicletype(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -5564,18 +5563,18 @@ size_t VehicleIdentification::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_id());
+        this->vehicleid());
   }
 
-  // uint32 vehicle_type = 2;
-  if (this->vehicle_type() != 0) {
+  // uint32 vehicletype = 2;
+  if (this->vehicletype() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_type());
+        this->vehicletype());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -5607,11 +5606,11 @@ void VehicleIdentification::MergeFrom(const VehicleIdentification& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.vehicle_id() != 0) {
-    set_vehicle_id(from.vehicle_id());
+  if (from.vehicleid() != 0) {
+    set_vehicleid(from.vehicleid());
   }
-  if (from.vehicle_type() != 0) {
-    set_vehicle_type(from.vehicle_type());
+  if (from.vehicletype() != 0) {
+    set_vehicletype(from.vehicletype());
   }
 }
 
@@ -5639,8 +5638,8 @@ void VehicleIdentification::Swap(VehicleIdentification* other) {
 }
 void VehicleIdentification::InternalSwap(VehicleIdentification* other) {
   using std::swap;
-  swap(vehicle_id_, other->vehicle_id_);
-  swap(vehicle_type_, other->vehicle_type_);
+  swap(vehicleid_, other->vehicleid_);
+  swap(vehicletype_, other->vehicletype_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -5656,22 +5655,22 @@ void VehicleIdentification::InternalSwap(VehicleIdentification* other) {
 void VehicleInertialState::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int VehicleInertialState::kVehicleIdFieldNumber;
+const int VehicleInertialState::kVehicleidFieldNumber;
 const int VehicleInertialState::kLongitudeFieldNumber;
 const int VehicleInertialState::kLatitudeFieldNumber;
 const int VehicleInertialState::kAltitudeFieldNumber;
 const int VehicleInertialState::kRollFieldNumber;
 const int VehicleInertialState::kPitchFieldNumber;
 const int VehicleInertialState::kHeadingFieldNumber;
-const int VehicleInertialState::kNorthSpeedFieldNumber;
-const int VehicleInertialState::kEastSpeedFieldNumber;
-const int VehicleInertialState::kVerticalSpeedFieldNumber;
-const int VehicleInertialState::kRollRateFieldNumber;
-const int VehicleInertialState::kPitchRateFieldNumber;
-const int VehicleInertialState::kYawRateFieldNumber;
-const int VehicleInertialState::kNorthAccelFieldNumber;
-const int VehicleInertialState::kEastAccelFieldNumber;
-const int VehicleInertialState::kVerticalAccelFieldNumber;
+const int VehicleInertialState::kNorthspeedFieldNumber;
+const int VehicleInertialState::kEastspeedFieldNumber;
+const int VehicleInertialState::kVerticalspeedFieldNumber;
+const int VehicleInertialState::kRollrateFieldNumber;
+const int VehicleInertialState::kPitchrateFieldNumber;
+const int VehicleInertialState::kYawrateFieldNumber;
+const int VehicleInertialState::kNorthaccelFieldNumber;
+const int VehicleInertialState::kEastaccelFieldNumber;
+const int VehicleInertialState::kVerticalaccelFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 VehicleInertialState::VehicleInertialState()
@@ -5687,16 +5686,16 @@ VehicleInertialState::VehicleInertialState(const VehicleInertialState& from)
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&vehicle_id_, &from.vehicle_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&vertical_accel_) -
-    reinterpret_cast<char*>(&vehicle_id_)) + sizeof(vertical_accel_));
+  ::memcpy(&vehicleid_, &from.vehicleid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&verticalaccel_) -
+    reinterpret_cast<char*>(&vehicleid_)) + sizeof(verticalaccel_));
   // @@protoc_insertion_point(copy_constructor:ProtoPackets.VehicleInertialState)
 }
 
 void VehicleInertialState::SharedCtor() {
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&vertical_accel_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(vertical_accel_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&verticalaccel_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(verticalaccel_));
   _cached_size_ = 0;
 }
 
@@ -5737,9 +5736,9 @@ void VehicleInertialState::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&vertical_accel_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(vertical_accel_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&verticalaccel_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(verticalaccel_));
   _internal_metadata_.Clear();
 }
 
@@ -5753,14 +5752,14 @@ bool VehicleInertialState::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 vehicle_id = 1;
+      // uint32 vehicleid = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_id_)));
+                 input, &vehicleid_)));
         } else {
           goto handle_unusual;
         }
@@ -5851,126 +5850,126 @@ bool VehicleInertialState::MergePartialFromCodedStream(
         break;
       }
 
-      // float north_speed = 8;
+      // float northspeed = 8;
       case 8: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(69u /* 69 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &north_speed_)));
+                 input, &northspeed_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float east_speed = 9;
+      // float eastspeed = 9;
       case 9: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(77u /* 77 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &east_speed_)));
+                 input, &eastspeed_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float vertical_speed = 10;
+      // float verticalspeed = 10;
       case 10: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(85u /* 85 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &vertical_speed_)));
+                 input, &verticalspeed_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float roll_rate = 11;
+      // float rollrate = 11;
       case 11: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(93u /* 93 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &roll_rate_)));
+                 input, &rollrate_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float pitch_rate = 12;
+      // float pitchrate = 12;
       case 12: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(101u /* 101 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &pitch_rate_)));
+                 input, &pitchrate_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float yaw_rate = 13;
+      // float yawrate = 13;
       case 13: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(109u /* 109 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &yaw_rate_)));
+                 input, &yawrate_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float north_accel = 14;
+      // float northaccel = 14;
       case 14: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(117u /* 117 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &north_accel_)));
+                 input, &northaccel_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float east_accel = 15;
+      // float eastaccel = 15;
       case 15: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(125u /* 125 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &east_accel_)));
+                 input, &eastaccel_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // float vertical_accel = 16;
+      // float verticalaccel = 16;
       case 16: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(133u /* 133 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &vertical_accel_)));
+                 input, &verticalaccel_)));
         } else {
           goto handle_unusual;
         }
@@ -6003,9 +6002,9 @@ void VehicleInertialState::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicle_id(), output);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicleid(), output);
   }
 
   // float longitude = 2;
@@ -6038,49 +6037,49 @@ void VehicleInertialState::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteFloat(7, this->heading(), output);
   }
 
-  // float north_speed = 8;
-  if (this->north_speed() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(8, this->north_speed(), output);
+  // float northspeed = 8;
+  if (this->northspeed() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(8, this->northspeed(), output);
   }
 
-  // float east_speed = 9;
-  if (this->east_speed() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(9, this->east_speed(), output);
+  // float eastspeed = 9;
+  if (this->eastspeed() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(9, this->eastspeed(), output);
   }
 
-  // float vertical_speed = 10;
-  if (this->vertical_speed() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(10, this->vertical_speed(), output);
+  // float verticalspeed = 10;
+  if (this->verticalspeed() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(10, this->verticalspeed(), output);
   }
 
-  // float roll_rate = 11;
-  if (this->roll_rate() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(11, this->roll_rate(), output);
+  // float rollrate = 11;
+  if (this->rollrate() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(11, this->rollrate(), output);
   }
 
-  // float pitch_rate = 12;
-  if (this->pitch_rate() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(12, this->pitch_rate(), output);
+  // float pitchrate = 12;
+  if (this->pitchrate() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(12, this->pitchrate(), output);
   }
 
-  // float yaw_rate = 13;
-  if (this->yaw_rate() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(13, this->yaw_rate(), output);
+  // float yawrate = 13;
+  if (this->yawrate() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(13, this->yawrate(), output);
   }
 
-  // float north_accel = 14;
-  if (this->north_accel() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(14, this->north_accel(), output);
+  // float northaccel = 14;
+  if (this->northaccel() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(14, this->northaccel(), output);
   }
 
-  // float east_accel = 15;
-  if (this->east_accel() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(15, this->east_accel(), output);
+  // float eastaccel = 15;
+  if (this->eastaccel() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(15, this->eastaccel(), output);
   }
 
-  // float vertical_accel = 16;
-  if (this->vertical_accel() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(16, this->vertical_accel(), output);
+  // float verticalaccel = 16;
+  if (this->verticalaccel() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(16, this->verticalaccel(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -6097,9 +6096,9 @@ void VehicleInertialState::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicle_id(), target);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicleid(), target);
   }
 
   // float longitude = 2;
@@ -6132,49 +6131,49 @@ void VehicleInertialState::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(7, this->heading(), target);
   }
 
-  // float north_speed = 8;
-  if (this->north_speed() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(8, this->north_speed(), target);
+  // float northspeed = 8;
+  if (this->northspeed() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(8, this->northspeed(), target);
   }
 
-  // float east_speed = 9;
-  if (this->east_speed() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(9, this->east_speed(), target);
+  // float eastspeed = 9;
+  if (this->eastspeed() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(9, this->eastspeed(), target);
   }
 
-  // float vertical_speed = 10;
-  if (this->vertical_speed() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(10, this->vertical_speed(), target);
+  // float verticalspeed = 10;
+  if (this->verticalspeed() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(10, this->verticalspeed(), target);
   }
 
-  // float roll_rate = 11;
-  if (this->roll_rate() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(11, this->roll_rate(), target);
+  // float rollrate = 11;
+  if (this->rollrate() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(11, this->rollrate(), target);
   }
 
-  // float pitch_rate = 12;
-  if (this->pitch_rate() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(12, this->pitch_rate(), target);
+  // float pitchrate = 12;
+  if (this->pitchrate() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(12, this->pitchrate(), target);
   }
 
-  // float yaw_rate = 13;
-  if (this->yaw_rate() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(13, this->yaw_rate(), target);
+  // float yawrate = 13;
+  if (this->yawrate() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(13, this->yawrate(), target);
   }
 
-  // float north_accel = 14;
-  if (this->north_accel() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(14, this->north_accel(), target);
+  // float northaccel = 14;
+  if (this->northaccel() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(14, this->northaccel(), target);
   }
 
-  // float east_accel = 15;
-  if (this->east_accel() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(15, this->east_accel(), target);
+  // float eastaccel = 15;
+  if (this->eastaccel() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(15, this->eastaccel(), target);
   }
 
-  // float vertical_accel = 16;
-  if (this->vertical_accel() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(16, this->vertical_accel(), target);
+  // float verticalaccel = 16;
+  if (this->verticalaccel() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(16, this->verticalaccel(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -6194,11 +6193,11 @@ size_t VehicleInertialState::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_id());
+        this->vehicleid());
   }
 
   // float longitude = 2;
@@ -6231,48 +6230,48 @@ size_t VehicleInertialState::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
-  // float north_speed = 8;
-  if (this->north_speed() != 0) {
+  // float northspeed = 8;
+  if (this->northspeed() != 0) {
     total_size += 1 + 4;
   }
 
-  // float east_speed = 9;
-  if (this->east_speed() != 0) {
+  // float eastspeed = 9;
+  if (this->eastspeed() != 0) {
     total_size += 1 + 4;
   }
 
-  // float vertical_speed = 10;
-  if (this->vertical_speed() != 0) {
+  // float verticalspeed = 10;
+  if (this->verticalspeed() != 0) {
     total_size += 1 + 4;
   }
 
-  // float roll_rate = 11;
-  if (this->roll_rate() != 0) {
+  // float rollrate = 11;
+  if (this->rollrate() != 0) {
     total_size += 1 + 4;
   }
 
-  // float pitch_rate = 12;
-  if (this->pitch_rate() != 0) {
+  // float pitchrate = 12;
+  if (this->pitchrate() != 0) {
     total_size += 1 + 4;
   }
 
-  // float yaw_rate = 13;
-  if (this->yaw_rate() != 0) {
+  // float yawrate = 13;
+  if (this->yawrate() != 0) {
     total_size += 1 + 4;
   }
 
-  // float north_accel = 14;
-  if (this->north_accel() != 0) {
+  // float northaccel = 14;
+  if (this->northaccel() != 0) {
     total_size += 1 + 4;
   }
 
-  // float east_accel = 15;
-  if (this->east_accel() != 0) {
+  // float eastaccel = 15;
+  if (this->eastaccel() != 0) {
     total_size += 1 + 4;
   }
 
-  // float vertical_accel = 16;
-  if (this->vertical_accel() != 0) {
+  // float verticalaccel = 16;
+  if (this->verticalaccel() != 0) {
     total_size += 2 + 4;
   }
 
@@ -6305,8 +6304,8 @@ void VehicleInertialState::MergeFrom(const VehicleInertialState& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.vehicle_id() != 0) {
-    set_vehicle_id(from.vehicle_id());
+  if (from.vehicleid() != 0) {
+    set_vehicleid(from.vehicleid());
   }
   if (from.longitude() != 0) {
     set_longitude(from.longitude());
@@ -6326,32 +6325,32 @@ void VehicleInertialState::MergeFrom(const VehicleInertialState& from) {
   if (from.heading() != 0) {
     set_heading(from.heading());
   }
-  if (from.north_speed() != 0) {
-    set_north_speed(from.north_speed());
+  if (from.northspeed() != 0) {
+    set_northspeed(from.northspeed());
   }
-  if (from.east_speed() != 0) {
-    set_east_speed(from.east_speed());
+  if (from.eastspeed() != 0) {
+    set_eastspeed(from.eastspeed());
   }
-  if (from.vertical_speed() != 0) {
-    set_vertical_speed(from.vertical_speed());
+  if (from.verticalspeed() != 0) {
+    set_verticalspeed(from.verticalspeed());
   }
-  if (from.roll_rate() != 0) {
-    set_roll_rate(from.roll_rate());
+  if (from.rollrate() != 0) {
+    set_rollrate(from.rollrate());
   }
-  if (from.pitch_rate() != 0) {
-    set_pitch_rate(from.pitch_rate());
+  if (from.pitchrate() != 0) {
+    set_pitchrate(from.pitchrate());
   }
-  if (from.yaw_rate() != 0) {
-    set_yaw_rate(from.yaw_rate());
+  if (from.yawrate() != 0) {
+    set_yawrate(from.yawrate());
   }
-  if (from.north_accel() != 0) {
-    set_north_accel(from.north_accel());
+  if (from.northaccel() != 0) {
+    set_northaccel(from.northaccel());
   }
-  if (from.east_accel() != 0) {
-    set_east_accel(from.east_accel());
+  if (from.eastaccel() != 0) {
+    set_eastaccel(from.eastaccel());
   }
-  if (from.vertical_accel() != 0) {
-    set_vertical_accel(from.vertical_accel());
+  if (from.verticalaccel() != 0) {
+    set_verticalaccel(from.verticalaccel());
   }
 }
 
@@ -6379,22 +6378,22 @@ void VehicleInertialState::Swap(VehicleInertialState* other) {
 }
 void VehicleInertialState::InternalSwap(VehicleInertialState* other) {
   using std::swap;
-  swap(vehicle_id_, other->vehicle_id_);
+  swap(vehicleid_, other->vehicleid_);
   swap(longitude_, other->longitude_);
   swap(latitude_, other->latitude_);
   swap(altitude_, other->altitude_);
   swap(roll_, other->roll_);
   swap(pitch_, other->pitch_);
   swap(heading_, other->heading_);
-  swap(north_speed_, other->north_speed_);
-  swap(east_speed_, other->east_speed_);
-  swap(vertical_speed_, other->vertical_speed_);
-  swap(roll_rate_, other->roll_rate_);
-  swap(pitch_rate_, other->pitch_rate_);
-  swap(yaw_rate_, other->yaw_rate_);
-  swap(north_accel_, other->north_accel_);
-  swap(east_accel_, other->east_accel_);
-  swap(vertical_accel_, other->vertical_accel_);
+  swap(northspeed_, other->northspeed_);
+  swap(eastspeed_, other->eastspeed_);
+  swap(verticalspeed_, other->verticalspeed_);
+  swap(rollrate_, other->rollrate_);
+  swap(pitchrate_, other->pitchrate_);
+  swap(yawrate_, other->yawrate_);
+  swap(northaccel_, other->northaccel_);
+  swap(eastaccel_, other->eastaccel_);
+  swap(verticalaccel_, other->verticalaccel_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -6410,8 +6409,8 @@ void VehicleInertialState::InternalSwap(VehicleInertialState* other) {
 void VehicleModeCommand::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int VehicleModeCommand::kVehicleIdFieldNumber;
-const int VehicleModeCommand::kVehicleModeFieldNumber;
+const int VehicleModeCommand::kVehicleidFieldNumber;
+const int VehicleModeCommand::kVehiclemodeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 VehicleModeCommand::VehicleModeCommand()
@@ -6427,16 +6426,16 @@ VehicleModeCommand::VehicleModeCommand(const VehicleModeCommand& from)
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&vehicle_id_, &from.vehicle_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&vehicle_mode_) -
-    reinterpret_cast<char*>(&vehicle_id_)) + sizeof(vehicle_mode_));
+  ::memcpy(&vehicleid_, &from.vehicleid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&vehiclemode_) -
+    reinterpret_cast<char*>(&vehicleid_)) + sizeof(vehiclemode_));
   // @@protoc_insertion_point(copy_constructor:ProtoPackets.VehicleModeCommand)
 }
 
 void VehicleModeCommand::SharedCtor() {
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&vehicle_mode_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(vehicle_mode_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&vehiclemode_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(vehiclemode_));
   _cached_size_ = 0;
 }
 
@@ -6477,9 +6476,9 @@ void VehicleModeCommand::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&vehicle_mode_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(vehicle_mode_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&vehiclemode_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(vehiclemode_));
   _internal_metadata_.Clear();
 }
 
@@ -6493,28 +6492,28 @@ bool VehicleModeCommand::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 vehicle_id = 1;
+      // uint32 vehicleid = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_id_)));
+                 input, &vehicleid_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint32 vehicle_mode = 2;
+      // uint32 vehiclemode = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_mode_)));
+                 input, &vehiclemode_)));
         } else {
           goto handle_unusual;
         }
@@ -6547,14 +6546,14 @@ void VehicleModeCommand::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicle_id(), output);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicleid(), output);
   }
 
-  // uint32 vehicle_mode = 2;
-  if (this->vehicle_mode() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->vehicle_mode(), output);
+  // uint32 vehiclemode = 2;
+  if (this->vehiclemode() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->vehiclemode(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -6571,14 +6570,14 @@ void VehicleModeCommand::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicle_id(), target);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicleid(), target);
   }
 
-  // uint32 vehicle_mode = 2;
-  if (this->vehicle_mode() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->vehicle_mode(), target);
+  // uint32 vehiclemode = 2;
+  if (this->vehiclemode() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->vehiclemode(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -6598,18 +6597,18 @@ size_t VehicleModeCommand::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_id());
+        this->vehicleid());
   }
 
-  // uint32 vehicle_mode = 2;
-  if (this->vehicle_mode() != 0) {
+  // uint32 vehiclemode = 2;
+  if (this->vehiclemode() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_mode());
+        this->vehiclemode());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -6641,11 +6640,11 @@ void VehicleModeCommand::MergeFrom(const VehicleModeCommand& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.vehicle_id() != 0) {
-    set_vehicle_id(from.vehicle_id());
+  if (from.vehicleid() != 0) {
+    set_vehicleid(from.vehicleid());
   }
-  if (from.vehicle_mode() != 0) {
-    set_vehicle_mode(from.vehicle_mode());
+  if (from.vehiclemode() != 0) {
+    set_vehiclemode(from.vehiclemode());
   }
 }
 
@@ -6673,8 +6672,8 @@ void VehicleModeCommand::Swap(VehicleModeCommand* other) {
 }
 void VehicleModeCommand::InternalSwap(VehicleModeCommand* other) {
   using std::swap;
-  swap(vehicle_id_, other->vehicle_id_);
-  swap(vehicle_mode_, other->vehicle_mode_);
+  swap(vehicleid_, other->vehicleid_);
+  swap(vehiclemode_, other->vehiclemode_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -6690,9 +6689,9 @@ void VehicleModeCommand::InternalSwap(VehicleModeCommand* other) {
 void VehicleSystemStatus::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int VehicleSystemStatus::kVehicleIdFieldNumber;
-const int VehicleSystemStatus::kVehicleModeFieldNumber;
-const int VehicleSystemStatus::kVehicleStateFieldNumber;
+const int VehicleSystemStatus::kVehicleidFieldNumber;
+const int VehicleSystemStatus::kVehiclemodeFieldNumber;
+const int VehicleSystemStatus::kVehiclestateFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 VehicleSystemStatus::VehicleSystemStatus()
@@ -6708,16 +6707,16 @@ VehicleSystemStatus::VehicleSystemStatus(const VehicleSystemStatus& from)
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&vehicle_id_, &from.vehicle_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&vehicle_state_) -
-    reinterpret_cast<char*>(&vehicle_id_)) + sizeof(vehicle_state_));
+  ::memcpy(&vehicleid_, &from.vehicleid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&vehiclestate_) -
+    reinterpret_cast<char*>(&vehicleid_)) + sizeof(vehiclestate_));
   // @@protoc_insertion_point(copy_constructor:ProtoPackets.VehicleSystemStatus)
 }
 
 void VehicleSystemStatus::SharedCtor() {
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&vehicle_state_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(vehicle_state_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&vehiclestate_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(vehiclestate_));
   _cached_size_ = 0;
 }
 
@@ -6758,9 +6757,9 @@ void VehicleSystemStatus::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&vehicle_state_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(vehicle_state_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&vehiclestate_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(vehiclestate_));
   _internal_metadata_.Clear();
 }
 
@@ -6774,42 +6773,42 @@ bool VehicleSystemStatus::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 vehicle_id = 1;
+      // uint32 vehicleid = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_id_)));
+                 input, &vehicleid_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint32 vehicle_mode = 2;
+      // uint32 vehiclemode = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_mode_)));
+                 input, &vehiclemode_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint32 vehicle_state = 3;
+      // uint32 vehiclestate = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_state_)));
+                 input, &vehiclestate_)));
         } else {
           goto handle_unusual;
         }
@@ -6842,19 +6841,19 @@ void VehicleSystemStatus::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicle_id(), output);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicleid(), output);
   }
 
-  // uint32 vehicle_mode = 2;
-  if (this->vehicle_mode() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->vehicle_mode(), output);
+  // uint32 vehiclemode = 2;
+  if (this->vehiclemode() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->vehiclemode(), output);
   }
 
-  // uint32 vehicle_state = 3;
-  if (this->vehicle_state() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->vehicle_state(), output);
+  // uint32 vehiclestate = 3;
+  if (this->vehiclestate() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->vehiclestate(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -6871,19 +6870,19 @@ void VehicleSystemStatus::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicle_id(), target);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicleid(), target);
   }
 
-  // uint32 vehicle_mode = 2;
-  if (this->vehicle_mode() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->vehicle_mode(), target);
+  // uint32 vehiclemode = 2;
+  if (this->vehiclemode() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->vehiclemode(), target);
   }
 
-  // uint32 vehicle_state = 3;
-  if (this->vehicle_state() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->vehicle_state(), target);
+  // uint32 vehiclestate = 3;
+  if (this->vehiclestate() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->vehiclestate(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -6903,25 +6902,25 @@ size_t VehicleSystemStatus::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_id());
+        this->vehicleid());
   }
 
-  // uint32 vehicle_mode = 2;
-  if (this->vehicle_mode() != 0) {
+  // uint32 vehiclemode = 2;
+  if (this->vehiclemode() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_mode());
+        this->vehiclemode());
   }
 
-  // uint32 vehicle_state = 3;
-  if (this->vehicle_state() != 0) {
+  // uint32 vehiclestate = 3;
+  if (this->vehiclestate() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_state());
+        this->vehiclestate());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -6953,14 +6952,14 @@ void VehicleSystemStatus::MergeFrom(const VehicleSystemStatus& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.vehicle_id() != 0) {
-    set_vehicle_id(from.vehicle_id());
+  if (from.vehicleid() != 0) {
+    set_vehicleid(from.vehicleid());
   }
-  if (from.vehicle_mode() != 0) {
-    set_vehicle_mode(from.vehicle_mode());
+  if (from.vehiclemode() != 0) {
+    set_vehiclemode(from.vehiclemode());
   }
-  if (from.vehicle_state() != 0) {
-    set_vehicle_state(from.vehicle_state());
+  if (from.vehiclestate() != 0) {
+    set_vehiclestate(from.vehiclestate());
   }
 }
 
@@ -6988,9 +6987,9 @@ void VehicleSystemStatus::Swap(VehicleSystemStatus* other) {
 }
 void VehicleSystemStatus::InternalSwap(VehicleSystemStatus* other) {
   using std::swap;
-  swap(vehicle_id_, other->vehicle_id_);
-  swap(vehicle_mode_, other->vehicle_mode_);
-  swap(vehicle_state_, other->vehicle_state_);
+  swap(vehicleid_, other->vehicleid_);
+  swap(vehiclemode_, other->vehiclemode_);
+  swap(vehiclestate_, other->vehiclestate_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -7006,9 +7005,9 @@ void VehicleSystemStatus::InternalSwap(VehicleSystemStatus* other) {
 void VehicleTelemetryCommand::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int VehicleTelemetryCommand::kVehicleIdFieldNumber;
-const int VehicleTelemetryCommand::kTelemetrySelectFieldNumber;
-const int VehicleTelemetryCommand::kTelemetryRateFieldNumber;
+const int VehicleTelemetryCommand::kVehicleidFieldNumber;
+const int VehicleTelemetryCommand::kTelemetryselectFieldNumber;
+const int VehicleTelemetryCommand::kTelemetryrateFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 VehicleTelemetryCommand::VehicleTelemetryCommand()
@@ -7024,16 +7023,16 @@ VehicleTelemetryCommand::VehicleTelemetryCommand(const VehicleTelemetryCommand& 
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&vehicle_id_, &from.vehicle_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&telemetry_rate_) -
-    reinterpret_cast<char*>(&vehicle_id_)) + sizeof(telemetry_rate_));
+  ::memcpy(&vehicleid_, &from.vehicleid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&telemetryrate_) -
+    reinterpret_cast<char*>(&vehicleid_)) + sizeof(telemetryrate_));
   // @@protoc_insertion_point(copy_constructor:ProtoPackets.VehicleTelemetryCommand)
 }
 
 void VehicleTelemetryCommand::SharedCtor() {
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&telemetry_rate_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(telemetry_rate_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&telemetryrate_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(telemetryrate_));
   _cached_size_ = 0;
 }
 
@@ -7074,9 +7073,9 @@ void VehicleTelemetryCommand::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&telemetry_rate_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(telemetry_rate_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&telemetryrate_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(telemetryrate_));
   _internal_metadata_.Clear();
 }
 
@@ -7090,42 +7089,42 @@ bool VehicleTelemetryCommand::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 vehicle_id = 1;
+      // uint32 vehicleid = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_id_)));
+                 input, &vehicleid_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint32 telemetry_select = 2;
+      // uint32 telemetryselect = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &telemetry_select_)));
+                 input, &telemetryselect_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint32 telemetry_rate = 3;
+      // uint32 telemetryrate = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &telemetry_rate_)));
+                 input, &telemetryrate_)));
         } else {
           goto handle_unusual;
         }
@@ -7158,19 +7157,19 @@ void VehicleTelemetryCommand::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicle_id(), output);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicleid(), output);
   }
 
-  // uint32 telemetry_select = 2;
-  if (this->telemetry_select() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->telemetry_select(), output);
+  // uint32 telemetryselect = 2;
+  if (this->telemetryselect() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->telemetryselect(), output);
   }
 
-  // uint32 telemetry_rate = 3;
-  if (this->telemetry_rate() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->telemetry_rate(), output);
+  // uint32 telemetryrate = 3;
+  if (this->telemetryrate() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->telemetryrate(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -7187,19 +7186,19 @@ void VehicleTelemetryCommand::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicle_id(), target);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicleid(), target);
   }
 
-  // uint32 telemetry_select = 2;
-  if (this->telemetry_select() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->telemetry_select(), target);
+  // uint32 telemetryselect = 2;
+  if (this->telemetryselect() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->telemetryselect(), target);
   }
 
-  // uint32 telemetry_rate = 3;
-  if (this->telemetry_rate() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->telemetry_rate(), target);
+  // uint32 telemetryrate = 3;
+  if (this->telemetryrate() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->telemetryrate(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -7219,25 +7218,25 @@ size_t VehicleTelemetryCommand::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_id());
+        this->vehicleid());
   }
 
-  // uint32 telemetry_select = 2;
-  if (this->telemetry_select() != 0) {
+  // uint32 telemetryselect = 2;
+  if (this->telemetryselect() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->telemetry_select());
+        this->telemetryselect());
   }
 
-  // uint32 telemetry_rate = 3;
-  if (this->telemetry_rate() != 0) {
+  // uint32 telemetryrate = 3;
+  if (this->telemetryrate() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->telemetry_rate());
+        this->telemetryrate());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -7269,14 +7268,14 @@ void VehicleTelemetryCommand::MergeFrom(const VehicleTelemetryCommand& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.vehicle_id() != 0) {
-    set_vehicle_id(from.vehicle_id());
+  if (from.vehicleid() != 0) {
+    set_vehicleid(from.vehicleid());
   }
-  if (from.telemetry_select() != 0) {
-    set_telemetry_select(from.telemetry_select());
+  if (from.telemetryselect() != 0) {
+    set_telemetryselect(from.telemetryselect());
   }
-  if (from.telemetry_rate() != 0) {
-    set_telemetry_rate(from.telemetry_rate());
+  if (from.telemetryrate() != 0) {
+    set_telemetryrate(from.telemetryrate());
   }
 }
 
@@ -7304,9 +7303,9 @@ void VehicleTelemetryCommand::Swap(VehicleTelemetryCommand* other) {
 }
 void VehicleTelemetryCommand::InternalSwap(VehicleTelemetryCommand* other) {
   using std::swap;
-  swap(vehicle_id_, other->vehicle_id_);
-  swap(telemetry_select_, other->telemetry_select_);
-  swap(telemetry_rate_, other->telemetry_rate_);
+  swap(vehicleid_, other->vehicleid_);
+  swap(telemetryselect_, other->telemetryselect_);
+  swap(telemetryrate_, other->telemetryrate_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -7322,8 +7321,8 @@ void VehicleTelemetryCommand::InternalSwap(VehicleTelemetryCommand* other) {
 void VehicleTerminationCommand::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int VehicleTerminationCommand::kVehicleIdFieldNumber;
-const int VehicleTerminationCommand::kTerminationModeFieldNumber;
+const int VehicleTerminationCommand::kVehicleidFieldNumber;
+const int VehicleTerminationCommand::kTerminationmodeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 VehicleTerminationCommand::VehicleTerminationCommand()
@@ -7339,16 +7338,16 @@ VehicleTerminationCommand::VehicleTerminationCommand(const VehicleTerminationCom
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&vehicle_id_, &from.vehicle_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&termination_mode_) -
-    reinterpret_cast<char*>(&vehicle_id_)) + sizeof(termination_mode_));
+  ::memcpy(&vehicleid_, &from.vehicleid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&terminationmode_) -
+    reinterpret_cast<char*>(&vehicleid_)) + sizeof(terminationmode_));
   // @@protoc_insertion_point(copy_constructor:ProtoPackets.VehicleTerminationCommand)
 }
 
 void VehicleTerminationCommand::SharedCtor() {
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&termination_mode_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(termination_mode_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&terminationmode_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(terminationmode_));
   _cached_size_ = 0;
 }
 
@@ -7389,9 +7388,9 @@ void VehicleTerminationCommand::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&termination_mode_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(termination_mode_));
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&terminationmode_) -
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(terminationmode_));
   _internal_metadata_.Clear();
 }
 
@@ -7405,28 +7404,28 @@ bool VehicleTerminationCommand::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 vehicle_id = 1;
+      // uint32 vehicleid = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_id_)));
+                 input, &vehicleid_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint32 termination_mode = 2;
+      // uint32 terminationmode = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &termination_mode_)));
+                 input, &terminationmode_)));
         } else {
           goto handle_unusual;
         }
@@ -7459,14 +7458,14 @@ void VehicleTerminationCommand::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicle_id(), output);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicleid(), output);
   }
 
-  // uint32 termination_mode = 2;
-  if (this->termination_mode() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->termination_mode(), output);
+  // uint32 terminationmode = 2;
+  if (this->terminationmode() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->terminationmode(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -7483,14 +7482,14 @@ void VehicleTerminationCommand::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicle_id(), target);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicleid(), target);
   }
 
-  // uint32 termination_mode = 2;
-  if (this->termination_mode() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->termination_mode(), target);
+  // uint32 terminationmode = 2;
+  if (this->terminationmode() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->terminationmode(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -7510,18 +7509,18 @@ size_t VehicleTerminationCommand::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_id());
+        this->vehicleid());
   }
 
-  // uint32 termination_mode = 2;
-  if (this->termination_mode() != 0) {
+  // uint32 terminationmode = 2;
+  if (this->terminationmode() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->termination_mode());
+        this->terminationmode());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -7553,11 +7552,11 @@ void VehicleTerminationCommand::MergeFrom(const VehicleTerminationCommand& from)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.vehicle_id() != 0) {
-    set_vehicle_id(from.vehicle_id());
+  if (from.vehicleid() != 0) {
+    set_vehicleid(from.vehicleid());
   }
-  if (from.termination_mode() != 0) {
-    set_termination_mode(from.termination_mode());
+  if (from.terminationmode() != 0) {
+    set_terminationmode(from.terminationmode());
   }
 }
 
@@ -7585,8 +7584,8 @@ void VehicleTerminationCommand::Swap(VehicleTerminationCommand* other) {
 }
 void VehicleTerminationCommand::InternalSwap(VehicleTerminationCommand* other) {
   using std::swap;
-  swap(vehicle_id_, other->vehicle_id_);
-  swap(termination_mode_, other->termination_mode_);
+  swap(vehicleid_, other->vehicleid_);
+  swap(terminationmode_, other->terminationmode_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -7602,7 +7601,7 @@ void VehicleTerminationCommand::InternalSwap(VehicleTerminationCommand* other) {
 void VehicleWaypointCommand::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int VehicleWaypointCommand::kVehicleIdFieldNumber;
+const int VehicleWaypointCommand::kVehicleidFieldNumber;
 const int VehicleWaypointCommand::kLongitudeFieldNumber;
 const int VehicleWaypointCommand::kLatitudeFieldNumber;
 const int VehicleWaypointCommand::kAltitudeFieldNumber;
@@ -7621,16 +7620,16 @@ VehicleWaypointCommand::VehicleWaypointCommand(const VehicleWaypointCommand& fro
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&vehicle_id_, &from.vehicle_id_,
+  ::memcpy(&vehicleid_, &from.vehicleid_,
     static_cast<size_t>(reinterpret_cast<char*>(&altitude_) -
-    reinterpret_cast<char*>(&vehicle_id_)) + sizeof(altitude_));
+    reinterpret_cast<char*>(&vehicleid_)) + sizeof(altitude_));
   // @@protoc_insertion_point(copy_constructor:ProtoPackets.VehicleWaypointCommand)
 }
 
 void VehicleWaypointCommand::SharedCtor() {
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&altitude_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(altitude_));
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(altitude_));
   _cached_size_ = 0;
 }
 
@@ -7671,9 +7670,9 @@ void VehicleWaypointCommand::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&vehicle_id_, 0, static_cast<size_t>(
+  ::memset(&vehicleid_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&altitude_) -
-      reinterpret_cast<char*>(&vehicle_id_)) + sizeof(altitude_));
+      reinterpret_cast<char*>(&vehicleid_)) + sizeof(altitude_));
   _internal_metadata_.Clear();
 }
 
@@ -7687,14 +7686,14 @@ bool VehicleWaypointCommand::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 vehicle_id = 1;
+      // uint32 vehicleid = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &vehicle_id_)));
+                 input, &vehicleid_)));
         } else {
           goto handle_unusual;
         }
@@ -7769,9 +7768,9 @@ void VehicleWaypointCommand::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicle_id(), output);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->vehicleid(), output);
   }
 
   // float longitude = 2;
@@ -7803,9 +7802,9 @@ void VehicleWaypointCommand::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicle_id(), target);
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->vehicleid(), target);
   }
 
   // float longitude = 2;
@@ -7840,11 +7839,11 @@ size_t VehicleWaypointCommand::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // uint32 vehicle_id = 1;
-  if (this->vehicle_id() != 0) {
+  // uint32 vehicleid = 1;
+  if (this->vehicleid() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->vehicle_id());
+        this->vehicleid());
   }
 
   // float longitude = 2;
@@ -7891,8 +7890,8 @@ void VehicleWaypointCommand::MergeFrom(const VehicleWaypointCommand& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.vehicle_id() != 0) {
-    set_vehicle_id(from.vehicle_id());
+  if (from.vehicleid() != 0) {
+    set_vehicleid(from.vehicleid());
   }
   if (from.longitude() != 0) {
     set_longitude(from.longitude());
@@ -7929,7 +7928,7 @@ void VehicleWaypointCommand::Swap(VehicleWaypointCommand* other) {
 }
 void VehicleWaypointCommand::InternalSwap(VehicleWaypointCommand* other) {
   using std::swap;
-  swap(vehicle_id_, other->vehicle_id_);
+  swap(vehicleid_, other->vehicleid_);
   swap(longitude_, other->longitude_);
   swap(latitude_, other->latitude_);
   swap(altitude_, other->altitude_);

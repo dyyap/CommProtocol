@@ -253,87 +253,87 @@ class AirVehicleGroundRelativeState : public ::google::protobuf::Message /* @@pr
 
   // accessors -------------------------------------------------------
 
-  // uint32 vehicle_id = 1;
-  void clear_vehicle_id();
-  static const int kVehicleIdFieldNumber = 1;
-  ::google::protobuf::uint32 vehicle_id() const;
-  void set_vehicle_id(::google::protobuf::uint32 value);
+  // uint32 vehicleid = 1;
+  void clear_vehicleid();
+  static const int kVehicleidFieldNumber = 1;
+  ::google::protobuf::uint32 vehicleid() const;
+  void set_vehicleid(::google::protobuf::uint32 value);
 
-  // float angle_of_attack = 2;
-  void clear_angle_of_attack();
-  static const int kAngleOfAttackFieldNumber = 2;
-  float angle_of_attack() const;
-  void set_angle_of_attack(float value);
+  // float angleofattack = 2;
+  void clear_angleofattack();
+  static const int kAngleofattackFieldNumber = 2;
+  float angleofattack() const;
+  void set_angleofattack(float value);
 
-  // float angle_of_sideslip = 3;
-  void clear_angle_of_sideslip();
-  static const int kAngleOfSideslipFieldNumber = 3;
-  float angle_of_sideslip() const;
-  void set_angle_of_sideslip(float value);
+  // float angleofsideslip = 3;
+  void clear_angleofsideslip();
+  static const int kAngleofsideslipFieldNumber = 3;
+  float angleofsideslip() const;
+  void set_angleofsideslip(float value);
 
-  // float true_airspeed = 4;
-  void clear_true_airspeed();
-  static const int kTrueAirspeedFieldNumber = 4;
-  float true_airspeed() const;
-  void set_true_airspeed(float value);
+  // float trueairspeed = 4;
+  void clear_trueairspeed();
+  static const int kTrueairspeedFieldNumber = 4;
+  float trueairspeed() const;
+  void set_trueairspeed(float value);
 
-  // float indicated_airspeed = 5;
-  void clear_indicated_airspeed();
-  static const int kIndicatedAirspeedFieldNumber = 5;
-  float indicated_airspeed() const;
-  void set_indicated_airspeed(float value);
+  // float indicatedairspeed = 5;
+  void clear_indicatedairspeed();
+  static const int kIndicatedairspeedFieldNumber = 5;
+  float indicatedairspeed() const;
+  void set_indicatedairspeed(float value);
 
-  // float north_wind_speed = 6;
-  void clear_north_wind_speed();
-  static const int kNorthWindSpeedFieldNumber = 6;
-  float north_wind_speed() const;
-  void set_north_wind_speed(float value);
+  // float northwindspeed = 6;
+  void clear_northwindspeed();
+  static const int kNorthwindspeedFieldNumber = 6;
+  float northwindspeed() const;
+  void set_northwindspeed(float value);
 
-  // float east_wind_speed = 7;
-  void clear_east_wind_speed();
-  static const int kEastWindSpeedFieldNumber = 7;
-  float east_wind_speed() const;
-  void set_east_wind_speed(float value);
+  // float eastwindspeed = 7;
+  void clear_eastwindspeed();
+  static const int kEastwindspeedFieldNumber = 7;
+  float eastwindspeed() const;
+  void set_eastwindspeed(float value);
 
-  // float north_ground_speed = 8;
-  void clear_north_ground_speed();
-  static const int kNorthGroundSpeedFieldNumber = 8;
-  float north_ground_speed() const;
-  void set_north_ground_speed(float value);
+  // float northgroundspeed = 8;
+  void clear_northgroundspeed();
+  static const int kNorthgroundspeedFieldNumber = 8;
+  float northgroundspeed() const;
+  void set_northgroundspeed(float value);
 
-  // float east_ground_speed = 9;
-  void clear_east_ground_speed();
-  static const int kEastGroundSpeedFieldNumber = 9;
-  float east_ground_speed() const;
-  void set_east_ground_speed(float value);
+  // float eastgroundspeed = 9;
+  void clear_eastgroundspeed();
+  static const int kEastgroundspeedFieldNumber = 9;
+  float eastgroundspeed() const;
+  void set_eastgroundspeed(float value);
 
-  // float barometric_pressure = 10;
-  void clear_barometric_pressure();
-  static const int kBarometricPressureFieldNumber = 10;
-  float barometric_pressure() const;
-  void set_barometric_pressure(float value);
+  // float barometricpressure = 10;
+  void clear_barometricpressure();
+  static const int kBarometricpressureFieldNumber = 10;
+  float barometricpressure() const;
+  void set_barometricpressure(float value);
 
-  // float barometric_altitude = 11;
-  void clear_barometric_altitude();
-  static const int kBarometricAltitudeFieldNumber = 11;
-  float barometric_altitude() const;
-  void set_barometric_altitude(float value);
+  // float barometricaltitude = 11;
+  void clear_barometricaltitude();
+  static const int kBarometricaltitudeFieldNumber = 11;
+  float barometricaltitude() const;
+  void set_barometricaltitude(float value);
 
   // @@protoc_insertion_point(class_scope:ProtoPackets.AirVehicleGroundRelativeState)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 vehicle_id_;
-  float angle_of_attack_;
-  float angle_of_sideslip_;
-  float true_airspeed_;
-  float indicated_airspeed_;
-  float north_wind_speed_;
-  float east_wind_speed_;
-  float north_ground_speed_;
-  float east_ground_speed_;
-  float barometric_pressure_;
-  float barometric_altitude_;
+  ::google::protobuf::uint32 vehicleid_;
+  float angleofattack_;
+  float angleofsideslip_;
+  float trueairspeed_;
+  float indicatedairspeed_;
+  float northwindspeed_;
+  float eastwindspeed_;
+  float northgroundspeed_;
+  float eastgroundspeed_;
+  float barometricpressure_;
+  float barometricaltitude_;
   mutable int _cached_size_;
   friend struct ::protobuf_ProtoPacketsV2_2eproto::TableStruct;
   friend void ::protobuf_ProtoPacketsV2_2eproto::InitDefaultsAirVehicleGroundRelativeStateImpl();
@@ -747,17 +747,17 @@ class TargetAcknowledgement : public ::google::protobuf::Message /* @@protoc_ins
 
   // accessors -------------------------------------------------------
 
-  // uint32 target_status = 1;
-  void clear_target_status();
-  static const int kTargetStatusFieldNumber = 1;
-  ::google::protobuf::uint32 target_status() const;
-  void set_target_status(::google::protobuf::uint32 value);
+  // uint32 targetstatus = 1;
+  void clear_targetstatus();
+  static const int kTargetstatusFieldNumber = 1;
+  ::google::protobuf::uint32 targetstatus() const;
+  void set_targetstatus(::google::protobuf::uint32 value);
 
   // @@protoc_insertion_point(class_scope:ProtoPackets.TargetAcknowledgement)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 target_status_;
+  ::google::protobuf::uint32 targetstatus_;
   mutable int _cached_size_;
   friend struct ::protobuf_ProtoPacketsV2_2eproto::TableStruct;
   friend void ::protobuf_ProtoPacketsV2_2eproto::InitDefaultsTargetAcknowledgementImpl();
@@ -846,29 +846,29 @@ class TargetDesignationCommand : public ::google::protobuf::Message /* @@protoc_
 
   // accessors -------------------------------------------------------
 
-  // uint32 vehicle_id = 1;
-  void clear_vehicle_id();
-  static const int kVehicleIdFieldNumber = 1;
-  ::google::protobuf::uint32 vehicle_id() const;
-  void set_vehicle_id(::google::protobuf::uint32 value);
+  // uint32 vehicleid = 1;
+  void clear_vehicleid();
+  static const int kVehicleidFieldNumber = 1;
+  ::google::protobuf::uint32 vehicleid() const;
+  void set_vehicleid(::google::protobuf::uint32 value);
 
-  // uint32 payload_id = 2;
-  void clear_payload_id();
-  static const int kPayloadIdFieldNumber = 2;
-  ::google::protobuf::uint32 payload_id() const;
-  void set_payload_id(::google::protobuf::uint32 value);
+  // uint32 payloadid = 2;
+  void clear_payloadid();
+  static const int kPayloadidFieldNumber = 2;
+  ::google::protobuf::uint32 payloadid() const;
+  void set_payloadid(::google::protobuf::uint32 value);
 
-  // uint32 target_id = 3;
-  void clear_target_id();
-  static const int kTargetIdFieldNumber = 3;
-  ::google::protobuf::uint32 target_id() const;
-  void set_target_id(::google::protobuf::uint32 value);
+  // uint32 targetid = 3;
+  void clear_targetid();
+  static const int kTargetidFieldNumber = 3;
+  ::google::protobuf::uint32 targetid() const;
+  void set_targetid(::google::protobuf::uint32 value);
 
-  // uint32 target_type = 4;
-  void clear_target_type();
-  static const int kTargetTypeFieldNumber = 4;
-  ::google::protobuf::uint32 target_type() const;
-  void set_target_type(::google::protobuf::uint32 value);
+  // uint32 targettype = 4;
+  void clear_targettype();
+  static const int kTargettypeFieldNumber = 4;
+  ::google::protobuf::uint32 targettype() const;
+  void set_targettype(::google::protobuf::uint32 value);
 
   // float longitude = 5;
   void clear_longitude();
@@ -892,10 +892,10 @@ class TargetDesignationCommand : public ::google::protobuf::Message /* @@protoc_
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 vehicle_id_;
-  ::google::protobuf::uint32 payload_id_;
-  ::google::protobuf::uint32 target_id_;
-  ::google::protobuf::uint32 target_type_;
+  ::google::protobuf::uint32 vehicleid_;
+  ::google::protobuf::uint32 payloadid_;
+  ::google::protobuf::uint32 targetid_;
+  ::google::protobuf::uint32 targettype_;
   float longitude_;
   float latitude_;
   float altitude_;
@@ -987,31 +987,31 @@ class TargetStatus : public ::google::protobuf::Message /* @@protoc_insertion_po
 
   // accessors -------------------------------------------------------
 
-  // double target_radius = 1;
-  void clear_target_radius();
-  static const int kTargetRadiusFieldNumber = 1;
-  double target_radius() const;
-  void set_target_radius(double value);
+  // double targetradius = 1;
+  void clear_targetradius();
+  static const int kTargetradiusFieldNumber = 1;
+  double targetradius() const;
+  void set_targetradius(double value);
 
-  // double target_angle = 2;
-  void clear_target_angle();
-  static const int kTargetAngleFieldNumber = 2;
-  double target_angle() const;
-  void set_target_angle(double value);
+  // double targetangle = 2;
+  void clear_targetangle();
+  static const int kTargetangleFieldNumber = 2;
+  double targetangle() const;
+  void set_targetangle(double value);
 
-  // double target_altitude = 3;
-  void clear_target_altitude();
-  static const int kTargetAltitudeFieldNumber = 3;
-  double target_altitude() const;
-  void set_target_altitude(double value);
+  // double targetaltitude = 3;
+  void clear_targetaltitude();
+  static const int kTargetaltitudeFieldNumber = 3;
+  double targetaltitude() const;
+  void set_targetaltitude(double value);
 
   // @@protoc_insertion_point(class_scope:ProtoPackets.TargetStatus)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  double target_radius_;
-  double target_angle_;
-  double target_altitude_;
+  double targetradius_;
+  double targetangle_;
+  double targetaltitude_;
   mutable int _cached_size_;
   friend struct ::protobuf_ProtoPacketsV2_2eproto::TableStruct;
   friend void ::protobuf_ProtoPacketsV2_2eproto::InitDefaultsTargetStatusImpl();
@@ -1100,11 +1100,11 @@ class VehicleAttitude : public ::google::protobuf::Message /* @@protoc_insertion
 
   // accessors -------------------------------------------------------
 
-  // uint32 vehicle_id = 1;
-  void clear_vehicle_id();
-  static const int kVehicleIdFieldNumber = 1;
-  ::google::protobuf::uint32 vehicle_id() const;
-  void set_vehicle_id(::google::protobuf::uint32 value);
+  // uint32 vehicleid = 1;
+  void clear_vehicleid();
+  static const int kVehicleidFieldNumber = 1;
+  ::google::protobuf::uint32 vehicleid() const;
+  void set_vehicleid(::google::protobuf::uint32 value);
 
   // float roll = 2;
   void clear_roll();
@@ -1128,7 +1128,7 @@ class VehicleAttitude : public ::google::protobuf::Message /* @@protoc_insertion
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 vehicle_id_;
+  ::google::protobuf::uint32 vehicleid_;
   float roll_;
   float pitch_;
   float yaw_;
@@ -1220,38 +1220,38 @@ class VehicleAuthorizationReply : public ::google::protobuf::Message /* @@protoc
 
   // accessors -------------------------------------------------------
 
-  // uint32 vehicle_id = 1;
-  void clear_vehicle_id();
-  static const int kVehicleIdFieldNumber = 1;
-  ::google::protobuf::uint32 vehicle_id() const;
-  void set_vehicle_id(::google::protobuf::uint32 value);
+  // uint32 vehicleid = 1;
+  void clear_vehicleid();
+  static const int kVehicleidFieldNumber = 1;
+  ::google::protobuf::uint32 vehicleid() const;
+  void set_vehicleid(::google::protobuf::uint32 value);
 
-  // uint32 vehicle_type = 2;
-  void clear_vehicle_type();
-  static const int kVehicleTypeFieldNumber = 2;
-  ::google::protobuf::uint32 vehicle_type() const;
-  void set_vehicle_type(::google::protobuf::uint32 value);
+  // uint32 vehicletype = 2;
+  void clear_vehicletype();
+  static const int kVehicletypeFieldNumber = 2;
+  ::google::protobuf::uint32 vehicletype() const;
+  void set_vehicletype(::google::protobuf::uint32 value);
 
-  // uint32 authorized_services = 3;
-  void clear_authorized_services();
-  static const int kAuthorizedServicesFieldNumber = 3;
-  ::google::protobuf::uint32 authorized_services() const;
-  void set_authorized_services(::google::protobuf::uint32 value);
+  // uint32 authorizedservices = 3;
+  void clear_authorizedservices();
+  static const int kAuthorizedservicesFieldNumber = 3;
+  ::google::protobuf::uint32 authorizedservices() const;
+  void set_authorizedservices(::google::protobuf::uint32 value);
 
-  // uint32 granted_services = 4;
-  void clear_granted_services();
-  static const int kGrantedServicesFieldNumber = 4;
-  ::google::protobuf::uint32 granted_services() const;
-  void set_granted_services(::google::protobuf::uint32 value);
+  // uint32 grantedservices = 4;
+  void clear_grantedservices();
+  static const int kGrantedservicesFieldNumber = 4;
+  ::google::protobuf::uint32 grantedservices() const;
+  void set_grantedservices(::google::protobuf::uint32 value);
 
   // @@protoc_insertion_point(class_scope:ProtoPackets.VehicleAuthorizationReply)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 vehicle_id_;
-  ::google::protobuf::uint32 vehicle_type_;
-  ::google::protobuf::uint32 authorized_services_;
-  ::google::protobuf::uint32 granted_services_;
+  ::google::protobuf::uint32 vehicleid_;
+  ::google::protobuf::uint32 vehicletype_;
+  ::google::protobuf::uint32 authorizedservices_;
+  ::google::protobuf::uint32 grantedservices_;
   mutable int _cached_size_;
   friend struct ::protobuf_ProtoPacketsV2_2eproto::TableStruct;
   friend void ::protobuf_ProtoPacketsV2_2eproto::InitDefaultsVehicleAuthorizationReplyImpl();
@@ -1340,38 +1340,38 @@ class VehicleAuthorizationRequest : public ::google::protobuf::Message /* @@prot
 
   // accessors -------------------------------------------------------
 
-  // uint32 vehicle_id = 1;
-  void clear_vehicle_id();
-  static const int kVehicleIdFieldNumber = 1;
-  ::google::protobuf::uint32 vehicle_id() const;
-  void set_vehicle_id(::google::protobuf::uint32 value);
+  // uint32 vehicleid = 1;
+  void clear_vehicleid();
+  static const int kVehicleidFieldNumber = 1;
+  ::google::protobuf::uint32 vehicleid() const;
+  void set_vehicleid(::google::protobuf::uint32 value);
 
-  // uint32 vehicle_type = 2;
-  void clear_vehicle_type();
-  static const int kVehicleTypeFieldNumber = 2;
-  ::google::protobuf::uint32 vehicle_type() const;
-  void set_vehicle_type(::google::protobuf::uint32 value);
+  // uint32 vehicletype = 2;
+  void clear_vehicletype();
+  static const int kVehicletypeFieldNumber = 2;
+  ::google::protobuf::uint32 vehicletype() const;
+  void set_vehicletype(::google::protobuf::uint32 value);
 
-  // uint32 authorized_services = 3;
-  void clear_authorized_services();
-  static const int kAuthorizedServicesFieldNumber = 3;
-  ::google::protobuf::uint32 authorized_services() const;
-  void set_authorized_services(::google::protobuf::uint32 value);
+  // uint32 authorizedservices = 3;
+  void clear_authorizedservices();
+  static const int kAuthorizedservicesFieldNumber = 3;
+  ::google::protobuf::uint32 authorizedservices() const;
+  void set_authorizedservices(::google::protobuf::uint32 value);
 
-  // uint32 granted_services = 4;
-  void clear_granted_services();
-  static const int kGrantedServicesFieldNumber = 4;
-  ::google::protobuf::uint32 granted_services() const;
-  void set_granted_services(::google::protobuf::uint32 value);
+  // uint32 grantedservices = 4;
+  void clear_grantedservices();
+  static const int kGrantedservicesFieldNumber = 4;
+  ::google::protobuf::uint32 grantedservices() const;
+  void set_grantedservices(::google::protobuf::uint32 value);
 
   // @@protoc_insertion_point(class_scope:ProtoPackets.VehicleAuthorizationRequest)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 vehicle_id_;
-  ::google::protobuf::uint32 vehicle_type_;
-  ::google::protobuf::uint32 authorized_services_;
-  ::google::protobuf::uint32 granted_services_;
+  ::google::protobuf::uint32 vehicleid_;
+  ::google::protobuf::uint32 vehicletype_;
+  ::google::protobuf::uint32 authorizedservices_;
+  ::google::protobuf::uint32 grantedservices_;
   mutable int _cached_size_;
   friend struct ::protobuf_ProtoPacketsV2_2eproto::TableStruct;
   friend void ::protobuf_ProtoPacketsV2_2eproto::InitDefaultsVehicleAuthorizationRequestImpl();
@@ -1460,59 +1460,59 @@ class VehicleBodySensedState : public ::google::protobuf::Message /* @@protoc_in
 
   // accessors -------------------------------------------------------
 
-  // uint32 vehicle_id = 1;
-  void clear_vehicle_id();
-  static const int kVehicleIdFieldNumber = 1;
-  ::google::protobuf::uint32 vehicle_id() const;
-  void set_vehicle_id(::google::protobuf::uint32 value);
+  // uint32 vehicleid = 1;
+  void clear_vehicleid();
+  static const int kVehicleidFieldNumber = 1;
+  ::google::protobuf::uint32 vehicleid() const;
+  void set_vehicleid(::google::protobuf::uint32 value);
 
-  // float x_accel = 2;
-  void clear_x_accel();
-  static const int kXAccelFieldNumber = 2;
-  float x_accel() const;
-  void set_x_accel(float value);
+  // float xaccel = 2;
+  void clear_xaccel();
+  static const int kXaccelFieldNumber = 2;
+  float xaccel() const;
+  void set_xaccel(float value);
 
-  // float y_accel = 3;
-  void clear_y_accel();
-  static const int kYAccelFieldNumber = 3;
-  float y_accel() const;
-  void set_y_accel(float value);
+  // float yaccel = 3;
+  void clear_yaccel();
+  static const int kYaccelFieldNumber = 3;
+  float yaccel() const;
+  void set_yaccel(float value);
 
-  // float z_accel = 4;
-  void clear_z_accel();
-  static const int kZAccelFieldNumber = 4;
-  float z_accel() const;
-  void set_z_accel(float value);
+  // float zaccel = 4;
+  void clear_zaccel();
+  static const int kZaccelFieldNumber = 4;
+  float zaccel() const;
+  void set_zaccel(float value);
 
-  // float roll_rate = 5;
-  void clear_roll_rate();
-  static const int kRollRateFieldNumber = 5;
-  float roll_rate() const;
-  void set_roll_rate(float value);
+  // float rollrate = 5;
+  void clear_rollrate();
+  static const int kRollrateFieldNumber = 5;
+  float rollrate() const;
+  void set_rollrate(float value);
 
-  // float pitch_rate = 6;
-  void clear_pitch_rate();
-  static const int kPitchRateFieldNumber = 6;
-  float pitch_rate() const;
-  void set_pitch_rate(float value);
+  // float pitchrate = 6;
+  void clear_pitchrate();
+  static const int kPitchrateFieldNumber = 6;
+  float pitchrate() const;
+  void set_pitchrate(float value);
 
-  // float yaw_rate = 7;
-  void clear_yaw_rate();
-  static const int kYawRateFieldNumber = 7;
-  float yaw_rate() const;
-  void set_yaw_rate(float value);
+  // float yawrate = 7;
+  void clear_yawrate();
+  static const int kYawrateFieldNumber = 7;
+  float yawrate() const;
+  void set_yawrate(float value);
 
   // @@protoc_insertion_point(class_scope:ProtoPackets.VehicleBodySensedState)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 vehicle_id_;
-  float x_accel_;
-  float y_accel_;
-  float z_accel_;
-  float roll_rate_;
-  float pitch_rate_;
-  float yaw_rate_;
+  ::google::protobuf::uint32 vehicleid_;
+  float xaccel_;
+  float yaccel_;
+  float zaccel_;
+  float rollrate_;
+  float pitchrate_;
+  float yawrate_;
   mutable int _cached_size_;
   friend struct ::protobuf_ProtoPacketsV2_2eproto::TableStruct;
   friend void ::protobuf_ProtoPacketsV2_2eproto::InitDefaultsVehicleBodySensedStateImpl();
@@ -1601,11 +1601,11 @@ class VehicleGlobalPosition : public ::google::protobuf::Message /* @@protoc_ins
 
   // accessors -------------------------------------------------------
 
-  // uint32 vehicle_id = 1;
-  void clear_vehicle_id();
-  static const int kVehicleIdFieldNumber = 1;
-  ::google::protobuf::uint32 vehicle_id() const;
-  void set_vehicle_id(::google::protobuf::uint32 value);
+  // uint32 vehicleid = 1;
+  void clear_vehicleid();
+  static const int kVehicleidFieldNumber = 1;
+  ::google::protobuf::uint32 vehicleid() const;
+  void set_vehicleid(::google::protobuf::uint32 value);
 
   // float longitude = 2;
   void clear_longitude();
@@ -1625,35 +1625,35 @@ class VehicleGlobalPosition : public ::google::protobuf::Message /* @@protoc_ins
   float altitude() const;
   void set_altitude(float value);
 
-  // float x_speed = 5;
-  void clear_x_speed();
-  static const int kXSpeedFieldNumber = 5;
-  float x_speed() const;
-  void set_x_speed(float value);
+  // float xspeed = 5;
+  void clear_xspeed();
+  static const int kXspeedFieldNumber = 5;
+  float xspeed() const;
+  void set_xspeed(float value);
 
-  // float y_speed = 6;
-  void clear_y_speed();
-  static const int kYSpeedFieldNumber = 6;
-  float y_speed() const;
-  void set_y_speed(float value);
+  // float yspeed = 6;
+  void clear_yspeed();
+  static const int kYspeedFieldNumber = 6;
+  float yspeed() const;
+  void set_yspeed(float value);
 
-  // float z_speed = 7;
-  void clear_z_speed();
-  static const int kZSpeedFieldNumber = 7;
-  float z_speed() const;
-  void set_z_speed(float value);
+  // float zspeed = 7;
+  void clear_zspeed();
+  static const int kZspeedFieldNumber = 7;
+  float zspeed() const;
+  void set_zspeed(float value);
 
   // @@protoc_insertion_point(class_scope:ProtoPackets.VehicleGlobalPosition)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 vehicle_id_;
+  ::google::protobuf::uint32 vehicleid_;
   float longitude_;
   float latitude_;
   float altitude_;
-  float x_speed_;
-  float y_speed_;
-  float z_speed_;
+  float xspeed_;
+  float yspeed_;
+  float zspeed_;
   mutable int _cached_size_;
   friend struct ::protobuf_ProtoPacketsV2_2eproto::TableStruct;
   friend void ::protobuf_ProtoPacketsV2_2eproto::InitDefaultsVehicleGlobalPositionImpl();
@@ -1742,24 +1742,24 @@ class VehicleIdentification : public ::google::protobuf::Message /* @@protoc_ins
 
   // accessors -------------------------------------------------------
 
-  // uint32 vehicle_id = 1;
-  void clear_vehicle_id();
-  static const int kVehicleIdFieldNumber = 1;
-  ::google::protobuf::uint32 vehicle_id() const;
-  void set_vehicle_id(::google::protobuf::uint32 value);
+  // uint32 vehicleid = 1;
+  void clear_vehicleid();
+  static const int kVehicleidFieldNumber = 1;
+  ::google::protobuf::uint32 vehicleid() const;
+  void set_vehicleid(::google::protobuf::uint32 value);
 
-  // uint32 vehicle_type = 2;
-  void clear_vehicle_type();
-  static const int kVehicleTypeFieldNumber = 2;
-  ::google::protobuf::uint32 vehicle_type() const;
-  void set_vehicle_type(::google::protobuf::uint32 value);
+  // uint32 vehicletype = 2;
+  void clear_vehicletype();
+  static const int kVehicletypeFieldNumber = 2;
+  ::google::protobuf::uint32 vehicletype() const;
+  void set_vehicletype(::google::protobuf::uint32 value);
 
   // @@protoc_insertion_point(class_scope:ProtoPackets.VehicleIdentification)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 vehicle_id_;
-  ::google::protobuf::uint32 vehicle_type_;
+  ::google::protobuf::uint32 vehicleid_;
+  ::google::protobuf::uint32 vehicletype_;
   mutable int _cached_size_;
   friend struct ::protobuf_ProtoPacketsV2_2eproto::TableStruct;
   friend void ::protobuf_ProtoPacketsV2_2eproto::InitDefaultsVehicleIdentificationImpl();
@@ -1848,11 +1848,11 @@ class VehicleInertialState : public ::google::protobuf::Message /* @@protoc_inse
 
   // accessors -------------------------------------------------------
 
-  // uint32 vehicle_id = 1;
-  void clear_vehicle_id();
-  static const int kVehicleIdFieldNumber = 1;
-  ::google::protobuf::uint32 vehicle_id() const;
-  void set_vehicle_id(::google::protobuf::uint32 value);
+  // uint32 vehicleid = 1;
+  void clear_vehicleid();
+  static const int kVehicleidFieldNumber = 1;
+  ::google::protobuf::uint32 vehicleid() const;
+  void set_vehicleid(::google::protobuf::uint32 value);
 
   // float longitude = 2;
   void clear_longitude();
@@ -1890,80 +1890,80 @@ class VehicleInertialState : public ::google::protobuf::Message /* @@protoc_inse
   float heading() const;
   void set_heading(float value);
 
-  // float north_speed = 8;
-  void clear_north_speed();
-  static const int kNorthSpeedFieldNumber = 8;
-  float north_speed() const;
-  void set_north_speed(float value);
+  // float northspeed = 8;
+  void clear_northspeed();
+  static const int kNorthspeedFieldNumber = 8;
+  float northspeed() const;
+  void set_northspeed(float value);
 
-  // float east_speed = 9;
-  void clear_east_speed();
-  static const int kEastSpeedFieldNumber = 9;
-  float east_speed() const;
-  void set_east_speed(float value);
+  // float eastspeed = 9;
+  void clear_eastspeed();
+  static const int kEastspeedFieldNumber = 9;
+  float eastspeed() const;
+  void set_eastspeed(float value);
 
-  // float vertical_speed = 10;
-  void clear_vertical_speed();
-  static const int kVerticalSpeedFieldNumber = 10;
-  float vertical_speed() const;
-  void set_vertical_speed(float value);
+  // float verticalspeed = 10;
+  void clear_verticalspeed();
+  static const int kVerticalspeedFieldNumber = 10;
+  float verticalspeed() const;
+  void set_verticalspeed(float value);
 
-  // float roll_rate = 11;
-  void clear_roll_rate();
-  static const int kRollRateFieldNumber = 11;
-  float roll_rate() const;
-  void set_roll_rate(float value);
+  // float rollrate = 11;
+  void clear_rollrate();
+  static const int kRollrateFieldNumber = 11;
+  float rollrate() const;
+  void set_rollrate(float value);
 
-  // float pitch_rate = 12;
-  void clear_pitch_rate();
-  static const int kPitchRateFieldNumber = 12;
-  float pitch_rate() const;
-  void set_pitch_rate(float value);
+  // float pitchrate = 12;
+  void clear_pitchrate();
+  static const int kPitchrateFieldNumber = 12;
+  float pitchrate() const;
+  void set_pitchrate(float value);
 
-  // float yaw_rate = 13;
-  void clear_yaw_rate();
-  static const int kYawRateFieldNumber = 13;
-  float yaw_rate() const;
-  void set_yaw_rate(float value);
+  // float yawrate = 13;
+  void clear_yawrate();
+  static const int kYawrateFieldNumber = 13;
+  float yawrate() const;
+  void set_yawrate(float value);
 
-  // float north_accel = 14;
-  void clear_north_accel();
-  static const int kNorthAccelFieldNumber = 14;
-  float north_accel() const;
-  void set_north_accel(float value);
+  // float northaccel = 14;
+  void clear_northaccel();
+  static const int kNorthaccelFieldNumber = 14;
+  float northaccel() const;
+  void set_northaccel(float value);
 
-  // float east_accel = 15;
-  void clear_east_accel();
-  static const int kEastAccelFieldNumber = 15;
-  float east_accel() const;
-  void set_east_accel(float value);
+  // float eastaccel = 15;
+  void clear_eastaccel();
+  static const int kEastaccelFieldNumber = 15;
+  float eastaccel() const;
+  void set_eastaccel(float value);
 
-  // float vertical_accel = 16;
-  void clear_vertical_accel();
-  static const int kVerticalAccelFieldNumber = 16;
-  float vertical_accel() const;
-  void set_vertical_accel(float value);
+  // float verticalaccel = 16;
+  void clear_verticalaccel();
+  static const int kVerticalaccelFieldNumber = 16;
+  float verticalaccel() const;
+  void set_verticalaccel(float value);
 
   // @@protoc_insertion_point(class_scope:ProtoPackets.VehicleInertialState)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 vehicle_id_;
+  ::google::protobuf::uint32 vehicleid_;
   float longitude_;
   float latitude_;
   float altitude_;
   float roll_;
   float pitch_;
   float heading_;
-  float north_speed_;
-  float east_speed_;
-  float vertical_speed_;
-  float roll_rate_;
-  float pitch_rate_;
-  float yaw_rate_;
-  float north_accel_;
-  float east_accel_;
-  float vertical_accel_;
+  float northspeed_;
+  float eastspeed_;
+  float verticalspeed_;
+  float rollrate_;
+  float pitchrate_;
+  float yawrate_;
+  float northaccel_;
+  float eastaccel_;
+  float verticalaccel_;
   mutable int _cached_size_;
   friend struct ::protobuf_ProtoPacketsV2_2eproto::TableStruct;
   friend void ::protobuf_ProtoPacketsV2_2eproto::InitDefaultsVehicleInertialStateImpl();
@@ -2052,24 +2052,24 @@ class VehicleModeCommand : public ::google::protobuf::Message /* @@protoc_insert
 
   // accessors -------------------------------------------------------
 
-  // uint32 vehicle_id = 1;
-  void clear_vehicle_id();
-  static const int kVehicleIdFieldNumber = 1;
-  ::google::protobuf::uint32 vehicle_id() const;
-  void set_vehicle_id(::google::protobuf::uint32 value);
+  // uint32 vehicleid = 1;
+  void clear_vehicleid();
+  static const int kVehicleidFieldNumber = 1;
+  ::google::protobuf::uint32 vehicleid() const;
+  void set_vehicleid(::google::protobuf::uint32 value);
 
-  // uint32 vehicle_mode = 2;
-  void clear_vehicle_mode();
-  static const int kVehicleModeFieldNumber = 2;
-  ::google::protobuf::uint32 vehicle_mode() const;
-  void set_vehicle_mode(::google::protobuf::uint32 value);
+  // uint32 vehiclemode = 2;
+  void clear_vehiclemode();
+  static const int kVehiclemodeFieldNumber = 2;
+  ::google::protobuf::uint32 vehiclemode() const;
+  void set_vehiclemode(::google::protobuf::uint32 value);
 
   // @@protoc_insertion_point(class_scope:ProtoPackets.VehicleModeCommand)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 vehicle_id_;
-  ::google::protobuf::uint32 vehicle_mode_;
+  ::google::protobuf::uint32 vehicleid_;
+  ::google::protobuf::uint32 vehiclemode_;
   mutable int _cached_size_;
   friend struct ::protobuf_ProtoPacketsV2_2eproto::TableStruct;
   friend void ::protobuf_ProtoPacketsV2_2eproto::InitDefaultsVehicleModeCommandImpl();
@@ -2158,31 +2158,31 @@ class VehicleSystemStatus : public ::google::protobuf::Message /* @@protoc_inser
 
   // accessors -------------------------------------------------------
 
-  // uint32 vehicle_id = 1;
-  void clear_vehicle_id();
-  static const int kVehicleIdFieldNumber = 1;
-  ::google::protobuf::uint32 vehicle_id() const;
-  void set_vehicle_id(::google::protobuf::uint32 value);
+  // uint32 vehicleid = 1;
+  void clear_vehicleid();
+  static const int kVehicleidFieldNumber = 1;
+  ::google::protobuf::uint32 vehicleid() const;
+  void set_vehicleid(::google::protobuf::uint32 value);
 
-  // uint32 vehicle_mode = 2;
-  void clear_vehicle_mode();
-  static const int kVehicleModeFieldNumber = 2;
-  ::google::protobuf::uint32 vehicle_mode() const;
-  void set_vehicle_mode(::google::protobuf::uint32 value);
+  // uint32 vehiclemode = 2;
+  void clear_vehiclemode();
+  static const int kVehiclemodeFieldNumber = 2;
+  ::google::protobuf::uint32 vehiclemode() const;
+  void set_vehiclemode(::google::protobuf::uint32 value);
 
-  // uint32 vehicle_state = 3;
-  void clear_vehicle_state();
-  static const int kVehicleStateFieldNumber = 3;
-  ::google::protobuf::uint32 vehicle_state() const;
-  void set_vehicle_state(::google::protobuf::uint32 value);
+  // uint32 vehiclestate = 3;
+  void clear_vehiclestate();
+  static const int kVehiclestateFieldNumber = 3;
+  ::google::protobuf::uint32 vehiclestate() const;
+  void set_vehiclestate(::google::protobuf::uint32 value);
 
   // @@protoc_insertion_point(class_scope:ProtoPackets.VehicleSystemStatus)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 vehicle_id_;
-  ::google::protobuf::uint32 vehicle_mode_;
-  ::google::protobuf::uint32 vehicle_state_;
+  ::google::protobuf::uint32 vehicleid_;
+  ::google::protobuf::uint32 vehiclemode_;
+  ::google::protobuf::uint32 vehiclestate_;
   mutable int _cached_size_;
   friend struct ::protobuf_ProtoPacketsV2_2eproto::TableStruct;
   friend void ::protobuf_ProtoPacketsV2_2eproto::InitDefaultsVehicleSystemStatusImpl();
@@ -2271,31 +2271,31 @@ class VehicleTelemetryCommand : public ::google::protobuf::Message /* @@protoc_i
 
   // accessors -------------------------------------------------------
 
-  // uint32 vehicle_id = 1;
-  void clear_vehicle_id();
-  static const int kVehicleIdFieldNumber = 1;
-  ::google::protobuf::uint32 vehicle_id() const;
-  void set_vehicle_id(::google::protobuf::uint32 value);
+  // uint32 vehicleid = 1;
+  void clear_vehicleid();
+  static const int kVehicleidFieldNumber = 1;
+  ::google::protobuf::uint32 vehicleid() const;
+  void set_vehicleid(::google::protobuf::uint32 value);
 
-  // uint32 telemetry_select = 2;
-  void clear_telemetry_select();
-  static const int kTelemetrySelectFieldNumber = 2;
-  ::google::protobuf::uint32 telemetry_select() const;
-  void set_telemetry_select(::google::protobuf::uint32 value);
+  // uint32 telemetryselect = 2;
+  void clear_telemetryselect();
+  static const int kTelemetryselectFieldNumber = 2;
+  ::google::protobuf::uint32 telemetryselect() const;
+  void set_telemetryselect(::google::protobuf::uint32 value);
 
-  // uint32 telemetry_rate = 3;
-  void clear_telemetry_rate();
-  static const int kTelemetryRateFieldNumber = 3;
-  ::google::protobuf::uint32 telemetry_rate() const;
-  void set_telemetry_rate(::google::protobuf::uint32 value);
+  // uint32 telemetryrate = 3;
+  void clear_telemetryrate();
+  static const int kTelemetryrateFieldNumber = 3;
+  ::google::protobuf::uint32 telemetryrate() const;
+  void set_telemetryrate(::google::protobuf::uint32 value);
 
   // @@protoc_insertion_point(class_scope:ProtoPackets.VehicleTelemetryCommand)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 vehicle_id_;
-  ::google::protobuf::uint32 telemetry_select_;
-  ::google::protobuf::uint32 telemetry_rate_;
+  ::google::protobuf::uint32 vehicleid_;
+  ::google::protobuf::uint32 telemetryselect_;
+  ::google::protobuf::uint32 telemetryrate_;
   mutable int _cached_size_;
   friend struct ::protobuf_ProtoPacketsV2_2eproto::TableStruct;
   friend void ::protobuf_ProtoPacketsV2_2eproto::InitDefaultsVehicleTelemetryCommandImpl();
@@ -2384,24 +2384,24 @@ class VehicleTerminationCommand : public ::google::protobuf::Message /* @@protoc
 
   // accessors -------------------------------------------------------
 
-  // uint32 vehicle_id = 1;
-  void clear_vehicle_id();
-  static const int kVehicleIdFieldNumber = 1;
-  ::google::protobuf::uint32 vehicle_id() const;
-  void set_vehicle_id(::google::protobuf::uint32 value);
+  // uint32 vehicleid = 1;
+  void clear_vehicleid();
+  static const int kVehicleidFieldNumber = 1;
+  ::google::protobuf::uint32 vehicleid() const;
+  void set_vehicleid(::google::protobuf::uint32 value);
 
-  // uint32 termination_mode = 2;
-  void clear_termination_mode();
-  static const int kTerminationModeFieldNumber = 2;
-  ::google::protobuf::uint32 termination_mode() const;
-  void set_termination_mode(::google::protobuf::uint32 value);
+  // uint32 terminationmode = 2;
+  void clear_terminationmode();
+  static const int kTerminationmodeFieldNumber = 2;
+  ::google::protobuf::uint32 terminationmode() const;
+  void set_terminationmode(::google::protobuf::uint32 value);
 
   // @@protoc_insertion_point(class_scope:ProtoPackets.VehicleTerminationCommand)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 vehicle_id_;
-  ::google::protobuf::uint32 termination_mode_;
+  ::google::protobuf::uint32 vehicleid_;
+  ::google::protobuf::uint32 terminationmode_;
   mutable int _cached_size_;
   friend struct ::protobuf_ProtoPacketsV2_2eproto::TableStruct;
   friend void ::protobuf_ProtoPacketsV2_2eproto::InitDefaultsVehicleTerminationCommandImpl();
@@ -2490,11 +2490,11 @@ class VehicleWaypointCommand : public ::google::protobuf::Message /* @@protoc_in
 
   // accessors -------------------------------------------------------
 
-  // uint32 vehicle_id = 1;
-  void clear_vehicle_id();
-  static const int kVehicleIdFieldNumber = 1;
-  ::google::protobuf::uint32 vehicle_id() const;
-  void set_vehicle_id(::google::protobuf::uint32 value);
+  // uint32 vehicleid = 1;
+  void clear_vehicleid();
+  static const int kVehicleidFieldNumber = 1;
+  ::google::protobuf::uint32 vehicleid() const;
+  void set_vehicleid(::google::protobuf::uint32 value);
 
   // float longitude = 2;
   void clear_longitude();
@@ -2518,7 +2518,7 @@ class VehicleWaypointCommand : public ::google::protobuf::Message /* @@protoc_in
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 vehicle_id_;
+  ::google::protobuf::uint32 vehicleid_;
   float longitude_;
   float latitude_;
   float altitude_;
@@ -2871,158 +2871,158 @@ class Packet : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
 #endif  // __GNUC__
 // AirVehicleGroundRelativeState
 
-// uint32 vehicle_id = 1;
-inline void AirVehicleGroundRelativeState::clear_vehicle_id() {
-  vehicle_id_ = 0u;
+// uint32 vehicleid = 1;
+inline void AirVehicleGroundRelativeState::clear_vehicleid() {
+  vehicleid_ = 0u;
 }
-inline ::google::protobuf::uint32 AirVehicleGroundRelativeState::vehicle_id() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.vehicle_id)
-  return vehicle_id_;
+inline ::google::protobuf::uint32 AirVehicleGroundRelativeState::vehicleid() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.vehicleid)
+  return vehicleid_;
 }
-inline void AirVehicleGroundRelativeState::set_vehicle_id(::google::protobuf::uint32 value) {
+inline void AirVehicleGroundRelativeState::set_vehicleid(::google::protobuf::uint32 value) {
   
-  vehicle_id_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.vehicle_id)
+  vehicleid_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.vehicleid)
 }
 
-// float angle_of_attack = 2;
-inline void AirVehicleGroundRelativeState::clear_angle_of_attack() {
-  angle_of_attack_ = 0;
+// float angleofattack = 2;
+inline void AirVehicleGroundRelativeState::clear_angleofattack() {
+  angleofattack_ = 0;
 }
-inline float AirVehicleGroundRelativeState::angle_of_attack() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.angle_of_attack)
-  return angle_of_attack_;
+inline float AirVehicleGroundRelativeState::angleofattack() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.angleofattack)
+  return angleofattack_;
 }
-inline void AirVehicleGroundRelativeState::set_angle_of_attack(float value) {
+inline void AirVehicleGroundRelativeState::set_angleofattack(float value) {
   
-  angle_of_attack_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.angle_of_attack)
+  angleofattack_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.angleofattack)
 }
 
-// float angle_of_sideslip = 3;
-inline void AirVehicleGroundRelativeState::clear_angle_of_sideslip() {
-  angle_of_sideslip_ = 0;
+// float angleofsideslip = 3;
+inline void AirVehicleGroundRelativeState::clear_angleofsideslip() {
+  angleofsideslip_ = 0;
 }
-inline float AirVehicleGroundRelativeState::angle_of_sideslip() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.angle_of_sideslip)
-  return angle_of_sideslip_;
+inline float AirVehicleGroundRelativeState::angleofsideslip() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.angleofsideslip)
+  return angleofsideslip_;
 }
-inline void AirVehicleGroundRelativeState::set_angle_of_sideslip(float value) {
+inline void AirVehicleGroundRelativeState::set_angleofsideslip(float value) {
   
-  angle_of_sideslip_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.angle_of_sideslip)
+  angleofsideslip_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.angleofsideslip)
 }
 
-// float true_airspeed = 4;
-inline void AirVehicleGroundRelativeState::clear_true_airspeed() {
-  true_airspeed_ = 0;
+// float trueairspeed = 4;
+inline void AirVehicleGroundRelativeState::clear_trueairspeed() {
+  trueairspeed_ = 0;
 }
-inline float AirVehicleGroundRelativeState::true_airspeed() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.true_airspeed)
-  return true_airspeed_;
+inline float AirVehicleGroundRelativeState::trueairspeed() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.trueairspeed)
+  return trueairspeed_;
 }
-inline void AirVehicleGroundRelativeState::set_true_airspeed(float value) {
+inline void AirVehicleGroundRelativeState::set_trueairspeed(float value) {
   
-  true_airspeed_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.true_airspeed)
+  trueairspeed_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.trueairspeed)
 }
 
-// float indicated_airspeed = 5;
-inline void AirVehicleGroundRelativeState::clear_indicated_airspeed() {
-  indicated_airspeed_ = 0;
+// float indicatedairspeed = 5;
+inline void AirVehicleGroundRelativeState::clear_indicatedairspeed() {
+  indicatedairspeed_ = 0;
 }
-inline float AirVehicleGroundRelativeState::indicated_airspeed() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.indicated_airspeed)
-  return indicated_airspeed_;
+inline float AirVehicleGroundRelativeState::indicatedairspeed() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.indicatedairspeed)
+  return indicatedairspeed_;
 }
-inline void AirVehicleGroundRelativeState::set_indicated_airspeed(float value) {
+inline void AirVehicleGroundRelativeState::set_indicatedairspeed(float value) {
   
-  indicated_airspeed_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.indicated_airspeed)
+  indicatedairspeed_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.indicatedairspeed)
 }
 
-// float north_wind_speed = 6;
-inline void AirVehicleGroundRelativeState::clear_north_wind_speed() {
-  north_wind_speed_ = 0;
+// float northwindspeed = 6;
+inline void AirVehicleGroundRelativeState::clear_northwindspeed() {
+  northwindspeed_ = 0;
 }
-inline float AirVehicleGroundRelativeState::north_wind_speed() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.north_wind_speed)
-  return north_wind_speed_;
+inline float AirVehicleGroundRelativeState::northwindspeed() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.northwindspeed)
+  return northwindspeed_;
 }
-inline void AirVehicleGroundRelativeState::set_north_wind_speed(float value) {
+inline void AirVehicleGroundRelativeState::set_northwindspeed(float value) {
   
-  north_wind_speed_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.north_wind_speed)
+  northwindspeed_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.northwindspeed)
 }
 
-// float east_wind_speed = 7;
-inline void AirVehicleGroundRelativeState::clear_east_wind_speed() {
-  east_wind_speed_ = 0;
+// float eastwindspeed = 7;
+inline void AirVehicleGroundRelativeState::clear_eastwindspeed() {
+  eastwindspeed_ = 0;
 }
-inline float AirVehicleGroundRelativeState::east_wind_speed() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.east_wind_speed)
-  return east_wind_speed_;
+inline float AirVehicleGroundRelativeState::eastwindspeed() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.eastwindspeed)
+  return eastwindspeed_;
 }
-inline void AirVehicleGroundRelativeState::set_east_wind_speed(float value) {
+inline void AirVehicleGroundRelativeState::set_eastwindspeed(float value) {
   
-  east_wind_speed_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.east_wind_speed)
+  eastwindspeed_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.eastwindspeed)
 }
 
-// float north_ground_speed = 8;
-inline void AirVehicleGroundRelativeState::clear_north_ground_speed() {
-  north_ground_speed_ = 0;
+// float northgroundspeed = 8;
+inline void AirVehicleGroundRelativeState::clear_northgroundspeed() {
+  northgroundspeed_ = 0;
 }
-inline float AirVehicleGroundRelativeState::north_ground_speed() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.north_ground_speed)
-  return north_ground_speed_;
+inline float AirVehicleGroundRelativeState::northgroundspeed() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.northgroundspeed)
+  return northgroundspeed_;
 }
-inline void AirVehicleGroundRelativeState::set_north_ground_speed(float value) {
+inline void AirVehicleGroundRelativeState::set_northgroundspeed(float value) {
   
-  north_ground_speed_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.north_ground_speed)
+  northgroundspeed_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.northgroundspeed)
 }
 
-// float east_ground_speed = 9;
-inline void AirVehicleGroundRelativeState::clear_east_ground_speed() {
-  east_ground_speed_ = 0;
+// float eastgroundspeed = 9;
+inline void AirVehicleGroundRelativeState::clear_eastgroundspeed() {
+  eastgroundspeed_ = 0;
 }
-inline float AirVehicleGroundRelativeState::east_ground_speed() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.east_ground_speed)
-  return east_ground_speed_;
+inline float AirVehicleGroundRelativeState::eastgroundspeed() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.eastgroundspeed)
+  return eastgroundspeed_;
 }
-inline void AirVehicleGroundRelativeState::set_east_ground_speed(float value) {
+inline void AirVehicleGroundRelativeState::set_eastgroundspeed(float value) {
   
-  east_ground_speed_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.east_ground_speed)
+  eastgroundspeed_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.eastgroundspeed)
 }
 
-// float barometric_pressure = 10;
-inline void AirVehicleGroundRelativeState::clear_barometric_pressure() {
-  barometric_pressure_ = 0;
+// float barometricpressure = 10;
+inline void AirVehicleGroundRelativeState::clear_barometricpressure() {
+  barometricpressure_ = 0;
 }
-inline float AirVehicleGroundRelativeState::barometric_pressure() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.barometric_pressure)
-  return barometric_pressure_;
+inline float AirVehicleGroundRelativeState::barometricpressure() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.barometricpressure)
+  return barometricpressure_;
 }
-inline void AirVehicleGroundRelativeState::set_barometric_pressure(float value) {
+inline void AirVehicleGroundRelativeState::set_barometricpressure(float value) {
   
-  barometric_pressure_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.barometric_pressure)
+  barometricpressure_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.barometricpressure)
 }
 
-// float barometric_altitude = 11;
-inline void AirVehicleGroundRelativeState::clear_barometric_altitude() {
-  barometric_altitude_ = 0;
+// float barometricaltitude = 11;
+inline void AirVehicleGroundRelativeState::clear_barometricaltitude() {
+  barometricaltitude_ = 0;
 }
-inline float AirVehicleGroundRelativeState::barometric_altitude() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.barometric_altitude)
-  return barometric_altitude_;
+inline float AirVehicleGroundRelativeState::barometricaltitude() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.AirVehicleGroundRelativeState.barometricaltitude)
+  return barometricaltitude_;
 }
-inline void AirVehicleGroundRelativeState::set_barometric_altitude(float value) {
+inline void AirVehicleGroundRelativeState::set_barometricaltitude(float value) {
   
-  barometric_altitude_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.barometric_altitude)
+  barometricaltitude_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.AirVehicleGroundRelativeState.barometricaltitude)
 }
 
 // -------------------------------------------------------------------
@@ -3139,78 +3139,78 @@ inline void Battery::set_batterypercentage(::google::protobuf::uint32 value) {
 
 // TargetAcknowledgement
 
-// uint32 target_status = 1;
-inline void TargetAcknowledgement::clear_target_status() {
-  target_status_ = 0u;
+// uint32 targetstatus = 1;
+inline void TargetAcknowledgement::clear_targetstatus() {
+  targetstatus_ = 0u;
 }
-inline ::google::protobuf::uint32 TargetAcknowledgement::target_status() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.TargetAcknowledgement.target_status)
-  return target_status_;
+inline ::google::protobuf::uint32 TargetAcknowledgement::targetstatus() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.TargetAcknowledgement.targetstatus)
+  return targetstatus_;
 }
-inline void TargetAcknowledgement::set_target_status(::google::protobuf::uint32 value) {
+inline void TargetAcknowledgement::set_targetstatus(::google::protobuf::uint32 value) {
   
-  target_status_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.TargetAcknowledgement.target_status)
+  targetstatus_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.TargetAcknowledgement.targetstatus)
 }
 
 // -------------------------------------------------------------------
 
 // TargetDesignationCommand
 
-// uint32 vehicle_id = 1;
-inline void TargetDesignationCommand::clear_vehicle_id() {
-  vehicle_id_ = 0u;
+// uint32 vehicleid = 1;
+inline void TargetDesignationCommand::clear_vehicleid() {
+  vehicleid_ = 0u;
 }
-inline ::google::protobuf::uint32 TargetDesignationCommand::vehicle_id() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.TargetDesignationCommand.vehicle_id)
-  return vehicle_id_;
+inline ::google::protobuf::uint32 TargetDesignationCommand::vehicleid() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.TargetDesignationCommand.vehicleid)
+  return vehicleid_;
 }
-inline void TargetDesignationCommand::set_vehicle_id(::google::protobuf::uint32 value) {
+inline void TargetDesignationCommand::set_vehicleid(::google::protobuf::uint32 value) {
   
-  vehicle_id_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.TargetDesignationCommand.vehicle_id)
+  vehicleid_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.TargetDesignationCommand.vehicleid)
 }
 
-// uint32 payload_id = 2;
-inline void TargetDesignationCommand::clear_payload_id() {
-  payload_id_ = 0u;
+// uint32 payloadid = 2;
+inline void TargetDesignationCommand::clear_payloadid() {
+  payloadid_ = 0u;
 }
-inline ::google::protobuf::uint32 TargetDesignationCommand::payload_id() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.TargetDesignationCommand.payload_id)
-  return payload_id_;
+inline ::google::protobuf::uint32 TargetDesignationCommand::payloadid() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.TargetDesignationCommand.payloadid)
+  return payloadid_;
 }
-inline void TargetDesignationCommand::set_payload_id(::google::protobuf::uint32 value) {
+inline void TargetDesignationCommand::set_payloadid(::google::protobuf::uint32 value) {
   
-  payload_id_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.TargetDesignationCommand.payload_id)
+  payloadid_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.TargetDesignationCommand.payloadid)
 }
 
-// uint32 target_id = 3;
-inline void TargetDesignationCommand::clear_target_id() {
-  target_id_ = 0u;
+// uint32 targetid = 3;
+inline void TargetDesignationCommand::clear_targetid() {
+  targetid_ = 0u;
 }
-inline ::google::protobuf::uint32 TargetDesignationCommand::target_id() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.TargetDesignationCommand.target_id)
-  return target_id_;
+inline ::google::protobuf::uint32 TargetDesignationCommand::targetid() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.TargetDesignationCommand.targetid)
+  return targetid_;
 }
-inline void TargetDesignationCommand::set_target_id(::google::protobuf::uint32 value) {
+inline void TargetDesignationCommand::set_targetid(::google::protobuf::uint32 value) {
   
-  target_id_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.TargetDesignationCommand.target_id)
+  targetid_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.TargetDesignationCommand.targetid)
 }
 
-// uint32 target_type = 4;
-inline void TargetDesignationCommand::clear_target_type() {
-  target_type_ = 0u;
+// uint32 targettype = 4;
+inline void TargetDesignationCommand::clear_targettype() {
+  targettype_ = 0u;
 }
-inline ::google::protobuf::uint32 TargetDesignationCommand::target_type() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.TargetDesignationCommand.target_type)
-  return target_type_;
+inline ::google::protobuf::uint32 TargetDesignationCommand::targettype() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.TargetDesignationCommand.targettype)
+  return targettype_;
 }
-inline void TargetDesignationCommand::set_target_type(::google::protobuf::uint32 value) {
+inline void TargetDesignationCommand::set_targettype(::google::protobuf::uint32 value) {
   
-  target_type_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.TargetDesignationCommand.target_type)
+  targettype_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.TargetDesignationCommand.targettype)
 }
 
 // float longitude = 5;
@@ -3259,64 +3259,64 @@ inline void TargetDesignationCommand::set_altitude(float value) {
 
 // TargetStatus
 
-// double target_radius = 1;
-inline void TargetStatus::clear_target_radius() {
-  target_radius_ = 0;
+// double targetradius = 1;
+inline void TargetStatus::clear_targetradius() {
+  targetradius_ = 0;
 }
-inline double TargetStatus::target_radius() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.TargetStatus.target_radius)
-  return target_radius_;
+inline double TargetStatus::targetradius() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.TargetStatus.targetradius)
+  return targetradius_;
 }
-inline void TargetStatus::set_target_radius(double value) {
+inline void TargetStatus::set_targetradius(double value) {
   
-  target_radius_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.TargetStatus.target_radius)
+  targetradius_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.TargetStatus.targetradius)
 }
 
-// double target_angle = 2;
-inline void TargetStatus::clear_target_angle() {
-  target_angle_ = 0;
+// double targetangle = 2;
+inline void TargetStatus::clear_targetangle() {
+  targetangle_ = 0;
 }
-inline double TargetStatus::target_angle() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.TargetStatus.target_angle)
-  return target_angle_;
+inline double TargetStatus::targetangle() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.TargetStatus.targetangle)
+  return targetangle_;
 }
-inline void TargetStatus::set_target_angle(double value) {
+inline void TargetStatus::set_targetangle(double value) {
   
-  target_angle_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.TargetStatus.target_angle)
+  targetangle_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.TargetStatus.targetangle)
 }
 
-// double target_altitude = 3;
-inline void TargetStatus::clear_target_altitude() {
-  target_altitude_ = 0;
+// double targetaltitude = 3;
+inline void TargetStatus::clear_targetaltitude() {
+  targetaltitude_ = 0;
 }
-inline double TargetStatus::target_altitude() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.TargetStatus.target_altitude)
-  return target_altitude_;
+inline double TargetStatus::targetaltitude() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.TargetStatus.targetaltitude)
+  return targetaltitude_;
 }
-inline void TargetStatus::set_target_altitude(double value) {
+inline void TargetStatus::set_targetaltitude(double value) {
   
-  target_altitude_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.TargetStatus.target_altitude)
+  targetaltitude_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.TargetStatus.targetaltitude)
 }
 
 // -------------------------------------------------------------------
 
 // VehicleAttitude
 
-// uint32 vehicle_id = 1;
-inline void VehicleAttitude::clear_vehicle_id() {
-  vehicle_id_ = 0u;
+// uint32 vehicleid = 1;
+inline void VehicleAttitude::clear_vehicleid() {
+  vehicleid_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleAttitude::vehicle_id() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleAttitude.vehicle_id)
-  return vehicle_id_;
+inline ::google::protobuf::uint32 VehicleAttitude::vehicleid() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleAttitude.vehicleid)
+  return vehicleid_;
 }
-inline void VehicleAttitude::set_vehicle_id(::google::protobuf::uint32 value) {
+inline void VehicleAttitude::set_vehicleid(::google::protobuf::uint32 value) {
   
-  vehicle_id_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleAttitude.vehicle_id)
+  vehicleid_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleAttitude.vehicleid)
 }
 
 // float roll = 2;
@@ -3365,240 +3365,240 @@ inline void VehicleAttitude::set_yaw(float value) {
 
 // VehicleAuthorizationReply
 
-// uint32 vehicle_id = 1;
-inline void VehicleAuthorizationReply::clear_vehicle_id() {
-  vehicle_id_ = 0u;
+// uint32 vehicleid = 1;
+inline void VehicleAuthorizationReply::clear_vehicleid() {
+  vehicleid_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleAuthorizationReply::vehicle_id() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleAuthorizationReply.vehicle_id)
-  return vehicle_id_;
+inline ::google::protobuf::uint32 VehicleAuthorizationReply::vehicleid() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleAuthorizationReply.vehicleid)
+  return vehicleid_;
 }
-inline void VehicleAuthorizationReply::set_vehicle_id(::google::protobuf::uint32 value) {
+inline void VehicleAuthorizationReply::set_vehicleid(::google::protobuf::uint32 value) {
   
-  vehicle_id_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleAuthorizationReply.vehicle_id)
+  vehicleid_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleAuthorizationReply.vehicleid)
 }
 
-// uint32 vehicle_type = 2;
-inline void VehicleAuthorizationReply::clear_vehicle_type() {
-  vehicle_type_ = 0u;
+// uint32 vehicletype = 2;
+inline void VehicleAuthorizationReply::clear_vehicletype() {
+  vehicletype_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleAuthorizationReply::vehicle_type() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleAuthorizationReply.vehicle_type)
-  return vehicle_type_;
+inline ::google::protobuf::uint32 VehicleAuthorizationReply::vehicletype() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleAuthorizationReply.vehicletype)
+  return vehicletype_;
 }
-inline void VehicleAuthorizationReply::set_vehicle_type(::google::protobuf::uint32 value) {
+inline void VehicleAuthorizationReply::set_vehicletype(::google::protobuf::uint32 value) {
   
-  vehicle_type_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleAuthorizationReply.vehicle_type)
+  vehicletype_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleAuthorizationReply.vehicletype)
 }
 
-// uint32 authorized_services = 3;
-inline void VehicleAuthorizationReply::clear_authorized_services() {
-  authorized_services_ = 0u;
+// uint32 authorizedservices = 3;
+inline void VehicleAuthorizationReply::clear_authorizedservices() {
+  authorizedservices_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleAuthorizationReply::authorized_services() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleAuthorizationReply.authorized_services)
-  return authorized_services_;
+inline ::google::protobuf::uint32 VehicleAuthorizationReply::authorizedservices() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleAuthorizationReply.authorizedservices)
+  return authorizedservices_;
 }
-inline void VehicleAuthorizationReply::set_authorized_services(::google::protobuf::uint32 value) {
+inline void VehicleAuthorizationReply::set_authorizedservices(::google::protobuf::uint32 value) {
   
-  authorized_services_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleAuthorizationReply.authorized_services)
+  authorizedservices_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleAuthorizationReply.authorizedservices)
 }
 
-// uint32 granted_services = 4;
-inline void VehicleAuthorizationReply::clear_granted_services() {
-  granted_services_ = 0u;
+// uint32 grantedservices = 4;
+inline void VehicleAuthorizationReply::clear_grantedservices() {
+  grantedservices_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleAuthorizationReply::granted_services() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleAuthorizationReply.granted_services)
-  return granted_services_;
+inline ::google::protobuf::uint32 VehicleAuthorizationReply::grantedservices() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleAuthorizationReply.grantedservices)
+  return grantedservices_;
 }
-inline void VehicleAuthorizationReply::set_granted_services(::google::protobuf::uint32 value) {
+inline void VehicleAuthorizationReply::set_grantedservices(::google::protobuf::uint32 value) {
   
-  granted_services_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleAuthorizationReply.granted_services)
+  grantedservices_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleAuthorizationReply.grantedservices)
 }
 
 // -------------------------------------------------------------------
 
 // VehicleAuthorizationRequest
 
-// uint32 vehicle_id = 1;
-inline void VehicleAuthorizationRequest::clear_vehicle_id() {
-  vehicle_id_ = 0u;
+// uint32 vehicleid = 1;
+inline void VehicleAuthorizationRequest::clear_vehicleid() {
+  vehicleid_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleAuthorizationRequest::vehicle_id() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleAuthorizationRequest.vehicle_id)
-  return vehicle_id_;
+inline ::google::protobuf::uint32 VehicleAuthorizationRequest::vehicleid() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleAuthorizationRequest.vehicleid)
+  return vehicleid_;
 }
-inline void VehicleAuthorizationRequest::set_vehicle_id(::google::protobuf::uint32 value) {
+inline void VehicleAuthorizationRequest::set_vehicleid(::google::protobuf::uint32 value) {
   
-  vehicle_id_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleAuthorizationRequest.vehicle_id)
+  vehicleid_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleAuthorizationRequest.vehicleid)
 }
 
-// uint32 vehicle_type = 2;
-inline void VehicleAuthorizationRequest::clear_vehicle_type() {
-  vehicle_type_ = 0u;
+// uint32 vehicletype = 2;
+inline void VehicleAuthorizationRequest::clear_vehicletype() {
+  vehicletype_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleAuthorizationRequest::vehicle_type() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleAuthorizationRequest.vehicle_type)
-  return vehicle_type_;
+inline ::google::protobuf::uint32 VehicleAuthorizationRequest::vehicletype() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleAuthorizationRequest.vehicletype)
+  return vehicletype_;
 }
-inline void VehicleAuthorizationRequest::set_vehicle_type(::google::protobuf::uint32 value) {
+inline void VehicleAuthorizationRequest::set_vehicletype(::google::protobuf::uint32 value) {
   
-  vehicle_type_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleAuthorizationRequest.vehicle_type)
+  vehicletype_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleAuthorizationRequest.vehicletype)
 }
 
-// uint32 authorized_services = 3;
-inline void VehicleAuthorizationRequest::clear_authorized_services() {
-  authorized_services_ = 0u;
+// uint32 authorizedservices = 3;
+inline void VehicleAuthorizationRequest::clear_authorizedservices() {
+  authorizedservices_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleAuthorizationRequest::authorized_services() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleAuthorizationRequest.authorized_services)
-  return authorized_services_;
+inline ::google::protobuf::uint32 VehicleAuthorizationRequest::authorizedservices() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleAuthorizationRequest.authorizedservices)
+  return authorizedservices_;
 }
-inline void VehicleAuthorizationRequest::set_authorized_services(::google::protobuf::uint32 value) {
+inline void VehicleAuthorizationRequest::set_authorizedservices(::google::protobuf::uint32 value) {
   
-  authorized_services_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleAuthorizationRequest.authorized_services)
+  authorizedservices_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleAuthorizationRequest.authorizedservices)
 }
 
-// uint32 granted_services = 4;
-inline void VehicleAuthorizationRequest::clear_granted_services() {
-  granted_services_ = 0u;
+// uint32 grantedservices = 4;
+inline void VehicleAuthorizationRequest::clear_grantedservices() {
+  grantedservices_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleAuthorizationRequest::granted_services() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleAuthorizationRequest.granted_services)
-  return granted_services_;
+inline ::google::protobuf::uint32 VehicleAuthorizationRequest::grantedservices() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleAuthorizationRequest.grantedservices)
+  return grantedservices_;
 }
-inline void VehicleAuthorizationRequest::set_granted_services(::google::protobuf::uint32 value) {
+inline void VehicleAuthorizationRequest::set_grantedservices(::google::protobuf::uint32 value) {
   
-  granted_services_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleAuthorizationRequest.granted_services)
+  grantedservices_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleAuthorizationRequest.grantedservices)
 }
 
 // -------------------------------------------------------------------
 
 // VehicleBodySensedState
 
-// uint32 vehicle_id = 1;
-inline void VehicleBodySensedState::clear_vehicle_id() {
-  vehicle_id_ = 0u;
+// uint32 vehicleid = 1;
+inline void VehicleBodySensedState::clear_vehicleid() {
+  vehicleid_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleBodySensedState::vehicle_id() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleBodySensedState.vehicle_id)
-  return vehicle_id_;
+inline ::google::protobuf::uint32 VehicleBodySensedState::vehicleid() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleBodySensedState.vehicleid)
+  return vehicleid_;
 }
-inline void VehicleBodySensedState::set_vehicle_id(::google::protobuf::uint32 value) {
+inline void VehicleBodySensedState::set_vehicleid(::google::protobuf::uint32 value) {
   
-  vehicle_id_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleBodySensedState.vehicle_id)
+  vehicleid_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleBodySensedState.vehicleid)
 }
 
-// float x_accel = 2;
-inline void VehicleBodySensedState::clear_x_accel() {
-  x_accel_ = 0;
+// float xaccel = 2;
+inline void VehicleBodySensedState::clear_xaccel() {
+  xaccel_ = 0;
 }
-inline float VehicleBodySensedState::x_accel() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleBodySensedState.x_accel)
-  return x_accel_;
+inline float VehicleBodySensedState::xaccel() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleBodySensedState.xaccel)
+  return xaccel_;
 }
-inline void VehicleBodySensedState::set_x_accel(float value) {
+inline void VehicleBodySensedState::set_xaccel(float value) {
   
-  x_accel_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleBodySensedState.x_accel)
+  xaccel_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleBodySensedState.xaccel)
 }
 
-// float y_accel = 3;
-inline void VehicleBodySensedState::clear_y_accel() {
-  y_accel_ = 0;
+// float yaccel = 3;
+inline void VehicleBodySensedState::clear_yaccel() {
+  yaccel_ = 0;
 }
-inline float VehicleBodySensedState::y_accel() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleBodySensedState.y_accel)
-  return y_accel_;
+inline float VehicleBodySensedState::yaccel() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleBodySensedState.yaccel)
+  return yaccel_;
 }
-inline void VehicleBodySensedState::set_y_accel(float value) {
+inline void VehicleBodySensedState::set_yaccel(float value) {
   
-  y_accel_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleBodySensedState.y_accel)
+  yaccel_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleBodySensedState.yaccel)
 }
 
-// float z_accel = 4;
-inline void VehicleBodySensedState::clear_z_accel() {
-  z_accel_ = 0;
+// float zaccel = 4;
+inline void VehicleBodySensedState::clear_zaccel() {
+  zaccel_ = 0;
 }
-inline float VehicleBodySensedState::z_accel() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleBodySensedState.z_accel)
-  return z_accel_;
+inline float VehicleBodySensedState::zaccel() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleBodySensedState.zaccel)
+  return zaccel_;
 }
-inline void VehicleBodySensedState::set_z_accel(float value) {
+inline void VehicleBodySensedState::set_zaccel(float value) {
   
-  z_accel_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleBodySensedState.z_accel)
+  zaccel_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleBodySensedState.zaccel)
 }
 
-// float roll_rate = 5;
-inline void VehicleBodySensedState::clear_roll_rate() {
-  roll_rate_ = 0;
+// float rollrate = 5;
+inline void VehicleBodySensedState::clear_rollrate() {
+  rollrate_ = 0;
 }
-inline float VehicleBodySensedState::roll_rate() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleBodySensedState.roll_rate)
-  return roll_rate_;
+inline float VehicleBodySensedState::rollrate() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleBodySensedState.rollrate)
+  return rollrate_;
 }
-inline void VehicleBodySensedState::set_roll_rate(float value) {
+inline void VehicleBodySensedState::set_rollrate(float value) {
   
-  roll_rate_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleBodySensedState.roll_rate)
+  rollrate_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleBodySensedState.rollrate)
 }
 
-// float pitch_rate = 6;
-inline void VehicleBodySensedState::clear_pitch_rate() {
-  pitch_rate_ = 0;
+// float pitchrate = 6;
+inline void VehicleBodySensedState::clear_pitchrate() {
+  pitchrate_ = 0;
 }
-inline float VehicleBodySensedState::pitch_rate() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleBodySensedState.pitch_rate)
-  return pitch_rate_;
+inline float VehicleBodySensedState::pitchrate() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleBodySensedState.pitchrate)
+  return pitchrate_;
 }
-inline void VehicleBodySensedState::set_pitch_rate(float value) {
+inline void VehicleBodySensedState::set_pitchrate(float value) {
   
-  pitch_rate_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleBodySensedState.pitch_rate)
+  pitchrate_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleBodySensedState.pitchrate)
 }
 
-// float yaw_rate = 7;
-inline void VehicleBodySensedState::clear_yaw_rate() {
-  yaw_rate_ = 0;
+// float yawrate = 7;
+inline void VehicleBodySensedState::clear_yawrate() {
+  yawrate_ = 0;
 }
-inline float VehicleBodySensedState::yaw_rate() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleBodySensedState.yaw_rate)
-  return yaw_rate_;
+inline float VehicleBodySensedState::yawrate() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleBodySensedState.yawrate)
+  return yawrate_;
 }
-inline void VehicleBodySensedState::set_yaw_rate(float value) {
+inline void VehicleBodySensedState::set_yawrate(float value) {
   
-  yaw_rate_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleBodySensedState.yaw_rate)
+  yawrate_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleBodySensedState.yawrate)
 }
 
 // -------------------------------------------------------------------
 
 // VehicleGlobalPosition
 
-// uint32 vehicle_id = 1;
-inline void VehicleGlobalPosition::clear_vehicle_id() {
-  vehicle_id_ = 0u;
+// uint32 vehicleid = 1;
+inline void VehicleGlobalPosition::clear_vehicleid() {
+  vehicleid_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleGlobalPosition::vehicle_id() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleGlobalPosition.vehicle_id)
-  return vehicle_id_;
+inline ::google::protobuf::uint32 VehicleGlobalPosition::vehicleid() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleGlobalPosition.vehicleid)
+  return vehicleid_;
 }
-inline void VehicleGlobalPosition::set_vehicle_id(::google::protobuf::uint32 value) {
+inline void VehicleGlobalPosition::set_vehicleid(::google::protobuf::uint32 value) {
   
-  vehicle_id_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleGlobalPosition.vehicle_id)
+  vehicleid_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleGlobalPosition.vehicleid)
 }
 
 // float longitude = 2;
@@ -3643,96 +3643,96 @@ inline void VehicleGlobalPosition::set_altitude(float value) {
   // @@protoc_insertion_point(field_set:ProtoPackets.VehicleGlobalPosition.altitude)
 }
 
-// float x_speed = 5;
-inline void VehicleGlobalPosition::clear_x_speed() {
-  x_speed_ = 0;
+// float xspeed = 5;
+inline void VehicleGlobalPosition::clear_xspeed() {
+  xspeed_ = 0;
 }
-inline float VehicleGlobalPosition::x_speed() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleGlobalPosition.x_speed)
-  return x_speed_;
+inline float VehicleGlobalPosition::xspeed() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleGlobalPosition.xspeed)
+  return xspeed_;
 }
-inline void VehicleGlobalPosition::set_x_speed(float value) {
+inline void VehicleGlobalPosition::set_xspeed(float value) {
   
-  x_speed_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleGlobalPosition.x_speed)
+  xspeed_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleGlobalPosition.xspeed)
 }
 
-// float y_speed = 6;
-inline void VehicleGlobalPosition::clear_y_speed() {
-  y_speed_ = 0;
+// float yspeed = 6;
+inline void VehicleGlobalPosition::clear_yspeed() {
+  yspeed_ = 0;
 }
-inline float VehicleGlobalPosition::y_speed() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleGlobalPosition.y_speed)
-  return y_speed_;
+inline float VehicleGlobalPosition::yspeed() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleGlobalPosition.yspeed)
+  return yspeed_;
 }
-inline void VehicleGlobalPosition::set_y_speed(float value) {
+inline void VehicleGlobalPosition::set_yspeed(float value) {
   
-  y_speed_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleGlobalPosition.y_speed)
+  yspeed_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleGlobalPosition.yspeed)
 }
 
-// float z_speed = 7;
-inline void VehicleGlobalPosition::clear_z_speed() {
-  z_speed_ = 0;
+// float zspeed = 7;
+inline void VehicleGlobalPosition::clear_zspeed() {
+  zspeed_ = 0;
 }
-inline float VehicleGlobalPosition::z_speed() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleGlobalPosition.z_speed)
-  return z_speed_;
+inline float VehicleGlobalPosition::zspeed() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleGlobalPosition.zspeed)
+  return zspeed_;
 }
-inline void VehicleGlobalPosition::set_z_speed(float value) {
+inline void VehicleGlobalPosition::set_zspeed(float value) {
   
-  z_speed_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleGlobalPosition.z_speed)
+  zspeed_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleGlobalPosition.zspeed)
 }
 
 // -------------------------------------------------------------------
 
 // VehicleIdentification
 
-// uint32 vehicle_id = 1;
-inline void VehicleIdentification::clear_vehicle_id() {
-  vehicle_id_ = 0u;
+// uint32 vehicleid = 1;
+inline void VehicleIdentification::clear_vehicleid() {
+  vehicleid_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleIdentification::vehicle_id() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleIdentification.vehicle_id)
-  return vehicle_id_;
+inline ::google::protobuf::uint32 VehicleIdentification::vehicleid() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleIdentification.vehicleid)
+  return vehicleid_;
 }
-inline void VehicleIdentification::set_vehicle_id(::google::protobuf::uint32 value) {
+inline void VehicleIdentification::set_vehicleid(::google::protobuf::uint32 value) {
   
-  vehicle_id_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleIdentification.vehicle_id)
+  vehicleid_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleIdentification.vehicleid)
 }
 
-// uint32 vehicle_type = 2;
-inline void VehicleIdentification::clear_vehicle_type() {
-  vehicle_type_ = 0u;
+// uint32 vehicletype = 2;
+inline void VehicleIdentification::clear_vehicletype() {
+  vehicletype_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleIdentification::vehicle_type() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleIdentification.vehicle_type)
-  return vehicle_type_;
+inline ::google::protobuf::uint32 VehicleIdentification::vehicletype() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleIdentification.vehicletype)
+  return vehicletype_;
 }
-inline void VehicleIdentification::set_vehicle_type(::google::protobuf::uint32 value) {
+inline void VehicleIdentification::set_vehicletype(::google::protobuf::uint32 value) {
   
-  vehicle_type_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleIdentification.vehicle_type)
+  vehicletype_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleIdentification.vehicletype)
 }
 
 // -------------------------------------------------------------------
 
 // VehicleInertialState
 
-// uint32 vehicle_id = 1;
-inline void VehicleInertialState::clear_vehicle_id() {
-  vehicle_id_ = 0u;
+// uint32 vehicleid = 1;
+inline void VehicleInertialState::clear_vehicleid() {
+  vehicleid_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleInertialState::vehicle_id() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.vehicle_id)
-  return vehicle_id_;
+inline ::google::protobuf::uint32 VehicleInertialState::vehicleid() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.vehicleid)
+  return vehicleid_;
 }
-inline void VehicleInertialState::set_vehicle_id(::google::protobuf::uint32 value) {
+inline void VehicleInertialState::set_vehicleid(::google::protobuf::uint32 value) {
   
-  vehicle_id_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.vehicle_id)
+  vehicleid_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.vehicleid)
 }
 
 // float longitude = 2;
@@ -3819,304 +3819,304 @@ inline void VehicleInertialState::set_heading(float value) {
   // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.heading)
 }
 
-// float north_speed = 8;
-inline void VehicleInertialState::clear_north_speed() {
-  north_speed_ = 0;
+// float northspeed = 8;
+inline void VehicleInertialState::clear_northspeed() {
+  northspeed_ = 0;
 }
-inline float VehicleInertialState::north_speed() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.north_speed)
-  return north_speed_;
+inline float VehicleInertialState::northspeed() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.northspeed)
+  return northspeed_;
 }
-inline void VehicleInertialState::set_north_speed(float value) {
+inline void VehicleInertialState::set_northspeed(float value) {
   
-  north_speed_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.north_speed)
+  northspeed_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.northspeed)
 }
 
-// float east_speed = 9;
-inline void VehicleInertialState::clear_east_speed() {
-  east_speed_ = 0;
+// float eastspeed = 9;
+inline void VehicleInertialState::clear_eastspeed() {
+  eastspeed_ = 0;
 }
-inline float VehicleInertialState::east_speed() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.east_speed)
-  return east_speed_;
+inline float VehicleInertialState::eastspeed() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.eastspeed)
+  return eastspeed_;
 }
-inline void VehicleInertialState::set_east_speed(float value) {
+inline void VehicleInertialState::set_eastspeed(float value) {
   
-  east_speed_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.east_speed)
+  eastspeed_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.eastspeed)
 }
 
-// float vertical_speed = 10;
-inline void VehicleInertialState::clear_vertical_speed() {
-  vertical_speed_ = 0;
+// float verticalspeed = 10;
+inline void VehicleInertialState::clear_verticalspeed() {
+  verticalspeed_ = 0;
 }
-inline float VehicleInertialState::vertical_speed() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.vertical_speed)
-  return vertical_speed_;
+inline float VehicleInertialState::verticalspeed() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.verticalspeed)
+  return verticalspeed_;
 }
-inline void VehicleInertialState::set_vertical_speed(float value) {
+inline void VehicleInertialState::set_verticalspeed(float value) {
   
-  vertical_speed_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.vertical_speed)
+  verticalspeed_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.verticalspeed)
 }
 
-// float roll_rate = 11;
-inline void VehicleInertialState::clear_roll_rate() {
-  roll_rate_ = 0;
+// float rollrate = 11;
+inline void VehicleInertialState::clear_rollrate() {
+  rollrate_ = 0;
 }
-inline float VehicleInertialState::roll_rate() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.roll_rate)
-  return roll_rate_;
+inline float VehicleInertialState::rollrate() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.rollrate)
+  return rollrate_;
 }
-inline void VehicleInertialState::set_roll_rate(float value) {
+inline void VehicleInertialState::set_rollrate(float value) {
   
-  roll_rate_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.roll_rate)
+  rollrate_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.rollrate)
 }
 
-// float pitch_rate = 12;
-inline void VehicleInertialState::clear_pitch_rate() {
-  pitch_rate_ = 0;
+// float pitchrate = 12;
+inline void VehicleInertialState::clear_pitchrate() {
+  pitchrate_ = 0;
 }
-inline float VehicleInertialState::pitch_rate() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.pitch_rate)
-  return pitch_rate_;
+inline float VehicleInertialState::pitchrate() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.pitchrate)
+  return pitchrate_;
 }
-inline void VehicleInertialState::set_pitch_rate(float value) {
+inline void VehicleInertialState::set_pitchrate(float value) {
   
-  pitch_rate_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.pitch_rate)
+  pitchrate_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.pitchrate)
 }
 
-// float yaw_rate = 13;
-inline void VehicleInertialState::clear_yaw_rate() {
-  yaw_rate_ = 0;
+// float yawrate = 13;
+inline void VehicleInertialState::clear_yawrate() {
+  yawrate_ = 0;
 }
-inline float VehicleInertialState::yaw_rate() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.yaw_rate)
-  return yaw_rate_;
+inline float VehicleInertialState::yawrate() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.yawrate)
+  return yawrate_;
 }
-inline void VehicleInertialState::set_yaw_rate(float value) {
+inline void VehicleInertialState::set_yawrate(float value) {
   
-  yaw_rate_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.yaw_rate)
+  yawrate_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.yawrate)
 }
 
-// float north_accel = 14;
-inline void VehicleInertialState::clear_north_accel() {
-  north_accel_ = 0;
+// float northaccel = 14;
+inline void VehicleInertialState::clear_northaccel() {
+  northaccel_ = 0;
 }
-inline float VehicleInertialState::north_accel() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.north_accel)
-  return north_accel_;
+inline float VehicleInertialState::northaccel() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.northaccel)
+  return northaccel_;
 }
-inline void VehicleInertialState::set_north_accel(float value) {
+inline void VehicleInertialState::set_northaccel(float value) {
   
-  north_accel_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.north_accel)
+  northaccel_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.northaccel)
 }
 
-// float east_accel = 15;
-inline void VehicleInertialState::clear_east_accel() {
-  east_accel_ = 0;
+// float eastaccel = 15;
+inline void VehicleInertialState::clear_eastaccel() {
+  eastaccel_ = 0;
 }
-inline float VehicleInertialState::east_accel() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.east_accel)
-  return east_accel_;
+inline float VehicleInertialState::eastaccel() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.eastaccel)
+  return eastaccel_;
 }
-inline void VehicleInertialState::set_east_accel(float value) {
+inline void VehicleInertialState::set_eastaccel(float value) {
   
-  east_accel_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.east_accel)
+  eastaccel_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.eastaccel)
 }
 
-// float vertical_accel = 16;
-inline void VehicleInertialState::clear_vertical_accel() {
-  vertical_accel_ = 0;
+// float verticalaccel = 16;
+inline void VehicleInertialState::clear_verticalaccel() {
+  verticalaccel_ = 0;
 }
-inline float VehicleInertialState::vertical_accel() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.vertical_accel)
-  return vertical_accel_;
+inline float VehicleInertialState::verticalaccel() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleInertialState.verticalaccel)
+  return verticalaccel_;
 }
-inline void VehicleInertialState::set_vertical_accel(float value) {
+inline void VehicleInertialState::set_verticalaccel(float value) {
   
-  vertical_accel_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.vertical_accel)
+  verticalaccel_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleInertialState.verticalaccel)
 }
 
 // -------------------------------------------------------------------
 
 // VehicleModeCommand
 
-// uint32 vehicle_id = 1;
-inline void VehicleModeCommand::clear_vehicle_id() {
-  vehicle_id_ = 0u;
+// uint32 vehicleid = 1;
+inline void VehicleModeCommand::clear_vehicleid() {
+  vehicleid_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleModeCommand::vehicle_id() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleModeCommand.vehicle_id)
-  return vehicle_id_;
+inline ::google::protobuf::uint32 VehicleModeCommand::vehicleid() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleModeCommand.vehicleid)
+  return vehicleid_;
 }
-inline void VehicleModeCommand::set_vehicle_id(::google::protobuf::uint32 value) {
+inline void VehicleModeCommand::set_vehicleid(::google::protobuf::uint32 value) {
   
-  vehicle_id_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleModeCommand.vehicle_id)
+  vehicleid_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleModeCommand.vehicleid)
 }
 
-// uint32 vehicle_mode = 2;
-inline void VehicleModeCommand::clear_vehicle_mode() {
-  vehicle_mode_ = 0u;
+// uint32 vehiclemode = 2;
+inline void VehicleModeCommand::clear_vehiclemode() {
+  vehiclemode_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleModeCommand::vehicle_mode() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleModeCommand.vehicle_mode)
-  return vehicle_mode_;
+inline ::google::protobuf::uint32 VehicleModeCommand::vehiclemode() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleModeCommand.vehiclemode)
+  return vehiclemode_;
 }
-inline void VehicleModeCommand::set_vehicle_mode(::google::protobuf::uint32 value) {
+inline void VehicleModeCommand::set_vehiclemode(::google::protobuf::uint32 value) {
   
-  vehicle_mode_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleModeCommand.vehicle_mode)
+  vehiclemode_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleModeCommand.vehiclemode)
 }
 
 // -------------------------------------------------------------------
 
 // VehicleSystemStatus
 
-// uint32 vehicle_id = 1;
-inline void VehicleSystemStatus::clear_vehicle_id() {
-  vehicle_id_ = 0u;
+// uint32 vehicleid = 1;
+inline void VehicleSystemStatus::clear_vehicleid() {
+  vehicleid_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleSystemStatus::vehicle_id() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleSystemStatus.vehicle_id)
-  return vehicle_id_;
+inline ::google::protobuf::uint32 VehicleSystemStatus::vehicleid() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleSystemStatus.vehicleid)
+  return vehicleid_;
 }
-inline void VehicleSystemStatus::set_vehicle_id(::google::protobuf::uint32 value) {
+inline void VehicleSystemStatus::set_vehicleid(::google::protobuf::uint32 value) {
   
-  vehicle_id_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleSystemStatus.vehicle_id)
+  vehicleid_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleSystemStatus.vehicleid)
 }
 
-// uint32 vehicle_mode = 2;
-inline void VehicleSystemStatus::clear_vehicle_mode() {
-  vehicle_mode_ = 0u;
+// uint32 vehiclemode = 2;
+inline void VehicleSystemStatus::clear_vehiclemode() {
+  vehiclemode_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleSystemStatus::vehicle_mode() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleSystemStatus.vehicle_mode)
-  return vehicle_mode_;
+inline ::google::protobuf::uint32 VehicleSystemStatus::vehiclemode() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleSystemStatus.vehiclemode)
+  return vehiclemode_;
 }
-inline void VehicleSystemStatus::set_vehicle_mode(::google::protobuf::uint32 value) {
+inline void VehicleSystemStatus::set_vehiclemode(::google::protobuf::uint32 value) {
   
-  vehicle_mode_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleSystemStatus.vehicle_mode)
+  vehiclemode_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleSystemStatus.vehiclemode)
 }
 
-// uint32 vehicle_state = 3;
-inline void VehicleSystemStatus::clear_vehicle_state() {
-  vehicle_state_ = 0u;
+// uint32 vehiclestate = 3;
+inline void VehicleSystemStatus::clear_vehiclestate() {
+  vehiclestate_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleSystemStatus::vehicle_state() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleSystemStatus.vehicle_state)
-  return vehicle_state_;
+inline ::google::protobuf::uint32 VehicleSystemStatus::vehiclestate() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleSystemStatus.vehiclestate)
+  return vehiclestate_;
 }
-inline void VehicleSystemStatus::set_vehicle_state(::google::protobuf::uint32 value) {
+inline void VehicleSystemStatus::set_vehiclestate(::google::protobuf::uint32 value) {
   
-  vehicle_state_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleSystemStatus.vehicle_state)
+  vehiclestate_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleSystemStatus.vehiclestate)
 }
 
 // -------------------------------------------------------------------
 
 // VehicleTelemetryCommand
 
-// uint32 vehicle_id = 1;
-inline void VehicleTelemetryCommand::clear_vehicle_id() {
-  vehicle_id_ = 0u;
+// uint32 vehicleid = 1;
+inline void VehicleTelemetryCommand::clear_vehicleid() {
+  vehicleid_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleTelemetryCommand::vehicle_id() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleTelemetryCommand.vehicle_id)
-  return vehicle_id_;
+inline ::google::protobuf::uint32 VehicleTelemetryCommand::vehicleid() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleTelemetryCommand.vehicleid)
+  return vehicleid_;
 }
-inline void VehicleTelemetryCommand::set_vehicle_id(::google::protobuf::uint32 value) {
+inline void VehicleTelemetryCommand::set_vehicleid(::google::protobuf::uint32 value) {
   
-  vehicle_id_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleTelemetryCommand.vehicle_id)
+  vehicleid_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleTelemetryCommand.vehicleid)
 }
 
-// uint32 telemetry_select = 2;
-inline void VehicleTelemetryCommand::clear_telemetry_select() {
-  telemetry_select_ = 0u;
+// uint32 telemetryselect = 2;
+inline void VehicleTelemetryCommand::clear_telemetryselect() {
+  telemetryselect_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleTelemetryCommand::telemetry_select() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleTelemetryCommand.telemetry_select)
-  return telemetry_select_;
+inline ::google::protobuf::uint32 VehicleTelemetryCommand::telemetryselect() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleTelemetryCommand.telemetryselect)
+  return telemetryselect_;
 }
-inline void VehicleTelemetryCommand::set_telemetry_select(::google::protobuf::uint32 value) {
+inline void VehicleTelemetryCommand::set_telemetryselect(::google::protobuf::uint32 value) {
   
-  telemetry_select_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleTelemetryCommand.telemetry_select)
+  telemetryselect_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleTelemetryCommand.telemetryselect)
 }
 
-// uint32 telemetry_rate = 3;
-inline void VehicleTelemetryCommand::clear_telemetry_rate() {
-  telemetry_rate_ = 0u;
+// uint32 telemetryrate = 3;
+inline void VehicleTelemetryCommand::clear_telemetryrate() {
+  telemetryrate_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleTelemetryCommand::telemetry_rate() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleTelemetryCommand.telemetry_rate)
-  return telemetry_rate_;
+inline ::google::protobuf::uint32 VehicleTelemetryCommand::telemetryrate() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleTelemetryCommand.telemetryrate)
+  return telemetryrate_;
 }
-inline void VehicleTelemetryCommand::set_telemetry_rate(::google::protobuf::uint32 value) {
+inline void VehicleTelemetryCommand::set_telemetryrate(::google::protobuf::uint32 value) {
   
-  telemetry_rate_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleTelemetryCommand.telemetry_rate)
+  telemetryrate_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleTelemetryCommand.telemetryrate)
 }
 
 // -------------------------------------------------------------------
 
 // VehicleTerminationCommand
 
-// uint32 vehicle_id = 1;
-inline void VehicleTerminationCommand::clear_vehicle_id() {
-  vehicle_id_ = 0u;
+// uint32 vehicleid = 1;
+inline void VehicleTerminationCommand::clear_vehicleid() {
+  vehicleid_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleTerminationCommand::vehicle_id() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleTerminationCommand.vehicle_id)
-  return vehicle_id_;
+inline ::google::protobuf::uint32 VehicleTerminationCommand::vehicleid() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleTerminationCommand.vehicleid)
+  return vehicleid_;
 }
-inline void VehicleTerminationCommand::set_vehicle_id(::google::protobuf::uint32 value) {
+inline void VehicleTerminationCommand::set_vehicleid(::google::protobuf::uint32 value) {
   
-  vehicle_id_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleTerminationCommand.vehicle_id)
+  vehicleid_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleTerminationCommand.vehicleid)
 }
 
-// uint32 termination_mode = 2;
-inline void VehicleTerminationCommand::clear_termination_mode() {
-  termination_mode_ = 0u;
+// uint32 terminationmode = 2;
+inline void VehicleTerminationCommand::clear_terminationmode() {
+  terminationmode_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleTerminationCommand::termination_mode() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleTerminationCommand.termination_mode)
-  return termination_mode_;
+inline ::google::protobuf::uint32 VehicleTerminationCommand::terminationmode() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleTerminationCommand.terminationmode)
+  return terminationmode_;
 }
-inline void VehicleTerminationCommand::set_termination_mode(::google::protobuf::uint32 value) {
+inline void VehicleTerminationCommand::set_terminationmode(::google::protobuf::uint32 value) {
   
-  termination_mode_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleTerminationCommand.termination_mode)
+  terminationmode_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleTerminationCommand.terminationmode)
 }
 
 // -------------------------------------------------------------------
 
 // VehicleWaypointCommand
 
-// uint32 vehicle_id = 1;
-inline void VehicleWaypointCommand::clear_vehicle_id() {
-  vehicle_id_ = 0u;
+// uint32 vehicleid = 1;
+inline void VehicleWaypointCommand::clear_vehicleid() {
+  vehicleid_ = 0u;
 }
-inline ::google::protobuf::uint32 VehicleWaypointCommand::vehicle_id() const {
-  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleWaypointCommand.vehicle_id)
-  return vehicle_id_;
+inline ::google::protobuf::uint32 VehicleWaypointCommand::vehicleid() const {
+  // @@protoc_insertion_point(field_get:ProtoPackets.VehicleWaypointCommand.vehicleid)
+  return vehicleid_;
 }
-inline void VehicleWaypointCommand::set_vehicle_id(::google::protobuf::uint32 value) {
+inline void VehicleWaypointCommand::set_vehicleid(::google::protobuf::uint32 value) {
   
-  vehicle_id_ = value;
-  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleWaypointCommand.vehicle_id)
+  vehicleid_ = value;
+  // @@protoc_insertion_point(field_set:ProtoPackets.VehicleWaypointCommand.vehicleid)
 }
 
 // float longitude = 2;
