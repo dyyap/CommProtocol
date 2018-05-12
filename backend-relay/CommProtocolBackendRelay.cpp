@@ -37,73 +37,6 @@ bool initSocket(int& hsocket, char* host_name, int host_port);
 bool sendPacket(int& socket, char* packet, int pktSize, ProtoPackets::Packet& payload);// , CodedOutputStream *coded_output);
 int hsock;
 
-
-error_t ArmCommandCallback(const comnet::Header& header, const ngcp::ArmCommand& packet, comnet::Comms& node)
-{
-    std::cout << "=::RECEIVED PACKET::=" << std::endl;
-    std::cout << std::endl << "Source node: " << (int32_t)header.source_id << std::endl;
-    std::cout << "Message: " << std::endl;
-    std::cout << "Packet contains: ";
-	std::cout << "ID: " << packet.id << endl;
-	std::cout << "Pos: " << packet.position << endl;
-    //packet.print();
-	ProtoPackets::ArmCommand *payload = new ProtoPackets::ArmCommand();
-	ProtoPackets::Packet masterPayload;
-    char *pkt = new char[1024];
-    payload->set_id(packet.id);
-    payload->set_position(packet.position);
-
-	masterPayload.set_allocated_armcommand(payload );
-	
-    int pktSize = masterPayload.ByteSize() + 4;
-    if (sendPacket(hsock, pkt, pktSize, masterPayload)==false) //,coded_output) == false)
-    {
-        delete pkt;
-        closesocket(hsock);
-        WSACleanup();
-        return -1;
-    }
-	delete pkt;
-    return comnet::CALLBACK_SUCCESS | comnet::CALLBACK_DESTROY_PACKET;
-}
-
-
-error_t ArmPositionCallback(const comnet::Header& header, const ngcp::ArmPosition& packet, comnet::Comms& node)
-{
-	std::cout << "=::RECEIVED PACKET::=" << std::endl;
-	std::cout << std::endl << "Source node: " << (int32_t)header.source_id << std::endl;
-	std::cout << "Message: " << std::endl;
-	std::cout << "Packet contains: ";
-	std::cout << "Pos1: " << packet.position1 << endl;
-	std::cout << "Pos2: " << packet.position2 << endl;
-	std::cout << "Pos3: " << packet.position3 << endl;
-	std::cout << "Pos4: " << packet.position4 << endl;
-
-	//packet.print();
-	ProtoPackets::ArmPosition *payload = new ProtoPackets::ArmPosition();
-	ProtoPackets::Packet masterPayload;
-	char *pkt = new char[1024];
-	payload->set_position1(packet.position1);
-	payload->set_position2(packet.position2);
-	payload->set_position3(packet.position3);
-	payload->set_position4(packet.position4);
-
-
-	masterPayload.set_allocated_armposition(payload);
-
-	int pktSize = masterPayload.ByteSize() + 4;
-	if (sendPacket(hsock, pkt, pktSize, masterPayload) == false) //,coded_output) == false)
-	{
-		delete pkt;
-		closesocket(hsock);
-		WSACleanup();
-		return -1;
-	}
-	delete pkt;
-	return comnet::CALLBACK_SUCCESS | comnet::CALLBACK_DESTROY_PACKET;
-}
-
-
 // Test against an xbee on another machine.
 void xbeeTest()
 {
@@ -222,9 +155,6 @@ void localTest(int& hsocket)
               << std::boolalpha
               << comm1.AddAddress(2, "127.0.0.1", 1338)
               << std::endl;
-
-    comm1.LinkCallback(new ngcp::ArmCommand(), new comnet::Callback((comnet::callback_t)ArmCommandCallback));
-	comm1.LinkCallback(new ngcp::ArmPosition(1, 1, 1, 1), new comnet::Callback((comnet::callback_t)ArmPositionCallback));
 
     // Test packet.
     ngcp::ArmCommand amc(22, 7777);
