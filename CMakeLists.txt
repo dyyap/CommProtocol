@@ -49,6 +49,7 @@ option(csharp "Build C# DLL for .NET use" OFF)
 # Options to allow debug/release version of CommProtocol.
 option(version_release "Compile the release version of CommProtocol" OFF)
 option(backend "Build backend system" ON)
+option(backend-relay "Build backend-relay system" ON)
 
 
 if (version_release)
@@ -234,6 +235,12 @@ if (backend)
 	message("*** Backend is building... ***")
 	add_subdirectory(backend/)
 endif()
+
+if (backend-relay)
+	message("*** Backend-relay is building... ***")
+	add_subdirectory(backend-relay/)
+endif()
+
 
 if (csharp)
   # C# DLL building

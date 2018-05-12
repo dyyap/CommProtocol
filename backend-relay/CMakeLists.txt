@@ -2,7 +2,7 @@
 # Test main for testing.
 #
 cmake_minimum_required( VERSION 2.8 )
-project(CommBackend)
+project(CommBackendRelay)
 
 include_directories(SYSTEM ${CMAKE_CURRENT_SOURCE_DIR}/../XbeeC/xbee_ansic_library/include/)
 include_directories(SYSTEM ${CMAKE_CURRENT_SOURCE_DIR}/../CommProto/include/)
@@ -14,8 +14,8 @@ link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../protobuf/lib)
 #link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../poco-1.9/lib)
 
 
-add_executable(CommProtoBackend
- ${CMAKE_CURRENT_SOURCE_DIR}/CommProtocolBackend.cpp 
+add_executable(CommProtoBackendRelay
+ ${CMAKE_CURRENT_SOURCE_DIR}/CommProtocolBackendRelay.cpp 
  ${CMAKE_CURRENT_SOURCE_DIR}/../Packets/ProtoPackets/ProtoPacketsV2.pb.cc
  ${CMAKE_CURRENT_SOURCE_DIR}/../Packets/ProtoPackets/ProtoPacketsV2.pb.h
  ${CMAKE_CURRENT_SOURCE_DIR}/../Packets/XbeePackets/AirVehicleGroundRelativeState.hpp
@@ -46,10 +46,7 @@ else()
   set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} " -std=c++11 -pthread")
 endif()
 # Given that linux is different from windows
-target_link_libraries(CommProtoBackend CommProtocol-Static)
-target_link_libraries(CommProtoBackend cryptopp-static)
-target_link_libraries(CommProtoBackend libxbee3)
-target_link_libraries(CommProtoBackend libprotobuf)
-#target_link_libraries(CommProtoBackend PocoFoundation)
-#target_link_libraries(CommProtoBackend PocoNet)
-#target_link_libraries(CommProtoBackend PocoUtil)
+target_link_libraries(CommProtoBackendRelay CommProtocol-Static)
+target_link_libraries(CommProtoBackendRelay cryptopp-static)
+target_link_libraries(CommProtoBackendRelay libxbee3)
+target_link_libraries(CommProtoBackendRelay libprotobuf)
