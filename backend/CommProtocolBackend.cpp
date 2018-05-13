@@ -213,7 +213,6 @@ int main()
 
 bool initSocket(int& hsocket, char* host_name, int host_port)
 {
-
     struct sockaddr_in my_addr;
     int *p_int;
     int err;
@@ -231,7 +230,6 @@ bool initSocket(int& hsocket, char* host_name, int host_port)
         printf("Error initializing socket %d\n", errno);
         return false;
     }
-
     p_int = (int*)malloc(sizeof(int));
     *p_int = 1;
 
