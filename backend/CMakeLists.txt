@@ -16,6 +16,8 @@ link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../protobuf/lib)
 
 add_executable(CommProtoBackend
  ${CMAKE_CURRENT_SOURCE_DIR}/CommProtocolBackend.cpp 
+${CMAKE_CURRENT_SOURCE_DIR}/XbeeCallbacks.h
+${CMAKE_CURRENT_SOURCE_DIR}/XbeeCallbacks.cpp 
  ${CMAKE_CURRENT_SOURCE_DIR}/../Packets/ProtoPackets/ProtoPacketsV2.pb.cc
  ${CMAKE_CURRENT_SOURCE_DIR}/../Packets/ProtoPackets/ProtoPacketsV2.pb.h
  ${CMAKE_CURRENT_SOURCE_DIR}/../Packets/XbeePackets/AirVehicleGroundRelativeState.hpp
