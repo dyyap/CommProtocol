@@ -48,4 +48,4 @@ error_t VehicleModeCommandCallback(const comnet::Header& header, const ngcp::Veh
 error_t VehicleSystemStatusCallback(const comnet::Header& header, const ngcp::VehicleSystemStatus& packet, comnet::Comms& node);
 error_t VehicleTelemetryCommandCallback(const comnet::Header& header, const ngcp::VehicleTelemetryCommand& packet, comnet::Comms& node);
 error_t VehicleTerminationCommandCallback(const comnet::Header& header, const ngcp::VehicleTerminationCommand& packet, comnet::Comms& node);
-error_t VehicleWaypointCommandallback(const comnet::Header& header, const ngcp::VehicleWaypointCommand& packet, comnet::Comms& node);
+error_t VehicleWaypointCommandCallback(const comnet::Header& header, const ngcp::VehicleWaypointCommand& packet, comnet::Comms& node);

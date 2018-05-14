@@ -71,8 +71,8 @@ void xbeeTest()
 		<< std::endl;
 
 
-	comm1.LinkCallback(new ngcp::ArmCommand(), new comnet::Callback((comnet::callback_t)ArmCommandCallback));
-	comm1.LinkCallback(new ngcp::ArmPosition(1,1,1,1), new comnet::Callback((comnet::callback_t)ArmPositionCallback));
+	//comm1.LinkCallback(new ngcp::ArmCommand(), new comnet::Callback((comnet::callback_t)ArmCommandCallback));
+	//comm1.LinkCallback(new ngcp::ArmPosition(1,1,1,1), new comnet::Callback((comnet::callback_t)ArmPositionCallback));
 
 
 	//comm1.LinkCallback(new Ping(), new comnet::Callback((comnet::callback_t)PingCallback));

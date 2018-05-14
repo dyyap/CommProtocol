@@ -539,7 +539,7 @@ error_t VehicleTerminationCommandCallback(const comnet::Header& header, const ng
 	return comnet::CALLBACK_SUCCESS | comnet::CALLBACK_DESTROY_PACKET;
 }
 
-error_t VehicleWaypointCommandallback(const comnet::Header& header, const ngcp::VehicleWaypointCommand& packet, comnet::Comms& node)
+error_t VehicleWaypointCommandCallback(const comnet::Header& header, const ngcp::VehicleWaypointCommand& packet, comnet::Comms& node)
 {
 	std::cout << "=::RECEIVED PACKET::=" << std::endl;
 	std::cout << std::endl << "Source node: " << (int32_t)header.source_id << std::endl;

@@ -53,10 +53,25 @@ void xbeeTest()
 		<< std::endl;
 
 	// link to callback function.
+	comm1.LinkCallback(new ngcp::AirVehicleGroundRelativeState(), new comnet::Callback((comnet::callback_t)AirVehicleGroundRelativeStateCallback));
 	comm1.LinkCallback(new ngcp::ArmCommand(), new comnet::Callback((comnet::callback_t)ArmCommandCallback));
-	comm1.LinkCallback(new ngcp::ArmPosition(1,1,1,1), new comnet::Callback((comnet::callback_t)ArmPositionCallback));
+	comm1.LinkCallback(new ngcp::ArmPosition(1, 1, 1, 1), new comnet::Callback((comnet::callback_t)ArmPositionCallback));
+	comm1.LinkCallback(new ngcp::Battery(), new comnet::Callback((comnet::callback_t)BatteryCallback));
+	comm1.LinkCallback(new ngcp::TargetAcknowledgement(), new comnet::Callback((comnet::callback_t)TargetAcknowledgementCallback));
+	comm1.LinkCallback(new ngcp::TargetDesignationCommand(), new comnet::Callback((comnet::callback_t)TargetDesignationCommandCallback));
+	comm1.LinkCallback(new ngcp::TargetStatus(), new comnet::Callback((comnet::callback_t)TargetStatusCallback));
+	comm1.LinkCallback(new ngcp::VehicleAttitude(), new comnet::Callback((comnet::callback_t)VehicleAttitudeCallback));
+	comm1.LinkCallback(new ngcp::VehicleAuthorizationReply(), new comnet::Callback((comnet::callback_t)VehicleAuthorizationReplyCallback));
+	comm1.LinkCallback(new ngcp::VehicleAuthorizationRequest(), new comnet::Callback((comnet::callback_t)VehicleAuthorizationRequestCallback));
+	comm1.LinkCallback(new ngcp::VehicleBodySensedState(), new comnet::Callback((comnet::callback_t)VehicleBodySensedStateCallback));
 	comm1.LinkCallback(new ngcp::VehicleGlobalPosition(), new comnet::Callback((comnet::callback_t)VehicleGlobalPositionCallback));
+	comm1.LinkCallback(new ngcp::VehicleIdentification(), new comnet::Callback((comnet::callback_t)VehicleIdentificationCallback));
 	comm1.LinkCallback(new ngcp::VehicleInertialState(), new comnet::Callback((comnet::callback_t)VehicleInertialStateCallback));
+	comm1.LinkCallback(new ngcp::VehicleModeCommand(), new comnet::Callback((comnet::callback_t)VehicleModeCommandCallback));
+	comm1.LinkCallback(new ngcp::VehicleSystemStatus(), new comnet::Callback((comnet::callback_t)VehicleSystemStatusCallback));
+	comm1.LinkCallback(new ngcp::VehicleTelemetryCommand(), new comnet::Callback((comnet::callback_t)VehicleTelemetryCommandCallback));
+	comm1.LinkCallback(new ngcp::VehicleTerminationCommand(), new comnet::Callback((comnet::callback_t)VehicleTerminationCommandCallback));
+	comm1.LinkCallback(new ngcp::VehicleWaypointCommand(), new comnet::Callback((comnet::callback_t)VehicleWaypointCommandCallback));
 
 	// Test packet. 
 
@@ -136,10 +151,26 @@ void localTcpTest(int& hsocket)
               << std::endl;
 
 	// link to callback function.
+	comm1.LinkCallback(new ngcp::AirVehicleGroundRelativeState(), new comnet::Callback((comnet::callback_t)AirVehicleGroundRelativeStateCallback));
 	comm1.LinkCallback(new ngcp::ArmCommand(), new comnet::Callback((comnet::callback_t)ArmCommandCallback));
 	comm1.LinkCallback(new ngcp::ArmPosition(1, 1, 1, 1), new comnet::Callback((comnet::callback_t)ArmPositionCallback));
+	comm1.LinkCallback(new ngcp::Battery(), new comnet::Callback((comnet::callback_t)BatteryCallback));
+	comm1.LinkCallback(new ngcp::TargetAcknowledgement(), new comnet::Callback((comnet::callback_t)TargetAcknowledgementCallback));
+	comm1.LinkCallback(new ngcp::TargetDesignationCommand(), new comnet::Callback((comnet::callback_t)TargetDesignationCommandCallback));
+	comm1.LinkCallback(new ngcp::TargetStatus(), new comnet::Callback((comnet::callback_t)TargetStatusCallback));
+	comm1.LinkCallback(new ngcp::VehicleAttitude(), new comnet::Callback((comnet::callback_t)VehicleAttitudeCallback));
+	comm1.LinkCallback(new ngcp::VehicleAuthorizationReply(), new comnet::Callback((comnet::callback_t)VehicleAuthorizationReplyCallback));
+	comm1.LinkCallback(new ngcp::VehicleAuthorizationRequest(), new comnet::Callback((comnet::callback_t)VehicleAuthorizationRequestCallback));
+	comm1.LinkCallback(new ngcp::VehicleBodySensedState(), new comnet::Callback((comnet::callback_t)VehicleBodySensedStateCallback));
 	comm1.LinkCallback(new ngcp::VehicleGlobalPosition(), new comnet::Callback((comnet::callback_t)VehicleGlobalPositionCallback));
+	comm1.LinkCallback(new ngcp::VehicleIdentification(), new comnet::Callback((comnet::callback_t)VehicleIdentificationCallback));
 	comm1.LinkCallback(new ngcp::VehicleInertialState(), new comnet::Callback((comnet::callback_t)VehicleInertialStateCallback));
+	comm1.LinkCallback(new ngcp::VehicleModeCommand(), new comnet::Callback((comnet::callback_t)VehicleModeCommandCallback));
+	comm1.LinkCallback(new ngcp::VehicleSystemStatus(), new comnet::Callback((comnet::callback_t)VehicleSystemStatusCallback));
+	comm1.LinkCallback(new ngcp::VehicleTelemetryCommand(), new comnet::Callback((comnet::callback_t)VehicleTelemetryCommandCallback));
+	comm1.LinkCallback(new ngcp::VehicleTerminationCommand(), new comnet::Callback((comnet::callback_t)VehicleTerminationCommandCallback));
+	comm1.LinkCallback(new ngcp::VehicleWaypointCommand(), new comnet::Callback((comnet::callback_t)VehicleWaypointCommandCallback));
+
 
     // Test packet.
     ngcp::ArmCommand amc(22, 7777);
