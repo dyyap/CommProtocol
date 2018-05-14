@@ -42,7 +42,7 @@ int UGV_DESTID = 2;
 void xbeeTest()
 {
 	//const char* destMac = "0013A20040A54318";
-	const char* destMac = "0013A2004105C6AF";
+	const char* destMac = "0013A2004105C6AA";
 
 	// test date
 	std::cout << "Test: 5/11/2018" << std::endl;
@@ -185,7 +185,7 @@ void localTest(int& hsocket)
 
 int main()
 {
-	const char* destMac = "0013A2004105C6AF";
+	const char* destMac = "0013A2004105C6AA";
 	const char* port = "COM9";
 	// test date
 	std::cout << "Test: 5/11/2018" << std::endl;
@@ -211,7 +211,7 @@ int main()
 		<< std::endl;
 	std::cout << "Connected to address: "
 		<< std::boolalpha
-		<< comm1.AddAddress(2, destMac)
+		<< comm1.AddAddress(UGV_DESTID, destMac)
 		<< std::endl;
 	// NOTE(All): Be sure to run the nodes! If not, the threads won't execute!
 	comm1.Run();
