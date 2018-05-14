@@ -112,7 +112,6 @@ void xbeeTest()
 //test two xbees on same machine.
 void localTest(int& hsocket)
 {
-
     const uint8_t com1ID = 1;
     const uint8_t com2ID = 2;
     const uint32_t baudRate = 57600;//57600;
@@ -190,7 +189,7 @@ int main()
 
     int defaultSize = 1024;
     //ProtoPackets::ArmCommand payload;
-    int host_port = 6969;
+    int host_port = 7000;
     char* host_name = "127.0.0.1";
 
    // payload.set_id(777);
@@ -219,8 +218,27 @@ int main()
         WSACleanup();
         return -1;
     }
+	if (listen(hsock, 10) == -1) {
+		fprintf(stderr, "Error listening %d\n", errno);
+		return -1;
+	}
 
-    localTest(hsock);
+	sockaddr_in sadr;
+	int addr_size = sizeof(sockaddr_in);
+	int *csock = 0;
+	while (true) {
+		printf("waiting for a connection\n");
+		csock = (int*)malloc(sizeof(int));
+		if ((*csock = accept(hsock, (sockaddr*)&sadr, &addr_size)) != -1) {
+			printf("---------------------\nReceived connection from %s\n", inet_ntoa(sadr.sin_addr));
+			
+		}
+		else {
+			fprintf(stderr, "Error accepting %d\n", errno);
+		}
+	}
+
+    //localTest(hsock);
 	//xbeeTest();
 
     /*for (int i = 0; i<10000; i++) {
@@ -273,10 +291,10 @@ bool initSocket(int& hsocket, char* host_name, int host_port)
     struct sockaddr_in my_addr;
     int *p_int;
     int err;
-
+	int result;
     WSADATA Data;
     printf("\nInitialising Winsock...");
-    if (WSAStartup(MAKEWORD(2, 2), &Data) != 0)
+    if ((result = WSAStartup(MAKEWORD(2, 2), &Data)) != 0)
     {
         printf("Failed. Error Code : %d", WSAGetLastError());
         return 1;
@@ -305,14 +323,19 @@ bool initSocket(int& hsocket, char* host_name, int host_port)
     my_addr.sin_port = htons(host_port);
 
     memset(&(my_addr.sin_zero), 0, 8);
-    if (connect(hsocket, (struct sockaddr*)&my_addr, sizeof(my_addr)) == -1)
-    {
-        if ((err = errno) != EINPROGRESS)
-        {
-            fprintf(stderr, "Error connecting socket %d\n", errno);
-            return false;
-        }
-    }
+    //if (connect(hsocket, (struct sockaddr*)&my_addr, sizeof(my_addr)) == -1)
+    //{
+    //    if ((err = errno) != EINPROGRESS)
+    //    {
+    //        fprintf(stderr, "Error connecting socket %d\n", errno);
+    //        return false;
+    //    }
+    //}
+
+	if (::bind(hsock, (SOCKADDR *)&my_addr, sizeof(my_addr)) == SOCKET_ERROR) {
+		fprintf(stderr, "Error binding to socket, make sure nothing else is listening on this port %d\n", errno);
+		return false;
+	}
     return true;
 }
 
@@ -332,5 +355,118 @@ bool sendPacket(int& socket, char* packet, int pktSize, ProtoPackets::Packet& pa
     }
 
     return true;
+}
+
+google::protobuf::uint32 readHdr(char *buf)
+{
+	google::protobuf::uint32 size;
+	google::protobuf::io::ArrayInputStream ais(buf, 4);
+	CodedInputStream coded_input(&ais);
+	coded_input.ReadVarint32(&size);//Decode the HDR and get the size
+	cout << "size of payload is " << size << endl;
+	return size;
+}
+
+
+
+void readBody(int csock, google::protobuf::uint32 siz)
+{
+	int bytecount;
+	ProtoPackets::Packet payload;
+	//log_packet payload;
+	char* buffer = new char[siz + 4];//size of the payload and hdr
+						 //Read the entire buffer including the hdr
+	if ((bytecount = recv(csock, buffer, 4 + siz, MSG_WAITALL)) == -1) {
+		fprintf(stderr, "Error receiving data %d\n", errno);
+	}
+	cout << "Second read byte count is " << bytecount << endl;
+	//Assign ArrayInputStream with enough memory 
+	google::protobuf::io::ArrayInputStream ais(buffer, siz + 4);
+	CodedInputStream coded_input(&ais);
+	//Read an unsigned integer with Varint encoding, truncating to 32 bits.
+	coded_input.ReadVarint32(&siz);
+	//After the message's length is read, PushLimit() is used to prevent the CodedInputStream 
+	//from reading beyond that length.Limits are used when parsing length-delimited 
+	//embedded messages
+	google::protobuf::io::CodedInputStream::Limit msgLimit = coded_input.PushLimit(siz);
+	//De-Serialize
+	payload.ParseFromCodedStream(&coded_input);
+	//Once the embedded message has been parsed, PopLimit() is called to undo the limit
+	coded_input.PopLimit(msgLimit);
+	//Print the message
+	cout << "Message is " << payload.DebugString();
+
+	ProtoPackets::Packet::PacketCase cases =  payload.packet_case();
+	std::cout << "packet case is: " << payload.packet_case();
+	switch (cases)
+	{
+	case 1: //AirVehicleGroundRelativeState = 1,
+		break;
+	case 2: //ArmCommand = 2,
+		break;
+	case 3: //ArmPosition = 3,
+		break;
+	case 4://Battery = 4,
+		break;
+	case 5://TargetAcknowledgement = 5,
+		break;
+	case 6://TargetDesignationCommand = 6,
+		break;
+	case 7://TargetStatus = 7,
+		break;
+	case 8://VehicleAttitude = 8,
+		break;
+	case 9://VehicleAuthorizationReply = 9,
+		break;
+	case 10://VehicleAuthorizationRequest = 10,
+		break;
+	case 11://VehicleBodySensedState = 11,
+		break;
+	case 12://VehicleGlobalPosition = 12,
+		break;
+	case 13://VehicleIdentification = 13,
+		break;
+	case 14://VehicleInertialState = 14,
+		break;
+	case 15://VehicleModeCommand = 15,
+		break;
+	case 16://VehicleSystemStatus = 16,
+		break;
+	case 17://VehicleTelemetryCommand = 17,
+		break;
+	case 18://VehicleTerminationCommand = 18,
+		break;
+	case 19://VehicleWaypointCommand = 19,
+		break;
+	default: // case == 0, means no case set, something is wrong.
+		break;
+	}
+
+}
+
+void* SocketHandler(void* lp) {
+	int *csock = (int*)lp;
+
+	char buffer[4];
+	int bytecount = 0;
+	string output, pl;
+	//log_packet logp;
+
+	memset(buffer, '\0', 4);
+
+	while (true) {
+		//Peek into the socket and get the packet size
+		if ((bytecount = recv(*csock,
+			buffer,
+			4, MSG_PEEK)) == -1) {
+			fprintf(stderr, "Error receiving data %d\n", errno);
+		}
+		else if (bytecount == 0)
+			break;
+		cout << "First read byte count is " << bytecount << endl;
+		readBody(*csock, readHdr(buffer));
+	}
+	//free(csock);
+	return 0;
 }
 
