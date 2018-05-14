@@ -33,10 +33,11 @@
 using namespace google::protobuf::io;
 using namespace std;
 
+void* SocketHandler(void* lp, comnet::Comms& );
 bool initSocket(int& hsocket, char* host_name, int host_port);
 bool sendPacket(int& socket, char* packet, int pktSize, ProtoPackets::Packet& payload);// , CodedOutputStream *coded_output);
 int hsock;
-
+int UGV_DESTID = 2;
 // Test against an xbee on another machine.
 void xbeeTest()
 {
@@ -67,7 +68,7 @@ void xbeeTest()
 		<< std::endl;
 	std::cout << "Connected to address: "
 		<< std::boolalpha
-		<< comm1.AddAddress(2, destMac)
+		<< comm1.AddAddress(UGV_DESTID, destMac)
 		<< std::endl;
 
 
@@ -184,32 +185,42 @@ void localTest(int& hsocket)
 
 int main()
 {
+	const char* destMac = "0013A2004105C6AF";
+	const char* port = "COM9";
+	// test date
+	std::cout << "Test: 5/11/2018" << std::endl;
+	//Disables Pinging to make reading output easier
+	comnet::constate::ConnectionStateManager::ConStateEnabled = false;
 
+	std::condition_variable cond;
+	std::cout << sizeof(comnet::Header) << std::endl;
+	// CommNode 1
+	comnet::Comms comm1(1);
+	//comm1.LoadKey("01234567890ABCDEF");
+
+	comnet::architecture::os::CommMutex mut;
+	comnet::architecture::os::CommLock commlock(mut);
+	// This will cause the thread to wait for a few milliseconds, causing any other thread to wait.
+	comnet::architecture::os::WaitForMilliseconds(commlock, cond, 1000);
+
+	std::cout << "Test complete!" << std::endl;
+	// CommNode 1 init and add Connection.
+	std::cout << "Init connection succeeded: "
+		<< std::boolalpha
+		<< comm1.InitConnection(ZIGBEE_LINK, port, "", 57600)
+		<< std::endl;
+	std::cout << "Connected to address: "
+		<< std::boolalpha
+		<< comm1.AddAddress(2, destMac)
+		<< std::endl;
+	// NOTE(All): Be sure to run the nodes! If not, the threads won't execute!
+	comm1.Run();
     /* Coded output stram */
-
     int defaultSize = 1024;
     //ProtoPackets::ArmCommand payload;
     int host_port = 7000;
     char* host_name = "127.0.0.1";
-
-   // payload.set_id(777);
-    //payload.set_position(1010);
-
-    //cout << "size after serilizing is " << payload.ByteSize() << endl;
-
-    //int siz = payload.ByteSize() + 4;
     char *pkt = new char[defaultSize];
-
-    //google::protobuf::io::ArrayOutputStream aos(pkt, siz);
-    //CodedOutputStream *coded_output = new CodedOutputStream(&aos);
-    //coded_output->WriteVarint32(payload.ByteSize());
-    //payload.SerializeToCodedStream(coded_output);
-
-    //char buffer[1024];
-    //int bytecount;
-    //int buffer_len = 0;
-
-
 
     if (initSocket(hsock, host_name, host_port) == false)
     {
@@ -222,61 +233,21 @@ int main()
 		fprintf(stderr, "Error listening %d\n", errno);
 		return -1;
 	}
-
 	sockaddr_in sadr;
 	int addr_size = sizeof(sockaddr_in);
 	int *csock = 0;
 	while (true) {
-		printf("waiting for a connection\n");
+		printf("\nwaiting for a connection\n");
 		csock = (int*)malloc(sizeof(int));
 		if ((*csock = accept(hsock, (sockaddr*)&sadr, &addr_size)) != -1) {
 			printf("---------------------\nReceived connection from %s\n", inet_ntoa(sadr.sin_addr));
-			
+			SocketHandler((void*)csock, comm1);
 		}
 		else {
 			fprintf(stderr, "Error accepting %d\n", errno);
 		}
 	}
-
-    //localTest(hsock);
-	//xbeeTest();
-
-    /*for (int i = 0; i<10000; i++) {
-    	for (int j = 0; j<10; j++) {
-
-    		if ((bytecount = send(hsock, pkt, siz, 0)) == -1) {
-    			fprintf(stderr, "Error sending data %d\n", errno);
-    			delete pkt;
-    			closesocket(hsock);
-    			WSACleanup();
-    			return -1;
-    		}
-    		printf("Sent bytes %d\n", bytecount);
-    		Sleep(1);
-    	}
-    }*/
-
-    //int id = 0;
-    //int pos = 1111;
-    //for (int i = 0; i < 100000; ++i,++id,++pos)
-    //{
-    //	payload.set_id(id);
-    //	payload.set_position(pos);
-    //	int pktSize = payload.ByteSize() + 4;
-    //	cout << "count " << i + 1 << endl;
-    //	if (sendPacket(hsock, pkt, pktSize, payload)==false) //,coded_output) == false)
-    //	{
-    //		delete pkt;
-    //		closesocket(hsock);
-    //		WSACleanup();
-    //		return -1;
-    //	}
-    //	Sleep(50);
-    //}
-
-
     delete pkt;
-
 //FINISH:
     closesocket(hsock);
     WSACleanup();
@@ -369,14 +340,16 @@ google::protobuf::uint32 readHdr(char *buf)
 
 
 
-void readBody(int csock, google::protobuf::uint32 siz)
+void readBody(int csock, google::protobuf::uint32 siz, comnet::Comms& comm)
 {
 	int bytecount;
 	ProtoPackets::Packet payload;
 	//log_packet payload;
 	char* buffer = new char[siz + 4];//size of the payload and hdr
 						 //Read the entire buffer including the hdr
-	if ((bytecount = recv(csock, buffer, 4 + siz, MSG_WAITALL)) == -1) {
+	memset(buffer, '\0', 4);
+	//if ((bytecount = recv(csock, buffer, siz + 4, MSG_WAITALL)) == -1) {
+	if ((bytecount = recv(csock, buffer, siz + 4, MSG_PUSH_IMMEDIATE)) == -1) {
 		fprintf(stderr, "Error receiving data %d\n", errno);
 	}
 	cout << "Second read byte count is " << bytecount << endl;
@@ -395,13 +368,20 @@ void readBody(int csock, google::protobuf::uint32 siz)
 	coded_input.PopLimit(msgLimit);
 	//Print the message
 	cout << "Message is " << payload.DebugString();
-
+	
 	ProtoPackets::Packet::PacketCase cases =  payload.packet_case();
 	std::cout << "packet case is: " << payload.packet_case();
 	switch (cases)
 	{
 	case 1: //AirVehicleGroundRelativeState = 1,
-		break;
+			{
+				ProtoPackets::AirVehicleGroundRelativeState p = payload.airvehiclegroundrelativestate;
+				ngcp::AirVehicleGroundRelativeState pkt(p.vehicleid, p.angleofattack, p.angleofsideslip, p.trueairspeed,
+					p.indicatedairspeed, p.northwindspeed, p.eastwindspeed, p.clear_northgroundspeed,
+					p.eastgroundspeed, p.barometricpressure, p.barometricaltitude);
+				comm.Send(pkt, UGV_DESTID);
+				break;
+			}
 	case 2: //ArmCommand = 2,
 		break;
 	case 3: //ArmPosition = 3,
@@ -427,7 +407,16 @@ void readBody(int csock, google::protobuf::uint32 siz)
 	case 13://VehicleIdentification = 13,
 		break;
 	case 14://VehicleInertialState = 14,
+	{
+		ProtoPackets::VehicleInertialState p = payload.vehicleinertialstate;
+		ngcp::VehicleInertialState pkt(p.vehicleid,p.longitude,p.latitude,p.altitude,
+										p.roll,p.pitch,p.heading,p.northspeed,p.eastspeed,
+										p.verticalspeed,p.rollrate,p.pitchrate,p.yawrate,
+										p.northaccel,p.eastaccel,p.verticalaccel);
+		
+		comm.Send(pkt, UGV_DESTID);
 		break;
+	}
 	case 15://VehicleModeCommand = 15,
 		break;
 	case 16://VehicleSystemStatus = 16,
@@ -442,9 +431,11 @@ void readBody(int csock, google::protobuf::uint32 siz)
 		break;
 	}
 
+	delete buffer;
+
 }
 
-void* SocketHandler(void* lp) {
+void* SocketHandler(void* lp, comnet::Comms& comm) {
 	int *csock = (int*)lp;
 
 	char buffer[4];
@@ -454,18 +445,18 @@ void* SocketHandler(void* lp) {
 
 	memset(buffer, '\0', 4);
 
-	while (true) {
+	//while (true) {
 		//Peek into the socket and get the packet size
 		if ((bytecount = recv(*csock,
 			buffer,
 			4, MSG_PEEK)) == -1) {
 			fprintf(stderr, "Error receiving data %d\n", errno);
 		}
-		else if (bytecount == 0)
-			break;
+		//else if (bytecount == 0)
+			//break;
 		cout << "First read byte count is " << bytecount << endl;
-		readBody(*csock, readHdr(buffer));
-	}
+		readBody(*csock, readHdr(buffer),comm);
+	//}
 	//free(csock);
 	return 0;
 }
