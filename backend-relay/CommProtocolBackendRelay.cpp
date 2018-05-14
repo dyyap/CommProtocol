@@ -375,10 +375,10 @@ void readBody(int csock, google::protobuf::uint32 siz, comnet::Comms& comm)
 	{
 	case 1: //AirVehicleGroundRelativeState = 1,
 			{
-				ProtoPackets::AirVehicleGroundRelativeState p = payload.airvehiclegroundrelativestate;
-				ngcp::AirVehicleGroundRelativeState pkt(p.vehicleid, p.angleofattack, p.angleofsideslip, p.trueairspeed,
-					p.indicatedairspeed, p.northwindspeed, p.eastwindspeed, p.clear_northgroundspeed,
-					p.eastgroundspeed, p.barometricpressure, p.barometricaltitude);
+				ProtoPackets::AirVehicleGroundRelativeState p = payload.airvehiclegroundrelativestate();
+				ngcp::AirVehicleGroundRelativeState pkt(p.vehicleid(), p.angleofattack(), p.angleofsideslip(), p.trueairspeed(),
+					p.indicatedairspeed(), p.northwindspeed(), p.eastwindspeed(), p.northgroundspeed(),
+					p.eastgroundspeed(), p.barometricpressure(), p.barometricaltitude());
 				comm.Send(pkt, UGV_DESTID);
 				break;
 			}
@@ -408,11 +408,11 @@ void readBody(int csock, google::protobuf::uint32 siz, comnet::Comms& comm)
 		break;
 	case 14://VehicleInertialState = 14,
 	{
-		ProtoPackets::VehicleInertialState p = payload.vehicleinertialstate;
-		ngcp::VehicleInertialState pkt(p.vehicleid,p.longitude,p.latitude,p.altitude,
-										p.roll,p.pitch,p.heading,p.northspeed,p.eastspeed,
-										p.verticalspeed,p.rollrate,p.pitchrate,p.yawrate,
-										p.northaccel,p.eastaccel,p.verticalaccel);
+		ProtoPackets::VehicleInertialState p = payload.vehicleinertialstate();
+		ngcp::VehicleInertialState pkt(p.vehicleid(),p.longitude(),p.latitude(),p.altitude(),
+										p.roll(),p.pitch(),p.heading(),p.northspeed(),p.eastspeed(),
+										p.verticalspeed(),p.rollrate(),p.pitchrate(),p.yawrate(),
+										p.northaccel(),p.eastaccel(),p.verticalaccel());
 		
 		comm.Send(pkt, UGV_DESTID);
 		break;
