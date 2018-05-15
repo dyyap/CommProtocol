@@ -1,4 +1,5 @@
 //#include "stdafx.h"
+#include <sstream>
 #include <ProtoPackets\ProtoPacketsV2.pb.h>
 #include <WinSock2.h>
 #include <iostream>
@@ -37,39 +38,63 @@ void* SocketHandler(void* lp, comnet::Comms& );
 bool initSocket(int& hsocket, char* host_name, int host_port);
 bool sendPacket(int& socket, char* packet, int pktSize, ProtoPackets::Packet& payload);// , CodedOutputStream *coded_output);
 int hsock;
-int UGV_DESTID = 2;
+int DEST_PLATFORM_ID = 2;
 // Test against an xbee on another machine.
-
-int main(int argc, const char * argv[])
+void helpmenu()
 {
+	string line = "CommProtorolBackendRelay.exe PORTNAME DEST_PORT DEST_MAC";
+	string portnumline = "PORTNAME          REQUIRED, Port name of which xbee is attached to, e.g. COM9";
+	string optional = "DEST_PORT          Unique Platform ID for the destination xbee";
+	string optional2 = "DEST_MAC          the MAC address of destination xbee";
+	std::cout << line << "\n" << portnumline << "\n" << optional << "\n" << optional2 << "\n";
+}
+int main(int argc,  char * argv[])
+{
+	char* destMac = "0013A2004105C6AA";
+	char* port = "COM9";
 
-	std::cout << "argc:" << argc << std::endl;
-	std::cout << "argv:"  << std::endl;
-
-	for (int i = 0; i < argc; ++i)
+	if (argc < 2)
 	{
-		std::cout << argv[i] << std::endl;
-
+		std::cout << "Error, Must specify port name. e.g COM9" << std::endl;
+		helpmenu();
+		system("pause");
+		return -1;
 	}
-	const char* destMac = "0013A2004105C6AA";
-	const char* port = "COM9";
+	else if (argc == 2)
+	{
+		port = argv[1];
+		std::cout << "Port Name: " << port << "\n";
+	}
+	else if (argc == 4)
+	{
+		port = argv[1];
+		std::stringstream ss(argv[2]);
+		ss >> DEST_PLATFORM_ID;
+		destMac = argv[3];
+		std::cout << "Port Name: " << port << "\n";
+		std::cout << "Destination Plaform ID: " << DEST_PLATFORM_ID << "\n";
+		std::cout << "Destination MAC Address: " << destMac << "\n";
+	}
+
+
+
 	// test date
-	std::cout << "Test: 5/11/2018" << std::endl;
+	//std::cout << "Test: 5/11/2018" << std::endl;
 	//Disables Pinging to make reading output easier
 	comnet::constate::ConnectionStateManager::ConStateEnabled = false;
 
 	std::condition_variable cond;
-	std::cout << sizeof(comnet::Header) << std::endl;
+	//std::cout << sizeof(comnet::Header) << std::endl;
 	// CommNode 1
 	comnet::Comms comm1(1);
 	//comm1.LoadKey("01234567890ABCDEF");
-
+	
 	comnet::architecture::os::CommMutex mut;
 	comnet::architecture::os::CommLock commlock(mut);
 	// This will cause the thread to wait for a few milliseconds, causing any other thread to wait.
 	comnet::architecture::os::WaitForMilliseconds(commlock, cond, 1000);
 
-	std::cout << "Test complete!" << std::endl;
+	//std::cout << "Test complete!" << std::endl;
 	// CommNode 1 init and add Connection.
 	std::cout << "Init connection succeeded: "
 		<< std::boolalpha
@@ -77,7 +102,7 @@ int main(int argc, const char * argv[])
 		<< std::endl;
 	std::cout << "Connected to address: "
 		<< std::boolalpha
-		<< comm1.AddAddress(UGV_DESTID, destMac)
+		<< comm1.AddAddress(DEST_PLATFORM_ID, destMac)
 		<< std::endl;
 	// NOTE(All): Be sure to run the nodes! If not, the threads won't execute!
 	comm1.Run();
@@ -245,35 +270,35 @@ void readBody(int csock, google::protobuf::uint32 siz, comnet::Comms& comm)
 				ngcp::AirVehicleGroundRelativeState pkt(p.vehicleid(), p.angleofattack(), p.angleofsideslip(), p.trueairspeed(),
 					p.indicatedairspeed(), p.northwindspeed(), p.eastwindspeed(), p.northgroundspeed(),
 					p.eastgroundspeed(), p.barometricpressure(), p.barometricaltitude());
-				comm.Send(pkt, UGV_DESTID);
+				comm.Send(pkt, DEST_PLATFORM_ID);
 				break;
 			}
 	case 2: //ArmCommand = 2,
 	{
 		ProtoPackets::ArmCommand p = payload.armcommand();
 		ngcp::ArmCommand pkt(p.id(),p.position());
-		comm.Send(pkt, UGV_DESTID);
+		comm.Send(pkt, DEST_PLATFORM_ID);
 		break;
 	}
 	case 3: //ArmPosition = 3,
 	{
 		ProtoPackets::ArmPosition p = payload.armposition();
 		ngcp::ArmPosition pkt(p.position1(),p.position2(),p.position3(),p.position4());
-		comm.Send(pkt, UGV_DESTID);
+		comm.Send(pkt, DEST_PLATFORM_ID);
 		break;
 	}
 	case 4://Battery = 4,
 	{
 		ProtoPackets::Battery p = payload.battery();
 		ngcp::Battery pkt(p.batterypercentage());
-		comm.Send(pkt, UGV_DESTID);
+		comm.Send(pkt, DEST_PLATFORM_ID);
 		break;
 	}
 	case 5://TargetAcknowledgement = 5,
 	{
 		ProtoPackets::TargetAcknowledgement p = payload.targetacknowledgement();
 		ngcp::TargetAcknowledgement pkt(p.targetstatus());
-		comm.Send(pkt, UGV_DESTID);
+		comm.Send(pkt, DEST_PLATFORM_ID);
 		break;
 	}
 	case 6://TargetDesignationCommand = 6,
@@ -281,21 +306,21 @@ void readBody(int csock, google::protobuf::uint32 siz, comnet::Comms& comm)
 		ProtoPackets::TargetDesignationCommand p = payload.targetdesignationcommand();
 		ngcp::TargetDesignationCommand pkt(p.vehicleid(),p.payloadid(),p.targetid(),p.targettype(),
 											p.longitude(),p.latitude(),p.altitude());
-		comm.Send(pkt, UGV_DESTID);
+		comm.Send(pkt, DEST_PLATFORM_ID);
 		break;
 	}
 	case 7://TargetStatus = 7,
 	{
 		ProtoPackets::TargetStatus p = payload.targetstatus();
 		ngcp::TargetStatus pkt(p.targetradius(),p.targetangle(),p.targetaltitude());
-		comm.Send(pkt, UGV_DESTID);
+		comm.Send(pkt, DEST_PLATFORM_ID);
 		break;
 	}
 	case 8://VehicleAttitude = 8,
 	{
 		ProtoPackets::VehicleAttitude p = payload.vehicleattitude();
 		ngcp::VehicleAttitude pkt(p.vehicleid(),p.roll(),p.pitch(),p.yaw());
-		comm.Send(pkt, UGV_DESTID);
+		comm.Send(pkt, DEST_PLATFORM_ID);
 		break;
 	}
 	case 9://VehicleAuthorizationReply = 9,
@@ -303,7 +328,7 @@ void readBody(int csock, google::protobuf::uint32 siz, comnet::Comms& comm)
 		ProtoPackets::VehicleAuthorizationReply p = payload.vehicleauthorizationreply();
 		ngcp::VehicleAuthorizationReply pkt(p.vehicleid(),p.vehicletype(),p.authorizedservices(),
 											p.grantedservices());
-		comm.Send(pkt, UGV_DESTID);
+		comm.Send(pkt, DEST_PLATFORM_ID);
 		break;
 	}
 	case 10://VehicleAuthorizationRequest = 10,
@@ -311,7 +336,7 @@ void readBody(int csock, google::protobuf::uint32 siz, comnet::Comms& comm)
 		ProtoPackets::VehicleAuthorizationRequest p = payload.vehicleauthorizationrequest();
 		ngcp::VehicleAuthorizationRequest pkt(p.vehicleid(),p.vehicletype(),
 											p.authorizedservices(),p.grantedservices());
-		comm.Send(pkt, UGV_DESTID);
+		comm.Send(pkt, DEST_PLATFORM_ID);
 		break;
 	}
 	case 11://VehicleBodySensedState = 11,
@@ -319,7 +344,7 @@ void readBody(int csock, google::protobuf::uint32 siz, comnet::Comms& comm)
 		ProtoPackets::VehicleBodySensedState p = payload.vehiclebodysensedstate();
 		ngcp::VehicleBodySensedState pkt(p.vehicleid(),p.xaccel(),p.yaccel(),p.zaccel(),
 										p.rollrate(),p.pitchrate(),p.yawrate());
-		comm.Send(pkt, UGV_DESTID);
+		comm.Send(pkt, DEST_PLATFORM_ID);
 		break;
 	}
 	case 12://VehicleGlobalPosition = 12,
@@ -327,14 +352,14 @@ void readBody(int csock, google::protobuf::uint32 siz, comnet::Comms& comm)
 		ProtoPackets::VehicleGlobalPosition p = payload.vehicleglobalposition();
 		ngcp::VehicleGlobalPosition pkt(p.vehicleid(), p.longitude(), p.latitude(), p.altitude(),
 			p.xspeed(), p.yspeed(), p.zspeed());
-		comm.Send(pkt, UGV_DESTID);
+		comm.Send(pkt, DEST_PLATFORM_ID);
 		break;
 	}
 	case 13://VehicleIdentification = 13,
 	{
 		ProtoPackets::VehicleIdentification p = payload.vehicleidentification();
 		ngcp::VehicleIdentification pkt(p.vehicleid(), p.vehicletype());
-		comm.Send(pkt, UGV_DESTID);
+		comm.Send(pkt, DEST_PLATFORM_ID);
 		break;
 	}
 	case 14://VehicleInertialState = 14,
@@ -345,42 +370,42 @@ void readBody(int csock, google::protobuf::uint32 siz, comnet::Comms& comm)
 										p.verticalspeed(),p.rollrate(),p.pitchrate(),p.yawrate(),
 										p.northaccel(),p.eastaccel(),p.verticalaccel());
 		
-		comm.Send(pkt, UGV_DESTID);
+		comm.Send(pkt, DEST_PLATFORM_ID);
 		break;
 	}
 	case 15://VehicleModeCommand = 15,
 	{
 		ProtoPackets::VehicleModeCommand p = payload.vehiclemodecommand();
 		ngcp::VehicleModeCommand pkt(p.vehicleid(), p.vehiclemode());
-		comm.Send(pkt, UGV_DESTID);
+		comm.Send(pkt, DEST_PLATFORM_ID);
 		break;
 	}
 	case 16://VehicleSystemStatus = 16,
 	{
 		ProtoPackets::VehicleSystemStatus p = payload.vehiclesystemstatus();
 		ngcp::VehicleSystemStatus pkt(p.vehicleid(), p.vehiclemode(), p.vehiclestate());
-		comm.Send(pkt, UGV_DESTID);
+		comm.Send(pkt, DEST_PLATFORM_ID);
 		break;
 	}
 	case 17://VehicleTelemetryCommand = 17,
 	{
 		ProtoPackets::VehicleTelemetryCommand p = payload.vehicletelemetrycommand();
 		ngcp::VehicleTelemetryCommand pkt(p.vehicleid(),p.telemetryselect(),p.telemetryrate());
-		comm.Send(pkt, UGV_DESTID);
+		comm.Send(pkt, DEST_PLATFORM_ID);
 		break;
 	}
 	case 18://VehicleTerminationCommand = 18,
 	{
 		ProtoPackets::VehicleTerminationCommand p = payload.vehicleterminationcommand();
 		ngcp::VehicleTerminationCommand pkt(p.vehicleid(),p.terminationmode());
-		comm.Send(pkt, UGV_DESTID);
+		comm.Send(pkt, DEST_PLATFORM_ID);
 		break;
 	}
 	case 19://VehicleWaypointCommand = 19,
 	{
 		ProtoPackets::VehicleWaypointCommand p = payload.vehiclewaypointcommand();
 		ngcp::VehicleWaypointCommand pkt(p.vehicleid(), p.longitude(), p.latitude(), p.altitude());
-		comm.Send(pkt, UGV_DESTID);
+		comm.Send(pkt, DEST_PLATFORM_ID);
 		break;
 	}
 	default: // case == 0, means no case set, something is wrong.
