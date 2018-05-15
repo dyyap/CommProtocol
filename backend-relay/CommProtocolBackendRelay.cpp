@@ -39,152 +39,18 @@ bool sendPacket(int& socket, char* packet, int pktSize, ProtoPackets::Packet& pa
 int hsock;
 int UGV_DESTID = 2;
 // Test against an xbee on another machine.
-void xbeeTest()
+
+int main(int argc, const char * argv[])
 {
-	//const char* destMac = "0013A20040A54318";
-	const char* destMac = "0013A2004105C6AA";
 
-	// test date
-	std::cout << "Test: 5/11/2018" << std::endl;
-	//Disables Pinging to make reading output easier
-	comnet::constate::ConnectionStateManager::ConStateEnabled = false;
+	std::cout << "argc:" << argc << std::endl;
+	std::cout << "argv:"  << std::endl;
 
-	std::condition_variable cond;
-	std::cout << sizeof(comnet::Header) << std::endl;
-	// CommNode 1
-	comnet::Comms comm1(1);
-	//comm1.LoadKey("01234567890ABCDEF");
+	for (int i = 0; i < argc; ++i)
+	{
+		std::cout << argv[i] << std::endl;
 
-	comnet::architecture::os::CommMutex mut;
-	comnet::architecture::os::CommLock commlock(mut);
-	// This will cause the thread to wait for a few milliseconds, causing any other thread to wait.
-	comnet::architecture::os::WaitForMilliseconds(commlock, cond, 1000);
-
-	std::cout << "Test complete!" << std::endl;
-	// CommNode 1 init and add Connection.
-	std::cout << "Init connection succeeded: "
-		<< std::boolalpha
-		<< comm1.InitConnection(ZIGBEE_LINK, "COM8", "", 57600)
-		<< std::endl;
-	std::cout << "Connected to address: "
-		<< std::boolalpha
-		<< comm1.AddAddress(UGV_DESTID, destMac)
-		<< std::endl;
-
-
-	//comm1.LinkCallback(new ngcp::ArmCommand(), new comnet::Callback((comnet::callback_t)ArmCommandCallback));
-	//comm1.LinkCallback(new ngcp::ArmPosition(1,1,1,1), new comnet::Callback((comnet::callback_t)ArmPositionCallback));
-
-
-	//comm1.LinkCallback(new Ping(), new comnet::Callback((comnet::callback_t)PingCallback));
-
-	// Test packet. 
-
-	// NOTE(All): Be sure to run the nodes! If not, the threads won't execute!
-	comm1.Run();
-
-	//// Loop. To exit, Click the red button on the top left (Windows Visual Studio) OR 
-	//// CNTRL+C (Linux). 
-	//while (true) {
-	//	std::cout << "Sleeping..." << std::endl;
-	//	// comm1 will be sending the packet.
-	//	std::string word;
-	//	std::cout << "enter message:";
-	//	std::cin >> word;
-	//	Ping message(word);
-	//	ArmCommand amc(22, 1337);
-	//	ArmPosition amp(7, 6, 5, 4);
-	//	comm1.Send(amp, 2);
-	//	comm1.Send(amc, 2);
-	//	comm1.Send(message, 2);
-	//	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-
-	//}
-	//std::cin.ignore();
-	while(true){ 
-	std:string word;
-		std::cin >> word;
-		ngcp::ArmCommand amc(22, 1337);
-		comm1.Send(amc, 2);
-		std::this_thread::sleep_for(std::chrono::milliseconds(1000)); 
 	}
-}
-
-//test two xbees on same machine.
-void localTest(int& hsocket)
-{
-    const uint8_t com1ID = 1;
-    const uint8_t com2ID = 2;
-    const uint32_t baudRate = 57600;//57600;
-
-    // test date
-    std::cout << "Test: 11/17/2017" << std::endl;
-    //Disables Pinging to make reading output easier
-    comnet::constate::ConnectionStateManager::ConStateEnabled = false;
-
-    std::condition_variable cond;
-    std::cout << sizeof(comnet::Header) << std::endl;
-    // CommNode 1
-    comnet::Comms comm1(com1ID);
-    comm1.LoadKey("01234567890ABCDEF");
-    // CommNode 2
-    comnet::Comms comm2(com2ID);
-    comm2.LoadKey("01234567890ABCDEF");
-    comnet::architecture::os::CommMutex mut;
-    comnet::architecture::os::CommLock commlock(mut);
-    // This will cause the thread to wait for a few milliseconds, causing any other thread to wait.
-    comnet::architecture::os::WaitForMilliseconds(commlock, cond, 1000);
-
-    std::cout << "Test complete!" << std::endl;
-
-    // ComNode 1 init and add Connection.
-    std::cout << "Init connection succeeded: "
-              << std::boolalpha
-              << comm2.InitConnection(TCP_LINK, "1338", "127.0.0.1")
-              << std::endl;
-    std::cout << "Connected to address: "
-              << std::boolalpha
-              << comm2.AddAddress(1, "127.0.0.1", 1337)
-              << std::endl;
-    // CommNode 2 init and add Connection.
-    std::cout << "Init connection succeeded: "
-              << std::boolalpha
-              << comm1.InitConnection(TCP_LINK, "1337", "127.0.0.1")
-              << std::endl;
-    std::cout << "Connected to address: "
-              << std::boolalpha
-              << comm1.AddAddress(2, "127.0.0.1", 1338)
-              << std::endl;
-
-    // Test packet.
-    ngcp::ArmCommand amc(22, 7777);
-	ngcp::ArmPosition amp(11, 22,33,44);
-    // NOTE(All): Be sure to run the nodes! If not, the threads won't execute!
-    comm1.Run();
-    comm2.Run();
-
-    // Loop. To exit, Click the red button on the top left (Windows Visual Studio) OR
-    // CNTRL+C (Linux).
-    while (true)
-    {
-        std::cout << "Sleeping..." << std::endl;
-        // comm1 will be sending the packet.
-        comm2.Send(amc, com1ID);
-		comm2.Send(amp, com1ID);
-        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-        ++amc.id;
-        ++amc.position;
-		++amp.position1;
-		++amp.position2;
-		++amp.position3;
-		++amp.position4;
-
-    }
-    std::cin.ignore();
-}
-
-int main()
-{
 	const char* destMac = "0013A2004105C6AA";
 	const char* port = "COM9";
 	// test date
@@ -518,7 +384,7 @@ void readBody(int csock, google::protobuf::uint32 siz, comnet::Comms& comm)
 		break;
 	}
 	default: // case == 0, means no case set, something is wrong.
-		
+		break;
 	}
 
 	delete buffer;
