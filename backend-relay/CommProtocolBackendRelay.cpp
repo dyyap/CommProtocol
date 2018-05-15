@@ -383,29 +383,94 @@ void readBody(int csock, google::protobuf::uint32 siz, comnet::Comms& comm)
 				break;
 			}
 	case 2: //ArmCommand = 2,
+	{
+		ProtoPackets::ArmCommand p = payload.armcommand();
+		ngcp::ArmCommand pkt(p.id(),p.position());
+		comm.Send(pkt, UGV_DESTID);
 		break;
+	}
 	case 3: //ArmPosition = 3,
+	{
+		ProtoPackets::ArmPosition p = payload.armposition();
+		ngcp::ArmPosition pkt(p.position1(),p.position2(),p.position3(),p.position4());
+		comm.Send(pkt, UGV_DESTID);
 		break;
+	}
 	case 4://Battery = 4,
+	{
+		ProtoPackets::Battery p = payload.battery();
+		ngcp::Battery pkt(p.batterypercentage());
+		comm.Send(pkt, UGV_DESTID);
 		break;
+	}
 	case 5://TargetAcknowledgement = 5,
+	{
+		ProtoPackets::TargetAcknowledgement p = payload.targetacknowledgement();
+		ngcp::TargetAcknowledgement pkt(p.targetstatus());
+		comm.Send(pkt, UGV_DESTID);
 		break;
+	}
 	case 6://TargetDesignationCommand = 6,
+	{
+		ProtoPackets::TargetDesignationCommand p = payload.targetdesignationcommand();
+		ngcp::TargetDesignationCommand pkt(p.vehicleid(),p.payloadid(),p.targetid(),p.targettype(),
+											p.longitude(),p.latitude(),p.altitude());
+		comm.Send(pkt, UGV_DESTID);
 		break;
+	}
 	case 7://TargetStatus = 7,
+	{
+		ProtoPackets::TargetStatus p = payload.targetstatus();
+		ngcp::TargetStatus pkt(p.targetradius(),p.targetangle(),p.targetaltitude());
+		comm.Send(pkt, UGV_DESTID);
 		break;
+	}
 	case 8://VehicleAttitude = 8,
+	{
+		ProtoPackets::VehicleAttitude p = payload.vehicleattitude();
+		ngcp::VehicleAttitude pkt(p.vehicleid(),p.roll(),p.pitch(),p.yaw());
+		comm.Send(pkt, UGV_DESTID);
 		break;
+	}
 	case 9://VehicleAuthorizationReply = 9,
+	{
+		ProtoPackets::VehicleAuthorizationReply p = payload.vehicleauthorizationreply();
+		ngcp::VehicleAuthorizationReply pkt(p.vehicleid(),p.vehicletype(),p.authorizedservices(),
+											p.grantedservices());
+		comm.Send(pkt, UGV_DESTID);
 		break;
+	}
 	case 10://VehicleAuthorizationRequest = 10,
+	{
+		ProtoPackets::VehicleAuthorizationRequest p = payload.vehicleauthorizationrequest();
+		ngcp::VehicleAuthorizationRequest pkt(p.vehicleid(),p.vehicletype(),
+											p.authorizedservices(),p.grantedservices());
+		comm.Send(pkt, UGV_DESTID);
 		break;
+	}
 	case 11://VehicleBodySensedState = 11,
+	{
+		ProtoPackets::VehicleBodySensedState p = payload.vehiclebodysensedstate();
+		ngcp::VehicleBodySensedState pkt(p.vehicleid(),p.xaccel(),p.yaccel(),p.zaccel(),
+										p.rollrate(),p.pitchrate(),p.yawrate());
+		comm.Send(pkt, UGV_DESTID);
 		break;
+	}
 	case 12://VehicleGlobalPosition = 12,
+	{
+		ProtoPackets::VehicleGlobalPosition p = payload.vehicleglobalposition();
+		ngcp::VehicleGlobalPosition pkt(p.vehicleid(), p.longitude(), p.latitude(), p.altitude(),
+			p.xspeed(), p.yspeed(), p.zspeed());
+		comm.Send(pkt, UGV_DESTID);
 		break;
+	}
 	case 13://VehicleIdentification = 13,
+	{
+		ProtoPackets::VehicleIdentification p = payload.vehicleidentification();
+		ngcp::VehicleIdentification pkt(p.vehicleid(), p.vehicletype());
+		comm.Send(pkt, UGV_DESTID);
 		break;
+	}
 	case 14://VehicleInertialState = 14,
 	{
 		ProtoPackets::VehicleInertialState p = payload.vehicleinertialstate();
@@ -418,17 +483,42 @@ void readBody(int csock, google::protobuf::uint32 siz, comnet::Comms& comm)
 		break;
 	}
 	case 15://VehicleModeCommand = 15,
+	{
+		ProtoPackets::VehicleModeCommand p = payload.vehiclemodecommand();
+		ngcp::VehicleModeCommand pkt(p.vehicleid(), p.vehiclemode());
+		comm.Send(pkt, UGV_DESTID);
 		break;
+	}
 	case 16://VehicleSystemStatus = 16,
+	{
+		ProtoPackets::VehicleSystemStatus p = payload.vehiclesystemstatus();
+		ngcp::VehicleSystemStatus pkt(p.vehicleid(), p.vehiclemode(), p.vehiclestate());
+		comm.Send(pkt, UGV_DESTID);
 		break;
+	}
 	case 17://VehicleTelemetryCommand = 17,
+	{
+		ProtoPackets::VehicleTelemetryCommand p = payload.vehicletelemetrycommand();
+		ngcp::VehicleTelemetryCommand pkt(p.vehicleid(),p.telemetryselect(),p.telemetryrate());
+		comm.Send(pkt, UGV_DESTID);
 		break;
+	}
 	case 18://VehicleTerminationCommand = 18,
+	{
+		ProtoPackets::VehicleTerminationCommand p = payload.vehicleterminationcommand();
+		ngcp::VehicleTerminationCommand pkt(p.vehicleid(),p.terminationmode());
+		comm.Send(pkt, UGV_DESTID);
 		break;
+	}
 	case 19://VehicleWaypointCommand = 19,
+	{
+		ProtoPackets::VehicleWaypointCommand p = payload.vehiclewaypointcommand();
+		ngcp::VehicleWaypointCommand pkt(p.vehicleid(), p.longitude(), p.latitude(), p.altitude());
+		comm.Send(pkt, UGV_DESTID);
 		break;
+	}
 	default: // case == 0, means no case set, something is wrong.
-		break;
+		
 	}
 
 	delete buffer;
