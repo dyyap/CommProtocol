@@ -7,8 +7,10 @@ tests/*
 
 # Test files not required.
 /CommProto/src/main.cpp
-CommProto/include/\.DS_Store
+build2/
 
-CommProto/src/\.DS_Store
+build_shared_lib/
 
-\.DS_Store
+latestBuild/
+
+Build_Backend/

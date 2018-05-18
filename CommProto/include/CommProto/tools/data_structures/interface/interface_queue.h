@@ -21,12 +21,12 @@
 
 #include <CommProto/tools/data_structures/interface/generic.h>
 
-using namespace comnet::tools::datastructures::interface;
+using namespace comnet::tools::datastructures::DataInterface;
 
 namespace comnet {
 namespace tools {
 namespace datastructures {
-namespace interface {
+namespace DataInterface {
 
 /**
    QueueType holds the value of what ever the generic queue may be.

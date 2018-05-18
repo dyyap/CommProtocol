@@ -26,7 +26,7 @@
 namespace comnet {
 namespace tools {
 namespace datastructures {
-namespace interface {
+namespace DataInterface {
 
 /** 
     ListType Contains value of the data structure being used. 

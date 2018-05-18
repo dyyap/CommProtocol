@@ -1,4 +1,6 @@
 # CommProtocol version 1.0.8
+[![Build Status](https://travis-ci.org/JasonZell/CommProtocol.svg?branch=master)](https://travis-ci.org/JasonZell/CommProtocol)
+
 CommProtocol is an adaptable, backend protocol tool for scalable systems. It is intended for abstractly communicating over via TCP/IP, UDP, Serial, and/or wireless network layers, while also giving you the freedom to work with servers and clients seemlessly, high performance. Being a large state machine that handles communications universally, CommProtocol is a fantastic tool to work the backbone of communications with simplicity.
 
 ## Design Goals
@@ -34,7 +36,7 @@ Building CommProtocol should be relatively easy, you will need the following too
 Simply download this repository (Clone if you will), navigate to the directory/folder of where you cloned this repository, and create a new folder called "build." inside this build directory, you will open a command prompt (or bash shell) inside and use the following command:
 
 ```
-cmake -Dtest=ON ../
+cmake ../
 ```
 
 Which will execute the cmake build for CommProtocol. When finished, you will either see the .sln project of NGCP-Comnet-v2 (on Windows) OR a makefile for Linux.  
@@ -44,12 +46,16 @@ If you are on Linux, simply call inside the current directory (assuming you are 
 make
 ```
 
-Which will compile all the projects for CommProtocol. 
+Which will compile all the projects for CommProtocol which includes the test and backend.
 
 #Note 
 CommProtocol Library requires libxbee3 to execute copy the file to your bin folder (ie .exe)
 - Windows {build dir}\libxbee3\(debug or release)\libxbee3.dll
 - Linux: {build dir}\libxbee3\libxbee3.o
-- MacOs: {build dir}\libxbee3\liblibxbee3.dylib
+
+CommProtocolBackend and the backend-relay are Windows ONLY!
+
+You don't need to copy the library for the test and backend since cmake copied them for you.
+
 ## Design Analysis
 Coming soon...
