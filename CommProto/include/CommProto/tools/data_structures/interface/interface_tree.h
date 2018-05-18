@@ -25,7 +25,7 @@
 namespace comnet {
 namespace tools {
 namespace datastructures {
-namespace interface {
+namespace DataInterface {
 
 /**
    TreeType holds the value of what ever the generic tree may be.

@@ -40,7 +40,7 @@ namespace datastructures {
 template<typename Object,
          typename Allocator   = allocator::NewAllocator<Object>,
          typename Comparator  = StandardComparator<Object> >
-class RBTree : public interface::Tree<Object> {
+class RBTree : public DataInterface::Tree<Object> {
   /**
     Color scheme for the red black tree.
   */

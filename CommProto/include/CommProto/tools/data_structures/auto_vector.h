@@ -43,7 +43,7 @@ namespace datastructures {
 */
 template<typename _Ty,
 	 typename _Alloc = std::allocator<_Ty> >
-class COMM_EXPORT AutoVector : public interface::List<_Ty> {
+class COMM_EXPORT AutoVector : public DataInterface::List<_Ty> {
   typedef const _Ty&                                        const_reference;
   typedef const _Ty*                                        const_pointer;
   typedef _Ty*                                              pointer;
@@ -60,7 +60,7 @@ public:
   AutoVector(const _Alloc& allocator = _Alloc() ) 
     : _vector(std::vector<_Ty, _Alloc>(allocator))
   { 
-    this->list_type = interface::AUTO_VECTOR;  
+    this->list_type = DataInterface::AUTO_VECTOR;  
     this->size = 0;
   }
 
@@ -70,7 +70,7 @@ public:
   AutoVector(size_type count)
     : _vector(std::vector<_Ty, _Alloc>(count))
   {
-    this->list_type = interface::AUTO_VECTOR;
+    this->list_type = DataInterface::AUTO_VECTOR;
     this->size = 0;
   }
 
@@ -80,7 +80,7 @@ public:
   AutoVector(size_type count, const _Alloc& allocator = _Alloc() ) 
     : _vector(std::vector<_Ty, _Alloc>(count, allocator) )
   {
-    this->list_type = interface::AUTO_VECTOR;
+    this->list_type = DataInterface::AUTO_VECTOR;
     this->size = 0;
   }
 
@@ -90,7 +90,7 @@ public:
   AutoVector(const AutoVector<_Ty, _Alloc>& other) 
     : _vector(std::vector<_Ty, _Alloc>(other._vector) )
   {
-    this->list_type = interface::AUTO_VECTOR;
+    this->list_type = DataInterface::AUTO_VECTOR;
     this->size = 0;
   }
 

@@ -44,10 +44,12 @@ option(build32 "Build library in 32 bit" OFF)
 option(build64 "Build library in 64 bit" ON)
 option(shared "Build shared/dll of the library" OFF)
 option(static "Build static/lib of the library" ON)
-option(test "Build test executable to test library with" OFF)
+option(test "Build test executable to test library with" ON)
 option(csharp "Build C# DLL for .NET use" OFF)
 # Options to allow debug/release version of CommProtocol.
 option(version_release "Compile the release version of CommProtocol" OFF)
+option(backend "Build backend system" ON)
+option(backend-relay "Build backend-relay system" ON)
 
 
 if (version_release)
@@ -219,6 +221,7 @@ endif()
 
 if (test)
   # C++ testing.
+  message("*** Test is building... ***")
   add_subdirectory(tests/classes/cpp/udp/)
   add_subdirectory(tests/classes/cpp/tcp/)
   add_subdirectory(tests/classes/cpp/xbee/)
@@ -226,6 +229,18 @@ if (test)
   # Vistionary testing toolset.
   add_subdirectory(unit)
 endif()
+
+# Comm Backend
+if (backend)
+	message("*** Backend is building... ***")
+	add_subdirectory(backend/)
+endif()
+
+if (backend-relay)
+	message("*** Backend-relay is building... ***")
+	add_subdirectory(backend-relay/)
+endif()
+
 
 if (csharp)
   # C# DLL building

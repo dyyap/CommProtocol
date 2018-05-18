@@ -24,7 +24,7 @@
 namespace comnet {
 namespace tools {
 namespace datastructures {
-namespace interface {
+namespace DataInterface {
 
 /**
    Map type to determine what type of map is being used.

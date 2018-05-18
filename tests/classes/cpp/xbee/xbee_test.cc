@@ -197,7 +197,7 @@ error_t ThroughputPingTestCallback(const comnet::Header& header, const Ping& pac
 void isolatedTest()
 {
 	//const char* destMac = "0013A20040A54318";
-	const char* destMac = "0013A20040A54318";
+	const char* destMac = "0013A2004105C6AA";
 
 	// test date
 	std::cout << "Test: 11/17/2017" << std::endl;
@@ -207,8 +207,8 @@ void isolatedTest()
 	std::condition_variable cond;
 	std::cout << sizeof(comnet::Header) << std::endl;
 	// CommNode 1
-	comnet::Comms comm1(1);
-	comm1.LoadKey("01234567890ABCDEF");
+	comnet::Comms comm1(2);
+	//comm1.LoadKey("01234567890ABCDEF");
 
 	comnet::architecture::os::CommMutex mut;
 	comnet::architecture::os::CommLock commlock(mut);
@@ -219,41 +219,48 @@ void isolatedTest()
 	// CommNode 1 init and add Connection.
 	std::cout << "Init connection succeeded: "
 		<< std::boolalpha
-		<< comm1.InitConnection(ZIGBEE_LINK, "COM12", "", 57600)
+		<< comm1.InitConnection(ZIGBEE_LINK, "COM6", "", 57600)
 		<< std::endl;
 	std::cout << "Connected to address: "
 		<< std::boolalpha
-		<< comm1.AddAddress(2, destMac)
+		<< comm1.AddAddress(1, destMac)
 		<< std::endl;
 
-	Ping holder("");
-	comm1.LinkCallback(&holder, new comnet::Callback((comnet::callback_t)PingCallback));
+	//Ping holder("");
+	//comm1.LinkCallback(&holder, new comnet::Callback((comnet::callback_t)PingCallback));
 
 	comm1.LinkCallback(new ArmCommand() , new comnet::Callback((comnet::callback_t)ArmCommandCallback));
-	comm1.LinkCallback(new ArmPosition(), new comnet::Callback((comnet::callback_t)ArmPositionCallback));
+	//comm1.LinkCallback(new ArmPosition(), new comnet::Callback((comnet::callback_t)ArmPositionCallback));
 
 	//comm1.LinkCallback(new Ping(), new comnet::Callback((comnet::callback_t)PingCallback));
 
 	// Test packet. 
 
-	Ping large("CAT NAME IS ANDREW");
+	//Ping large("CAT NAME IS ANDREW");
 	// NOTE(All): Be sure to run the nodes! If not, the threads won't execute!
 	comm1.Run();
-
+	int id = 22;
+	int pos = 8000;
 	// Loop. To exit, Click the red button on the top left (Windows Visual Studio) OR 
 	// CNTRL+C (Linux). 
+
 	while (true) {
-		std::cout << "Sleeping..." << std::endl;
+		//std::cout << "Sleeping..." << std::endl;
 		// comm1 will be sending the packet.
-		std::string word;
-		std::cout << "enter message:";
-		std::cin >> word;
-		Ping message(word);
-		ArmCommand amc(22, 1337);
-		ArmPosition amp(7, 6, 5, 4);
-		comm1.Send(amp, 2);
-		comm1.Send(amc, 2);
-		comm1.Send(message, 2);
+		//std::string word;
+		//std::cout << "enter message:";
+		//std::cin >> word;
+		//Ping message(word);
+		
+		//ArmPosition amp(7, 6, 5, 4);
+		//comm1.Send(amp, 2);
+		ArmCommand amc(id, pos);
+		std::cout << "Packet field ID: " << amc.id << std::endl;
+		std::cout << "Packet field Position: " << amc.position <<  std::endl;
+		comm1.Send(amc, 1);
+		//comm1.Send(message, 2);
+		id++;
+		pos++;
 		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
 	}
@@ -387,8 +394,8 @@ void throughputTest()
 int main(int c, char** args) {
 
 
-	localTest();
-	//isolatedTest();
+	//localTest();
+	isolatedTest();
 
 	return 0;
 }

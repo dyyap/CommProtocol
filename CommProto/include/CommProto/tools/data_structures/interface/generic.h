@@ -25,7 +25,7 @@
 namespace comnet {
 namespace tools {
 namespace datastructures {
-namespace interface {
+namespace DataInterface {
 
 /**
  Handles the data structure type.

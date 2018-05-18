@@ -43,7 +43,7 @@ _COMNET_PUBLIC_API_
 template<typename _Ty,
   class    _Compare = StandardComparator<_Ty>,
   class    _Alloc   = tools::allocator::NewAllocator<_Ty> >
-class COMM_EXPORT DoubleLinkedList : public interface::List<_Ty> {
+class COMM_EXPORT DoubleLinkedList : public DataInterface::List<_Ty> {
   /*
     TODO(Garcia): We will need to make use of the Allocator.
    */
@@ -108,7 +108,7 @@ public:
   , alloc(allocator) 
   , cmp(comparator)
   {
-    this->list_type = interface::DOUBLE_LINKED_LIST;
+    this->list_type = DataInterface::DOUBLE_LINKED_LIST;
     this->size = 0;
   }
 
@@ -118,7 +118,7 @@ public:
     , tail(NULL)
     , cursor(NULL)
   {
-    this->list_type = interface::DOUBLE_LINKED_LIST;
+    this->list_type = DataInterface::DOUBLE_LINKED_LIST;
     this->size = 0;
   }
 

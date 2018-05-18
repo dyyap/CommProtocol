@@ -27,8 +27,7 @@
 
 namespace comnet {
 
-
-using namespace comnet::tools::datastructures::interface;
+using namespace comnet::tools::datastructures::DataInterface;
 using namespace comnet::pkg;
 
 class AbstractPacket;
