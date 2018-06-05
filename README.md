@@ -53,9 +53,7 @@ CommProtocol Library requires libxbee3 to execute copy the file to your bin fold
 - Windows {build dir}\libxbee3\(debug or release)\libxbee3.dll
 - Linux: {build dir}\libxbee3\libxbee3.o
 
-CommProtocolBackend and the backend-relay are Windows ONLY!
+CommProtocolBackend and the backend-relay are ***Windows ONLY!*** You must incorporate codes to handle sockets in Linux system!
 
 You don't need to copy the library for the test and backend since cmake copied them for you.
 
-## Design Analysis
-Coming soon...
