@@ -1,5 +1,0 @@
-API Mode 1
-Baudrate 57600
-RTS and CTS
-D6 CTS flow control [1]
-D7 Rts flow control [1]

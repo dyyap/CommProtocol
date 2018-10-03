@@ -1,1 +1,0 @@
-This Directory will hold all Python wrapper files for wrapping CommProto Library.
