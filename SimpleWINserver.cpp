@@ -3,14 +3,13 @@
 
 
 // instructions need PUTTY 
-// telnet (for now) into 127.0.0.1 with port 54000
+// ssh into 127.0.0.1 with port 54000
 
 #pragma comment (lib, "ws2_32.lib")
 
 using namespace std;
 
-void main() {
-
+void InitializeWinsock() {
 
 	// Initialize winsock
 	WSAData wsData;
@@ -21,6 +20,12 @@ void main() {
 		cerr << "Can't Initialize winsock! Quitting" << endl;
 
 	}
+
+}
+
+void main() {
+
+	InitializeWinsock();
 
 	// Create a socket
 	// socket is an endpoint; number ; in unix it is a file descriptor
