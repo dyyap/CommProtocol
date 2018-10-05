@@ -1,11 +1,16 @@
 #include <iostream>
 #include <WS2tcpip.h>
 
+
+// instructions need PUTTY 
+// telnet (for now) into 127.0.0.1 with port 54000
+
 #pragma comment (lib, "ws2_32.lib")
 
 using namespace std;
 
 void main() {
+
 
 	// Initialize winsock
 	WSAData wsData;
@@ -56,7 +61,7 @@ void main() {
 	
 	ZeroMemory(host, NI_MAXHOST);
 	ZeroMemory(service, NI_MAXHOST);
-	memset(host, 0, NI_MAXHOST); //portable
+	//memset(host, 0, NI_MAXHOST); //portable
 
 	//lookup the host name of the client we are working with
 	if (getnameinfo((sockaddr*)&client, sizeof(client), host, NI_MAXHOST, service, NI_MAXSERV, 0) == 0) {
@@ -79,15 +84,29 @@ void main() {
 		ZeroMemory(buf, 4096);
 
 		// wait for client to send data
+		int bytesReceived = recv(clientSocket, buf, 4096, 0);
+		if (bytesReceived == SOCKET_ERROR)
+		{
+			cerr << "Error in recv(). Quitting" << endl;
+			break;
+		
+		}
+		
+		if (bytesReceived == 0) {
+			cout << "Client disconnected " << endl;
+			break;
+			
+		}
+		send(clientSocket, buf, bytesReceived + 1, 0); // never get the terminating zero
+
 		
 		// Echo message back to client
 	}
 	//close the socket
-
+	closesocket(clientSocket);
 	//Shutdown winsock
-
-
-
+	WSACleanup();
 
 }
+
 
