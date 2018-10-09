@@ -1,5 +1,8 @@
 #include <iostream>
 #include <WS2tcpip.h>
+#include <string.h>
+#include <string>
+
 
 
 // instructions need PUTTY 
@@ -39,7 +42,7 @@ void main() {
 	// Bind the socket to an ip adress and port or vice versa
 	sockaddr_in hint; // hint data structure https://patents.google.com/patent/WO2017078732A1/en
 	hint.sin_family = AF_INET; // IP4
-	hint.sin_port = htons(54000);  // host to network short
+	hint.sin_port = htons(6969);  // host to network short
 	hint.sin_addr.S_un.S_addr = INADDR_ANY; // could also use inet_pton
 
 	//bind to socket
@@ -86,9 +89,10 @@ void main() {
 	char buf[4096];
 
 	while (true) {
-		ZeroMemory(buf, 4096);
+		memset(buf, 0, 4096);
 
 		// wait for client to send data
+		
 		int bytesReceived = recv(clientSocket, buf, 4096, 0);
 		if (bytesReceived == SOCKET_ERROR)
 		{
@@ -102,6 +106,9 @@ void main() {
 			break;
 			
 		}
+
+		cout << "Received: " << string(buf ,0, bytesReceived)<< endl;
+
 		send(clientSocket, buf, bytesReceived + 1, 0); // never get the terminating zero
 
 		
