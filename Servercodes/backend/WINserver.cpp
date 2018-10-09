@@ -6,7 +6,7 @@
 
 
 // instructions need PUTTY 
-// ssh into 127.0.0.1 with port 54000
+// ssh into 127.0.0.1 with port 6969
 
 #pragma comment (lib, "ws2_32.lib")
 
