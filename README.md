@@ -5,16 +5,16 @@ CommProtocol is an adaptable, backend protocol tool for scalable systems. It is 
 
 ## Compling and run the code in Linux
 
-	To compile the code in Linux, first go to folder the Servercodes, and then compile UNIXServer.cpp and UNIXClient.cpp for server and client respectively
+To compile the code in Linux, first go to folder the Servercodes, and then compile UNIXServer.cpp and UNIXClient.cpp for server and client respectively
 	
-	```
-	g++ UNIXServer.cpp -o server
-	g++ UNIXClient.cpp -o client
-	```	
+```
+g++ UNIXServer.cpp -o server
+g++ UNIXClient.cpp -o client
+```	
 
-	Run the server code first, then the client code (in two separate terminals)
+Run the server code first, then the client code (in two separate terminals)
 
-	```
-	./server
-	./client
-	```	
+```
+./server
+./client
+```	
