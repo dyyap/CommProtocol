@@ -3,8 +3,10 @@
 #include <iostream>
 #include <sys/socket.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <netinet/in.h>
 #include <string.h>
+#include <string>
 #define PORT 59000
 
 int main(int argc, char const *argv[])
@@ -14,7 +16,7 @@ int main(int argc, char const *argv[])
     int opt = 1;
     int addrlen = sizeof(address);
     char buffer[1024] = {0};
-    char *hello = "Hello from server";
+    const char *hello = "Hello from server";
 
     // Creating socket file descriptor
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0)
