@@ -1,4 +1,9 @@
 # prevent newline problems between macOS and Windows
 
 * text=auto
-* text eol=lf
+*.sln text eol=lf
+*.c text
+*.h text
+
+*.png binary
+*.jpg binary
