@@ -5,8 +5,11 @@
  * node general-client.js
  */
 
+const net = require('net');
+const readline = require('readline');
 const protobuf = require('protobufjs');
 
+const HOST = '127.0.0.1';
 const PORT = 6969;
 const PACKET = {
   VehicleInertialState: {
