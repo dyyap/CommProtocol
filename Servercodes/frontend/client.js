@@ -9,7 +9,7 @@ const net = require('net');
 const readline = require('readline');
 
 const HOST = '127.0.0.1';
-const PORT = 59000;
+const PORT = 9200;
 
 const client = net.connect(PORT, HOST);
 

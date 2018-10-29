@@ -9,7 +9,7 @@ int main()
 {
   // Step 1. Here we assume that the server application has
   // already obtained the protocol port number.
-  unsigned short port_num = 5900;
+  unsigned short port_num = 59000;
 
   // Step 2. Creating an endpoint.
   asio::ip::tcp::endpoint ep(asio::ip::address_v4::any(),
