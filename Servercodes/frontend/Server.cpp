@@ -18,7 +18,7 @@ void processRequest(asio::ip::tcp::socket& sock) {
   std::string receiveMessage;
   std::getline(input, receiveMessage);
 
-  std::cout << receiveMessage << std::endl;
+  std::cout << "Client message: " << receiveMessage << std::endl;
 
   if (ec != asio::error::eof)
     throw system::system_error(ec);
@@ -26,11 +26,11 @@ void processRequest(asio::ip::tcp::socket& sock) {
   // Request received. Sending response.
   // Allocating and filling the buffer with
   // binary data.
-  std::string sendMessage = "Hello from server";
+  //std::string sendMessage = "Hello from server";
 
   // Sending the request data.
-  asio::write(sock, asio::buffer(sendMessage));
-  std::cout << "Message sent" << std::endl;
+  //asio::write(sock, asio::buffer(sendMessage));
+  std::cout << "Shutting down server" << std::endl;
 
   // Shutting down the socket to let the
   // client know that we've sent the whole
@@ -42,14 +42,13 @@ int main(){
   
   try {
     asio::ip::tcp::endpoint ep(asio::ip::address_v4::any(), port_num);
-
     asio::io_service ios;
-
     asio::ip::tcp::acceptor acceptor(ios, ep);
-
+    
+    std::cout << "Waiting for Client" <<  std::endl;
     asio::ip::tcp::socket sock(ios);
-
     acceptor.accept(sock);
+    std::cout << "Connected to Client\n" << std::endl;
 
     processRequest(sock);
   }
