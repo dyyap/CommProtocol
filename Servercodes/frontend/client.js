@@ -40,7 +40,6 @@ function sendMessage() {
   rl.question('Message to send (-1 to exit): ', msg => {
     rl.close();
     if (msg !== '-1') {
-    	console.log(msg);
       client.write(msg);
       sendMessage();
     } else {
