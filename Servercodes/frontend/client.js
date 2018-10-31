@@ -2,7 +2,7 @@
  * JS -> C++, Frontend -> Backend
  * To run, do the following scripts:
  *
- * node general-client.js
+ * node client.js
  */
 
 const net = require('net');
@@ -13,16 +13,26 @@ const PORT = 9200;
 
 const client = net.connect(PORT, HOST);
 
+let rl;
+
 client.on('connect', () => {
   sendMessage();
 });
 
-client.on('close', () => console.log('Client disconnected'));
+client.on('close', () => {
+	if (rl) console.log();
+	console.log('Disconnected');
+  if (rl) rl.close();
+});
 
-client.on('error', () => console.log('No server detected'));
+client.on('error', () => {
+	if (rl) console.log();
+	console.log('No server detected');
+  if (rl) rl.close();
+});
 
 function sendMessage() {
-  const rl = readline.createInterface({
+  rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
   });
@@ -30,6 +40,7 @@ function sendMessage() {
   rl.question('Message to send (-1 to exit): ', msg => {
     rl.close();
     if (msg !== '-1') {
+    	console.log(msg);
       client.write(msg);
       sendMessage();
     } else {

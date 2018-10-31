@@ -2,7 +2,7 @@
  * JS -> C++, Frontend -> Backend
  * To run, do the following scripts:
  *
- * node general-client.js
+ * node client-with-protobuf.js
  */
 
 const net = require('net');
@@ -25,9 +25,17 @@ client.on('connect', () => {
   sendMessage();
 });
 
-client.on('close', () => console.log('Client disconnected'));
+client.on('close', () => {
+	if (rl) console.log();
+	console.log('Client disconnected');
+  if (rl) rl.close();
+});
 
-client.on('error', () => console.log('No server detected'));
+client.on('error', () => {
+	if (rl) console.log();
+	console.log('No server detected');
+  if (rl) rl.close();
+});
 
 function sendMessage() {
   const rl = readline.createInterface({
