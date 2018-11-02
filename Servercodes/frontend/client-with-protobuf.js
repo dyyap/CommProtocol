@@ -10,7 +10,8 @@ const readline = require('readline');
 const protobuf = require('protobufjs');
 
 const HOST = '127.0.0.1';
-const PORT = 6969;
+const PORT = 9200;
+
 const PACKET = {
   VehicleInertialState: {
     vehicleid: 6,
@@ -20,6 +21,8 @@ const PACKET = {
 };
 
 const client = net.connect(PORT, HOST);
+
+let rl;
 
 client.on('connect', () => {
   sendMessage();
@@ -37,16 +40,16 @@ client.on('error', () => {
   if (rl) rl.close();
 });
 
-function sendMessage() {
-  const rl = readline.createInterface({
+async function sendMessage() {
+  rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
   });
 
-  rl.question('Type anything to send a packet (-1 to exit): ', msg => {
+  rl.question('Type anything to send a packet (-1 to exit): ', async msg => {
     rl.close();
     if (msg !== '-1') {
-      sendPacket(PACKET);
+      await sendPacket(PACKET);
       sendMessage();
     } else {
       client.end();
@@ -54,8 +57,8 @@ function sendMessage() {
   });
 }
 
-function sendPacket(packet) {
-  protobuf.load('./protobuf/ProtoPackets.proto')
+async function sendPacket(packet) {
+  await protobuf.load('./ProtoPackets.proto')
     .then(root => {
       const Message = root.lookupType('ProtoPackets.Packet');
 
