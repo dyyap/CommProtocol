@@ -10,7 +10,7 @@ const readline = require('readline');
 const protobuf = require('protobufjs');
 
 const HOST = '127.0.0.1';
-const PORT = 6969;
+const PORT = 59000;
 const PACKET = {
   VehicleInertialState: {
     vehicleid: 6,

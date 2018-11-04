@@ -10,14 +10,3 @@ node client.js
 node client-with-protobuf.js
 ```
 
-To compile Server.cpp do this
-
-```
-g++ Server.cpp -lboost_system -lpthread -o server
-```
-
-and run
-
-```
-./server
-```
