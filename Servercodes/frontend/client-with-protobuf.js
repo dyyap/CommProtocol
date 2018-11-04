@@ -2,7 +2,7 @@
  * JS -> C++, Frontend -> Backend
  * To run, do the following scripts:
  *
- * node general-client.js
+ * node client-with-protobuf.js
  */
 
 const net = require('net');
@@ -10,7 +10,12 @@ const readline = require('readline');
 const protobuf = require('protobufjs');
 
 const HOST = '127.0.0.1';
+<<<<<<< HEAD
 const PORT = 59000;
+=======
+const PORT = 9200;
+
+>>>>>>> 39a002f5fcf1510caa7efe0de46ed6bd57143609
 const PACKET = {
   VehicleInertialState: {
     vehicleid: 6,
@@ -21,24 +26,34 @@ const PACKET = {
 
 const client = net.connect(PORT, HOST);
 
+let rl;
+
 client.on('connect', () => {
   sendMessage();
 });
 
-client.on('close', () => console.log('Client disconnected'));
+client.on('close', () => {
+	if (rl) console.log();
+	console.log('Client disconnected');
+  if (rl) rl.close();
+});
 
-client.on('error', () => console.log('No server detected'));
+client.on('error', () => {
+	if (rl) console.log();
+	console.log('No server detected');
+  if (rl) rl.close();
+});
 
-function sendMessage() {
-  const rl = readline.createInterface({
+async function sendMessage() {
+  rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
   });
 
-  rl.question('Type anything to send a packet (-1 to exit): ', msg => {
+  rl.question('Type anything to send a packet (-1 to exit): ', async msg => {
     rl.close();
     if (msg !== '-1') {
-      sendPacket(PACKET);
+      await sendPacket(PACKET);
       sendMessage();
     } else {
       client.end();
@@ -46,8 +61,8 @@ function sendMessage() {
   });
 }
 
-function sendPacket(packet) {
-  protobuf.load('./protobuf/ProtoPackets.proto')
+async function sendPacket(packet) {
+  await protobuf.load('./ProtoPackets.proto')
     .then(root => {
       const Message = root.lookupType('ProtoPackets.Packet');
 
