@@ -1,8 +1,14 @@
 /*
- * JS -> C++, Frontend -> Backend
- * To run, do the following scripts:
- *
- * node client-with-protobuf.js
+  THIS WILL NOT BE USED IN THE FINAL PROJECT,
+  
+  I AM ONLY INCLUDING THIS FOR TEST PURPOSES FOR YOU
+  WHO WANT TO SEE HOW JS CLIENT INTERACTS WITH THEORETICAL
+  SERVER (CURRENTLY WRITTEN ALSO IN JS)
+  
+  THIS IS HOW THE C++ SERVER SHOULD BE WRITTEN. THE SERVER SHOULD
+  CREATE THE HOST:PORT CONNECTION OPEN TO ANY CLIENT RIGHT AFTER
+  THE SERVER IS OPENED, THEN TAKE IN ANY INCOMING MESSAGES AND SEND
+  MESSAGES AS NEEDED. YOU CAN SEND MESSAGES MANUALLY (in intervals, user input, etc.)
  */
 
 const net = require('net');
@@ -20,28 +26,30 @@ const PACKET = {
   },
 };
 
-const Packet = protobuf.loadSync('./ProtoPackets.proto').lookup('ProtoPackets.Packet');
+const Packet = protobuf.loadSync('./ProtoPacketsV2.proto').lookup('ProtoPackets.Packet');
 
-const client = net.connect(PORT, HOST);
+const server = net.createServer();
+server.listen(PORT, HOST, console.log('Ready'));
 
-let rl;
+let client, rl;
 
-client.on('connect', sendMessage);
+server.on('connection', socket => {
+	client = socket;
+  client.on('data', receiveMessage);
+  sendMessage();
+});
 
-client.on('data', receiveMessage);
-
-client.on('close', () => {
+server.on('close', () => {
 	if (rl) console.log();
-	console.log('Client disconnected');
+	console.log('Server shut down');
   if (rl) rl.close();
 });
 
-client.on('error', () => {
+server.on('error', () => {
 	if (rl) console.log();
-	console.log('No server detected');
+	console.log('An error ocurred');
   if (rl) rl.close();
 });
-
 async function sendMessage() {
   rl = readline.createInterface({
     input: process.stdin,
@@ -54,7 +62,8 @@ async function sendMessage() {
       await sendPacket(PACKET);
       sendMessage();
     } else {
-      client.end();
+    	client.end();
+      server.close();
     }
   });
 }

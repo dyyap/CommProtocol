@@ -8,5 +8,8 @@ node client.js
 
 # if you run the protobuf client run the following command
 node client-with-protobuf.js
+
+# if you want to run the test server, supposed to be written with C++, run the following command
+node tcp-server.js
 ```
 
