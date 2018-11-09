@@ -21,19 +21,19 @@ void addVehicles(ProtoPackets::AirVehicleGroundRelativeState*);
 
 int main(int argc, char const *argv[]){
   //Add a vehicle
-  ProtoPackets::AirVehicleGroundRelativeState vehicle;
-  addVehicles(&vehicle);
+//  ProtoPackets::AirVehicleGroundRelativeState vehicle;
+//  addVehicles(&vehicle);
   
-  std::cout << "\nSize after serilizing is " << vehicle.ByteSize() << std::endl;
+ // std::cout << "\nSize after serilizing is " << vehicle.ByteSize() << std::endl;
   
 
-  int size = vehicle.ByteSize()+4;
-  char *pkt = new char [size];
+//  int size = vehicle.ByteSize()+4;
+ // char *pkt = new char [size];
   
-  ArrayOutputStream aos(pkt,size);
-  CodedOutputStream *output = new CodedOutputStream(&aos);
-  output->WriteVarint32(vehicle.ByteSize());
-  vehicle.SerializeToCodedStream(output);
+ // ArrayOutputStream aos(pkt,size);
+ // CodedOutputStream *output = new CodedOutputStream(&aos);
+ // output->WriteVarint32(vehicle.ByteSize());
+ // vehicle.SerializeToCodedStream(output);
 
   //Creating socket and send
 
@@ -73,11 +73,22 @@ int main(int argc, char const *argv[]){
   }
   
   std::cout << "Waiting for client" << std::endl; 
-  if ((new_socket = accept(server_fd, (struct sockaddr *)&address, (socklen_t*)&addrlen))<0) {
+if ((new_socket = accept(server_fd, (struct sockaddr *)&address, (socklen_t*)&addrlen))<0) {
         std::cerr << "Fail accepting connection" << std::endl;
         exit(EXIT_FAILURE);
     }
+ProtoPackets::AirVehicleGroundRelativeState vechicle;
+addVehicles(&vechicle);
+int size = vechicle.ByteSize()+4;
+char *pkt = new char [size];
+ArrayOutputStream aos(pkt,size);
+CodedOutputStream *output = new CodedOutputStream(&aos);
+output->WriteVarint32(vechicle.ByteSize());
+vechicle.SerializeToCodedStream(output);
+std::cout << "\nSize after serilizing is " << vechicle.ByteSize() << std::endl;
+    
 
+  
   if((bytecount = send(new_socket, (void *) pkt,size,0)) < 0 ) {
     std::cerr << "Error sending data" << std::endl;
     exit(EXIT_FAILURE);
