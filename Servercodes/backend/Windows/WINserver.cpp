@@ -7,6 +7,8 @@
 
 // instructions need PUTTY 
 // ssh into 127.0.0.1 with port 6969
+// Created for NGCP by Daniel Yap 2018 
+// Treasurer for ./SCRIPT Daniel Yap 2019
 
 #pragma comment (lib, "ws2_32.lib")
 
